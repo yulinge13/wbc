@@ -1,1 +1,1 @@
-<import src="/pages/accumulatedIncome/accumulatedIncome.vue.wxml" /><template is="7fa68804" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/accumulatedIncome/accumulatedIncome.vue.wxml" /><template is="13b1e27c" data="{{ ...$root['0'], $root }}"/>

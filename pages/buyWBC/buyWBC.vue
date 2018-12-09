@@ -31,7 +31,7 @@
 						<image src="http://www.dbl.name/wbc/static/images/BTC-比特币.png"></image>
 					</view>
 					<view class="money_num">
-						￥200.00
+						￥{{this.price}}.00
 					</view>
 				</view>
 				<view class="pay_mid">
@@ -68,52 +68,69 @@
 	export default {
 		data() {
 			return {
-				modalShow:false,
-				payShow:false,
-				num:1
+				price: 500,
+				modalShow: false,
+				payShow: false,
+				num: 1,
+				type: 1, //1微信 2支付宝
 			};
 		},
 		components: {
 			Pop,
 			NumBox
 		},
-		computed:{
+		computed: {
 			...mapState({
-				personInfo:state =>{
+				personInfo: state => {
 					return state.personInfo
 				}
 			})
 		},
-		methods:{
+		methods: {
 			//获取数量
-			getNum(val){
+			getNum(val) {
 				this.num = val
 			},
-			closePayShow(){
+			closePayShow() {
 				this.payShow = false
 			},
-			showModal(){
+			showModal() {
 				this.modalShow = true
 			},
-			close(){
+			close() {
 				this.modalShow = false
 			},
-			weichat(){
+			weichat() {
+				uni.showToast({
+					title: '暂时不支持微信支付',
+					duration: 1000,
+					icon: 'none'
+				});
+				// 				
+				// 				this.type = 1
+				// 				this.payShow = true
+			},
+			alipay() {
+				this.type = 2
 				this.payShow = true
 			},
-			alipay(){
-				this.payShow = true
+			pay() {
+				if (this.type === 1) {
+
+				} else if (this.type === 2) {
+					this.aliyPay()
+				}
 			},
-			pay(){
+			aliyPay() {
 				uni.request({
 					method: 'POST',
-					url: 'http://www.dbl.name/index.php/' + this.url.alipayMobilePay, //仅为示例，并非真实接口地址。
+					url: 'http://www.dbl.name/index.php/' + this.url.alipayPay, //仅为示例，并非真实接口地址。
 					data: {
-						uid:this.personInfo.id,
-						goods_name:'wbc充值',
-						charge:0.01,
-						type:'wbc',
-						num:1000
+						uid: this.personInfo.id,
+						goods_name: 'wbc充值',
+						charge: this.price,
+						type: 'wbc',
+						num: this.num
 					},
 					header: {
 						"Content-Type": "application/x-www-form-urlencoded" //自定义请求头信息
@@ -121,12 +138,19 @@
 					success(res) {
 						uni.requestPayment({
 							provider: 'alipay',
-							orderInfo:res.data , //订单数据
-							success: function (res) {
-								console.log('success:' + JSON.stringify(res));
+							orderInfo: res.data, //订单数据
+							success: function(res) {
+								uni.showToast({
+									title: '购买成功',
+									duration: 1000,
+								});
 							},
-							fail: function (err) {
-								console.log('fail:' + JSON.stringify(err));
+							fail: function(err) {
+								uni.showToast({
+									title: '购买失败',
+									duration: 1000,
+									icon: 'none'
+								});
 							}
 						});
 					}
@@ -215,16 +239,19 @@
 	.wora .img:nth-of-type(2) {
 		margin-right: 0;
 	}
-	.pay_modal{
-		padding: 0 30upx;	
+
+	.pay_modal {
+		padding: 0 30upx;
 		padding-top: 30upx;
 		background: #fff;
 	}
-	.pay_top{
+
+	.pay_top {
 		display: flex;
 		margin-bottom: 85upx;
 	}
-	.pay_top .money_icon{
+
+	.pay_top .money_icon {
 		width: 215upx;
 		height: 215upx;
 		display: flex;
@@ -233,18 +260,21 @@
 		margin-right: 40upx;
 		border: 1upx solid #dddddd;
 	}
-	.pay_top .money_icon image{
+
+	.pay_top .money_icon image {
 		width: 178upx;
 		height: 178upx;
 	}
-	.pay_top .money_num{
+
+	.pay_top .money_num {
 		font-size: 60upx;
 		height: 46upx;
 		line-height: 46upx;
 		color: #f6931a;
 		padding-top: 41upx;
 	}
-	.pay_mid{
+
+	.pay_mid {
 		display: flex;
 		height: 55upx;
 		line-height: 55upx;
@@ -252,15 +282,18 @@
 		color: #333333;
 		margin-bottom: 40upx;
 	}
-	.pay_mid .pay_name{
+
+	.pay_mid .pay_name {
 		width: 140upx;
 		text-align: left;
 	}
-	.pay_num text{
+
+	.pay_num text {
 		color: #f6931a;
 		padding: 0 20upx;
 	}
-	.order_btn{
+
+	.order_btn {
 		margin-top: 20upx;
 		margin-bottom: 60upx;
 	}

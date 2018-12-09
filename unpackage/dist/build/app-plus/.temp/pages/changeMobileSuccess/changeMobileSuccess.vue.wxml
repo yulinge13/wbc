@@ -1,12 +1,12 @@
-<template name="9653bce0">
-  <view class="_view data-v-48d06f0f changeMobileSuccess">
-    <view class="_view data-v-48d06f0f top">
-      <image src="http://www.dbl.name/wbc/static/images/已完成 (1).png" class="_image data-v-48d06f0f"></image>
-      <view class="_view data-v-48d06f0f name"> 更换成功！ </view>
+<template name="463f8008">
+  <view class="_view data-v-03fedf94 changeMobileSuccess">
+    <view class="_view data-v-03fedf94 top">
+      <image src="http://www.dbl.name/wbc/static/images/已完成 (1).png" class="_image data-v-03fedf94"></image>
+      <view class="_view data-v-03fedf94 name"> 更换成功！ </view>
     </view>
-    <view class="_view data-v-48d06f0f moble_name"> 您的手机号已更改为：134****7182 </view>
-    <view class="_view data-v-48d06f0f tishi"> 下次请使用此号码登录，登录密码不变 </view>
-    <view class="_view data-v-48d06f0f btn"> 确定 </view>
-    <view class="_view data-v-48d06f0f beizhu"> 备注：确定以后回到登录页面重新登录 </view>
+    <view class="_view data-v-03fedf94 moble_name"> 您的手机号已更改成功 </view>
+    <view class="_view data-v-03fedf94 tishi"> 下次请使用此号码登录，登录密码不变 </view>
+    <view class="_view data-v-03fedf94 btn" bindtap="handleProxy" data-eventid="{{'Fjm-0'}}" data-comkey="{{$k}}"> 确定 </view>
+    <view class="_view data-v-03fedf94 beizhu"> 备注：确定以后回到登录页面重新登录 </view>
   </view>
 </template>

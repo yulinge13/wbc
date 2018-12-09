@@ -1,3 +1,3 @@
-<template name="88d97e72">
-  <view bindtap="handleProxy" data-eventid="{{'lc5-0'}}" data-comkey="{{$k}}" class="_view data-v-5e6b61cf {{disable ? 'time_btn time_btn_dis' : 'time_btn'}}"> 发送验证码({{time}}s) </view>
+<template name="0cae4d4f">
+  <view bindtap="handleProxy" data-eventid="{{'u88-0'}}" data-comkey="{{$k}}" class="_view data-v-d29eaf2c {{disable ? 'time_btn time_btn_dis' : 'time_btn'}}"> 发送验证码({{time}}s) </view>
 </template>

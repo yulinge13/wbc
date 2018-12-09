@@ -44,7 +44,9 @@
 		methods:{
 			next(){
 				if(this.code.length>0 && this.mobileCode.length>0 && this.code === this.mobileCode){
-					
+					uni.navigateTo({
+						url: '../changeTransactionPasswordTwo/changeTransactionPasswordTwo'
+					});
 				}else{
 					console.log(this.code)
 					console.log(this.mobileCode)

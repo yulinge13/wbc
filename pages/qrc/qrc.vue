@@ -11,19 +11,29 @@
 			预存WBC可用
 		</view>
 		<view class="num">
-			446.0000
+			{{personInfo.balance}}
 		</view>
 	</view>
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
-				personInfo:uni.getStorageSync('personInfo') || this.$store.state.personInfo || {},
 				qrcUrl:''
 			};
 			
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
 		},
 		methods:{
 			//获取二维码

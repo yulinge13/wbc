@@ -1,54 +1,54 @@
-<template name="320f5ed2">
-  <view class="_view data-v-37518611 index_page">
-    <view class="_view data-v-37518611 index_page_top">
-      <view class="_view data-v-37518611 header">
-        <view class="_view data-v-37518611 header_left">
-          <image src="http://www.dbl.name/wbc/static/images/logo.png" class="_image data-v-37518611 logo"></image>
-          <view class="_view data-v-37518611 logo_name"> 冬宝链 </view>
+<template name="1ac6bd6c">
+  <view class="_view data-v-4368ffd4 index_page">
+    <view class="_view data-v-4368ffd4 index_page_top">
+      <view class="_view data-v-4368ffd4 header">
+        <view class="_view data-v-4368ffd4 header_left">
+          <image src="http://www.dbl.name/wbc/static/images/logo.png" class="_image data-v-4368ffd4 logo"></image>
+          <view class="_view data-v-4368ffd4 logo_name"> 冬宝链 </view>
         </view>
-        <view class="_view data-v-37518611 header_right">
-          <image src="http://www.dbl.name/wbc/static/images/扫一扫@2x.png" class="_image data-v-37518611 sao"></image>
+        <view class="_view data-v-4368ffd4 header_right">
+          <image src="http://www.dbl.name/wbc/static/images/扫一扫@2x.png" class="_image data-v-4368ffd4 sao"></image>
         </view>
       </view>
-      <view class="_view data-v-37518611 profit">
-        <view class="_view data-v-37518611 profit_name">产链权益系数</view>
-        <view class="_view data-v-37518611 profit_num">{{coefficient}}</view>
+      <view class="_view data-v-4368ffd4 profit">
+        <view class="_view data-v-4368ffd4 profit_name">产链权益系数</view>
+        <view class="_view data-v-4368ffd4 profit_num">{{coefficient}}</view>
       </view>
-      <view class="_view data-v-37518611 banner">
-        <image class="_image data-v-37518611 banner_pic" src="http://www.dbl.name/wbc/static/images/banner.png"></image>
-        <view class="_view data-v-37518611 banner_text">
-          <image src="http://www.dbl.name/wbc/static/images/通知@2x.png" class="_image data-v-37518611 notice_pic"></image>
-          <view class="_view data-v-37518611 notice"> 冬宝链v1.0正式上线了！ </view>
+      <view class="_view data-v-4368ffd4 banner">
+        <image class="_image data-v-4368ffd4 banner_pic" src="http://www.dbl.name/wbc/static/images/banner.png"></image>
+        <view class="_view data-v-4368ffd4 banner_text">
+          <image src="http://www.dbl.name/wbc/static/images/通知@2x.png" class="_image data-v-4368ffd4 notice_pic"></image>
+          <view class="_view data-v-4368ffd4 notice"> 冬宝链v1.0正式上线了！ </view>
         </view>
-        <view class="_view data-v-37518611 slider_lists">
-          <view class="_view data-v-37518611 slider_list">
-            <view class="_view data-v-37518611 slider_list_top">
-              <image src="http://www.dbl.name/wbc/static/images/存储@2x.png" class="_image data-v-37518611"></image>
-              <view class="_view data-v-37518611 slider_list_name"> WBC存储量 </view>
+        <view class="_view data-v-4368ffd4 slider_lists">
+          <view class="_view data-v-4368ffd4 slider_list">
+            <view class="_view data-v-4368ffd4 slider_list_top">
+              <image src="http://www.dbl.name/wbc/static/images/存储@2x.png" class="_image data-v-4368ffd4"></image>
+              <view class="_view data-v-4368ffd4 slider_list_name"> WBC存储量 </view>
             </view>
-            <view class="_view data-v-37518611 slider_list_num"> {{$store.state.personInfo.balance}} </view>
+            <view class="_view data-v-4368ffd4 slider_list_num"> {{personInfo.balance || 0}} </view>
           </view>
-          <view class="_view data-v-37518611 slider_line"></view>
-          <view class="_view data-v-37518611 slider_list">
-            <view class="_view data-v-37518611 slider_list_top">
-              <image src="http://www.dbl.name/wbc/static/images/收益(1)@2x.png" class="_image data-v-37518611"></image>
-              <view class="_view data-v-37518611 slider_list_name"> WBC预期收益 </view>
+          <view class="_view data-v-4368ffd4 slider_line"></view>
+          <view class="_view data-v-4368ffd4 slider_list">
+            <view class="_view data-v-4368ffd4 slider_list_top">
+              <image src="http://www.dbl.name/wbc/static/images/收益(1)@2x.png" class="_image data-v-4368ffd4"></image>
+              <view class="_view data-v-4368ffd4 slider_list_name"> WBC预期收益 </view>
             </view>
-            <view class="_view data-v-37518611 slider_list_num"> 106,705.0000 </view>
+            <view class="_view data-v-4368ffd4 slider_list_num"> {{personInfo.total_points || 0}} </view>
           </view>
         </view>
       </view>
-      <view class="_view data-v-37518611 to_buy" bindtap="handleProxy" data-eventid="{{'dEw-0'}}" data-comkey="{{$k}}">
-        <view class="_view data-v-37518611 buy_btn">
-          <image src="http://www.dbl.name/wbc/static/images/购买按钮.png" class="_image data-v-37518611 buy_btn_pic"></image>
-          <image src="http://www.dbl.name/wbc/static/images/手指.png" class="_image data-v-37518611 buy_pic"></image>
+      <view class="_view data-v-4368ffd4 to_buy" bindtap="handleProxy" data-eventid="{{'34Q-0'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-4368ffd4 buy_btn">
+          <image src="http://www.dbl.name/wbc/static/images/购买按钮.png" class="_image data-v-4368ffd4 buy_btn_pic"></image>
+          <image src="http://www.dbl.name/wbc/static/images/手指.png" class="_image data-v-4368ffd4 buy_pic"></image>
         </view>
       </view>
     </view>
-    <view class="_view data-v-37518611 lists">
-      <view class="_view data-v-37518611 list" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'SJk-1-'+index}}" data-comkey="{{$k}}" wx:for="{{linkLists}}" wx:for-index="index" wx:for-item="i">
-        <image src="{{i.path}}" class="_image data-v-37518611"></image>
-        <view class="_view data-v-37518611 list_name"> {{i.name}} </view>
+    <view class="_view data-v-4368ffd4 lists">
+      <view class="_view data-v-4368ffd4 list" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'P5K-1-'+index}}" data-comkey="{{$k}}" wx:for="{{linkLists}}" wx:for-index="index" wx:for-item="i">
+        <image src="{{i.path}}" class="_image data-v-4368ffd4"></image>
+        <view class="_view data-v-4368ffd4 list_name"> {{i.name}} </view>
       </view>
     </view>
   </view>

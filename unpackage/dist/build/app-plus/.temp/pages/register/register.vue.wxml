@@ -1,56 +1,56 @@
 <import src="/components/tiemBtn.vue.wxml" />
-<template name="500f6dc6">
-  <view class="_view data-v-a5c6756a login_page">
-    <view class="_view data-v-a5c6756a login_name"> 注册 </view>
-    <view class="_view data-v-a5c6756a logo">
-      <image src="http://www.dbl.name/wbc/static/images/logo_1拷贝2@2x.png" class="_image data-v-a5c6756a"></image>
+<template name="4be21384">
+  <view class="_view data-v-53b26790 login_page">
+    <view class="_view data-v-53b26790 login_name"> 注册 </view>
+    <view class="_view data-v-53b26790 logo">
+      <image src="http://www.dbl.name/wbc/static/images/logo_1拷贝2@2x.png" class="_image data-v-53b26790"></image>
     </view>
-    <view class="_view data-v-a5c6756a login_modal">
-      <view class="_view data-v-a5c6756a fill">
-        <image src="http://www.dbl.name/wbc/static/images/推荐拷贝3@2x.png" class="_image data-v-a5c6756a fill_pic"></image>
-        <view class="_view data-v-a5c6756a fill_val">
-          <input placeholder="请输入推荐人账号" value="{{fromData.incode}}" bindinput="handleProxy" data-eventid="{{'1yQ-0'}}" data-comkey="{{$k}}" class="_input data-v-a5c6756a" />
+    <view class="_view data-v-53b26790 login_modal">
+      <view class="_view data-v-53b26790 fill">
+        <image src="http://www.dbl.name/wbc/static/images/推荐拷贝3@2x.png" class="_image data-v-53b26790 fill_pic"></image>
+        <view class="_view data-v-53b26790 fill_val">
+          <input placeholder="请输入推荐人账号" value="{{fromData.incode}}" bindinput="handleProxy" data-eventid="{{'ilI-0'}}" data-comkey="{{$k}}" class="_input data-v-53b26790" />
         </view>
       </view>
-      <view class="_view data-v-a5c6756a fill">
-        <image src="http://www.dbl.name/wbc/static/images/账号@2x.png" class="_image data-v-a5c6756a fill_pic"></image>
-        <view class="_view data-v-a5c6756a fill_val">
-          <input placeholder="请输入个人账号昵称" value="{{fromData.nickname}}" bindinput="handleProxy" data-eventid="{{'ITF-1'}}" data-comkey="{{$k}}" class="_input data-v-a5c6756a" />
+      <view class="_view data-v-53b26790 fill">
+        <image src="http://www.dbl.name/wbc/static/images/账号@2x.png" class="_image data-v-53b26790 fill_pic"></image>
+        <view class="_view data-v-53b26790 fill_val">
+          <input placeholder="请输入个人账号昵称" value="{{fromData.nickname}}" bindinput="handleProxy" data-eventid="{{'BSf-1'}}" data-comkey="{{$k}}" class="_input data-v-53b26790" />
         </view>
       </view>
-      <view class="_view data-v-a5c6756a fill">
-        <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-a5c6756a fill_pic"></image>
-        <view class="_view data-v-a5c6756a fill_val">
-          <input placeholder="请输入密码" password="{{true}}" value="{{fromData.password}}" bindinput="handleProxy" data-eventid="{{'ET5-2'}}" data-comkey="{{$k}}" class="_input data-v-a5c6756a" />
+      <view class="_view data-v-53b26790 fill">
+        <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-53b26790 fill_pic"></image>
+        <view class="_view data-v-53b26790 fill_val">
+          <input placeholder="请输入密码" password="{{true}}" value="{{fromData.password}}" bindinput="handleProxy" data-eventid="{{'6jB-2'}}" data-comkey="{{$k}}" class="_input data-v-53b26790" />
         </view>
       </view>
-      <view class="_view data-v-a5c6756a fill">
-        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-a5c6756a fill_pic"></image>
-        <view class="_view data-v-a5c6756a fill_val">
-          <input placeholder="请确认密码" password="{{true}}" value="{{fromData.surePassword}}" bindinput="handleProxy" data-eventid="{{'oy6-3'}}" data-comkey="{{$k}}" class="_input data-v-a5c6756a" />
+      <view class="_view data-v-53b26790 fill">
+        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-53b26790 fill_pic"></image>
+        <view class="_view data-v-53b26790 fill_val">
+          <input placeholder="请确认密码" password="{{true}}" value="{{fromData.surePassword}}" bindinput="handleProxy" data-eventid="{{'Bde-3'}}" data-comkey="{{$k}}" class="_input data-v-53b26790" />
         </view>
       </view>
-      <view class="_view data-v-a5c6756a fill">
-        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-a5c6756a fill_pic"></image>
-        <view class="_view data-v-a5c6756a fill_val">
-          <input placeholder="请输入支付密码" password="{{true}}" value="{{fromData.pay_password}}" bindinput="handleProxy" data-eventid="{{'RzM-4'}}" data-comkey="{{$k}}" class="_input data-v-a5c6756a" />
+      <view class="_view data-v-53b26790 fill">
+        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-53b26790 fill_pic"></image>
+        <view class="_view data-v-53b26790 fill_val">
+          <input placeholder="请输入支付密码" password="{{true}}" value="{{fromData.pay_password}}" bindinput="handleProxy" data-eventid="{{'gzO-4'}}" data-comkey="{{$k}}" class="_input data-v-53b26790" />
         </view>
       </view>
-      <view class="_view data-v-a5c6756a fill">
-        <image src="http://www.dbl.name/wbc/static/images/手机号@2x.png" class="_image data-v-a5c6756a fill_pic"></image>
-        <view class="_view data-v-a5c6756a fill_val small">
-          <input placeholder="请输入手机号" value="{{fromData.mobile}}" bindinput="handleProxy" data-eventid="{{'5A1-5'}}" data-comkey="{{$k}}" class="_input data-v-a5c6756a" />
+      <view class="_view data-v-53b26790 fill">
+        <image src="http://www.dbl.name/wbc/static/images/手机号@2x.png" class="_image data-v-53b26790 fill_pic"></image>
+        <view class="_view data-v-53b26790 fill_val small">
+          <input placeholder="请输入手机号" value="{{fromData.mobile}}" bindinput="handleProxy" data-eventid="{{'Hps-5'}}" data-comkey="{{$k}}" class="_input data-v-53b26790" />
         </view>
       </view>
-      <view class="_view data-v-a5c6756a fill">
-        <image src="http://www.dbl.name/wbc/static/images/验证码拷贝@2x.png" class="_image data-v-a5c6756a fill_pic"></image>
-        <view class="_view data-v-a5c6756a fill_val">
-          <input placeholder="请输入手机验证码" value="{{fromData.code}}" bindinput="handleProxy" data-eventid="{{'9fS-6'}}" data-comkey="{{$k}}" class="_input data-v-a5c6756a" />
+      <view class="_view data-v-53b26790 fill">
+        <image src="http://www.dbl.name/wbc/static/images/验证码拷贝@2x.png" class="_image data-v-53b26790 fill_pic"></image>
+        <view class="_view data-v-53b26790 fill_val">
+          <input placeholder="请输入手机验证码" value="{{fromData.code}}" bindinput="handleProxy" data-eventid="{{'lSz-6'}}" data-comkey="{{$k}}" class="_input data-v-53b26790" />
         </view>
-        <template data="{{...$root['0'], ...$root[$kk+'c6Y-0'],$root}}" is="88d97e72"></template>
+        <template type="reg" data="{{...$root['0'], ...$root[$kk+'PqX-0'],$root}}" is="0cae4d4f"></template>
       </view>
-      <button class="_button data-v-a5c6756a login_btn" bindtap="handleProxy" data-eventid="{{'ud0-7'}}" data-comkey="{{$k}}">注册</button>
+      <button class="_button data-v-53b26790 login_btn" bindtap="handleProxy" data-eventid="{{'i7f-7'}}" data-comkey="{{$k}}">注册</button>
     </view>
-    <view class="_view data-v-a5c6756a footer"> 冬宝链 </view>
+    <view class="_view data-v-53b26790 footer"> 冬宝链 </view>
   </view>
 </template>

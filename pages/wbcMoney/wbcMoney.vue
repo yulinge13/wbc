@@ -7,7 +7,7 @@
 					冬宝链（WBC）
 				</view>
 				<view class="header_num">
-					1253.3000
+					{{personInfo.reward || 0}}
 				</view>
 			</view>
 		</view>
@@ -15,27 +15,32 @@
 			<view class="fill fill_one">
 				<view class="fill_title">
 					<view class="fill_left">
-						<image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png"></image>
+						<image src="http://www.dbl.name/wbc/static/images/银行卡1.png"></image>
 						<view class="fill_left_name">
 							已绑定银行卡
 						</view>
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入转入账户" class="input" />
+					<view class="" v-if="cardInfo.id">
+						{{cardInfo.bank_account}}
+					</view>
+					<view class="" v-else @tap="linkToAddCard">
+						请添加银行卡号
+					</view>
 				</view>
 			</view>
 			<view class="fill fill_three">
 				<view class="fill_title">
 					<view class="fill_left">
-						<image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png"></image>
+						<image src="http://www.dbl.name/wbc/static/images/键盘1.png"></image>
 						<view class="fill_left_name">
 							请输入提取WBC数量
 						</view>
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入提取数量" class="input" />
+					<input type="number" placeholder="请输入提取数量" class="input" v-model="formData.num" @input="getActNum"/>
 				</view>
 			</view>
 			<view class="act_num">
@@ -44,7 +49,7 @@
 						实际提现：
 					</view>
 					<view class="act_val">
-						5924.21
+						{{actNum}}
 					</view>
 				</view>
 				<view class="act">
@@ -52,26 +57,26 @@
 						扣除手续费用：
 					</view>
 					<view class="act_val">
-						5924.21
+						{{cutNum}}
 					</view>
 				</view>
 			</view>
 			<view class="fill fill_four">
 				<view class="fill_title">
 					<view class="fill_left">
-						<image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png"></image>
+						<image src="http://www.dbl.name/wbc/static/images/交易密码.png"></image>
 						<view class="fill_left_name">
-							请输入手机验证码
+							请输入交易密码
 						</view>
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入互转数量" class="input" />
-					<TimeBtn :mobile="15983750925"></TimeBtn>
+					<input placeholder="请输入交易密码" :password="true" class="input" v-model="formData.pay_password"/>
+					<!-- <TimeBtn :mobile="15983750925"></TimeBtn> -->
 				</view>
 			</view>
 		</view>
-		<view class="btn">
+		<view class="btn" @tap="getMoney">
 			提交
 		</view>
 	</view>
@@ -86,7 +91,14 @@
 	export default {
 		data() {
 			return {
-
+				cardInfo:{},//所有的银行卡
+				formData:{
+					num:0,
+					pay_password:''
+				},
+				actNum:0,
+				cutNum:0,
+				sxf:null,//系数
 			};
 		},
 		computed:{
@@ -100,10 +112,84 @@
 			TimeBtn
 		},
 		methods:{
+			getActNum(val){
+				const sxf = (this.sxf.replace('%','')-0)/100
+				const num = val.detail.value-0
+				this.cutNum = sxf*num.toFixed(2)
+				this.actNum = num - sxf*num.toFixed(2)
+			},
 			//获取实际能获得数量
-			getActNum(){
-				
+			getActsxf(){
+				this.Post({
+					url:this.url.balanceWithdrawSxf,
+					data:{
+						type:1
+					}
+				}).then(res => {
+					if(res.code === 200){
+						this.sxf = res.data
+					}
+				})
+			},
+			//获取个人的银行卡
+			getCardLists(){
+				this.Post({
+					url:this.url.balanceGetUbank,
+					data:{
+						uid:this.personInfo.id,
+						type:'1'
+					}
+				}).then(res => {
+					if(res.code === 200){
+						this.cardInfo = res.data
+					}
+				})
+			},
+			//添加银行卡
+			linkToAddCard(){
+				uni.navigateTo({
+					url: '../bankCard/bankCard'
+				});
+			},
+			//提现
+			getMoney(){
+				if(this.formData.num===0){
+					uni.showToast({
+						title: '请输入要提现的数量',
+						duration: 1000,
+						icon: 'none'
+					});
+					return 
+				}
+				if(this.formData.pay_password.length<=0){
+					uni.showToast({
+						title: '请输入交易密码',
+						duration: 1000,
+						icon: 'none'
+					});
+					return 
+				}
+				this.Post({
+					url:this.url.balanceWithdraw,
+					data:{
+						uid:this.personInfo.id,
+						type:1,
+						num:this.formData.num,
+						pay_password:this.formData.pay_password
+					}
+				}).then(res => {
+					if(res.code === 200){
+						uni.showToast({
+							title: res.msg,
+							duration: 1000,
+						});
+					}
+				})
 			}
+		},
+		onLoad() {
+			this.getCardLists()
+			this.getActsxf()
 		}
 		
 	}

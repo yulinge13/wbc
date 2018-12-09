@@ -67,7 +67,7 @@
 							}
 						}).then(res => {
 							if(res.code === 200){
-								uni.navigateTo({
+								uni.reLaunch({
 									url: '../changePasswordSuccess/changePasswordSuccess'
 								});
 							}else{

@@ -1,11 +1,11 @@
-<template name="5b745f1c">
-  <view class="_view data-v-698ec01e qrc">
-    <image src="http://www.dbl.name/wbc/static/images/形状 4.png" class="_image data-v-698ec01e bg"></image>
-    <view class="_view data-v-698ec01e qrc_box">
-      <image src="{{qrcUrl}}" class="_image data-v-698ec01e"></image>
+<template name="6b070eea">
+  <view class="_view data-v-453b3714 qrc">
+    <image src="http://www.dbl.name/wbc/static/images/形状 4.png" class="_image data-v-453b3714 bg"></image>
+    <view class="_view data-v-453b3714 qrc_box">
+      <image src="{{qrcUrl}}" class="_image data-v-453b3714"></image>
     </view>
-    <view class="_view data-v-698ec01e click"> 长按保存二维码 </view>
-    <view class="_view data-v-698ec01e name"> 预存WBC可用 </view>
-    <view class="_view data-v-698ec01e num"> 446.0000 </view>
+    <view class="_view data-v-453b3714 click"> 长按保存二维码 </view>
+    <view class="_view data-v-453b3714 name"> 预存WBC可用 </view>
+    <view class="_view data-v-453b3714 num"> {{personInfo.balance}} </view>
   </view>
 </template>

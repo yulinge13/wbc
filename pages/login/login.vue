@@ -19,12 +19,12 @@
 					<input placeholder="请输入密码" :password="true" v-model="password" />
 				</view>
 			</view>
-			<view class="fill">
+			<!-- 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/验证码拷贝@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
 					<input placeholder="请输入验证码" />
 				</view>
-			</view>
+			</view> -->
 			<button class="login_btn" @tap="login">登陆</button>
 			<view class="login_or_zhu">
 				<view class="login_text" @tap="linkToReg">
@@ -42,6 +42,10 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
@@ -50,9 +54,16 @@
 			};
 		},
 		methods: {
+			...mapMutations(['dateUpInfo']),
 			//登陆
 			login() {
+
 				if (this.mobile && this.password) {
+					uni.showLoading({
+						title: '登陆中...'
+					});
+
+					const _this = this
 					this.Post({
 						url: this.url.userLogin,
 						data: {
@@ -60,13 +71,13 @@
 							password: this.password
 						}
 					}).then(res => {
+						uni.hideLoading();
 						if (res.code === 200) {
 							uni.showToast({
 								title: res.msg,
 								duration: 1000,
 							});
-							uni.setStorageSync('personInfo', res.data);
-							this.$store.state.personInfo = res.data
+							this.dateUpInfo(res.data.id)
 							uni.switchTab({
 								url: '../my/my',
 							});

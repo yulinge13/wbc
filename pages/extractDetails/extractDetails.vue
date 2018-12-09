@@ -14,13 +14,13 @@
 		<view class="lists">
 			<view class="list" v-for="(i,index) in lists" :key="index">
 				<view class="time">
-					2018-04-01 18:10
+					{{i.date}}
 				</view>
 				<view class="type">
-					转出
+					{{i.whitchType}}
 				</view>
-				<view class="num">
-					-10
+				<view class="num" :style="'color:'+i.color">
+					{{i.icon}}{{i.money}}
 				</view>
 			</view>
 		</view>
@@ -36,6 +36,7 @@
 		data() {
 			return {
 				lists:[],//
+				pageNum:1
 			};
 		},
 		computed:{
@@ -53,7 +54,24 @@
 					data:{
 						uid:this.personInfo.id,
 						type:1,
-						page:1
+						page:this.pageNum
+					}
+				}).then(res => {
+					if(res.code === 200){
+						res.data.forEach(i => {
+							if(this.personInfo.id === i.in_uid){
+								i.money = i.in_charge
+								i.whitchType = '转入'
+								i.color = '#3574fa'
+								i.icon = '+'
+							}else{
+								i.money = i.out_charge
+								i.whitchType = '转出'
+								i.color = '#ed3735'
+								i.icon = '-'
+							}
+						})
+						this.lists = res.data
 					}
 				})
 			}

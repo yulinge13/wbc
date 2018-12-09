@@ -8,7 +8,7 @@
 				<image src="http://www.dbl.name/wbc/static/images/20181202213613.png"></image>
 			</view>
 			<view class="header_num">
-				1212332
+				{{personInfo.balance}}
 			</view>
 			<view class="header_lists">
 				<view class="header_list">
@@ -18,7 +18,7 @@
 							预存WBC
 						</view>
 						<view class="header_list_num">
-							￥455.0000
+							￥{{personInfo.corpus_bill}}
 						</view>
 					</view>
 				</view>
@@ -29,7 +29,7 @@
 							补贴WBC
 						</view>
 						<view class="header_list_num">
-							￥455.0000
+							￥{{personInfo.corpus_point}}
 						</view>
 					</view>
 				</view>
@@ -78,7 +78,7 @@
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入互转数量" class="input" v-model="formData.num"/>
+					<input type="number" placeholder="请输入互转数量" class="input" v-model="formData.num" @input="getActNum"/>
 				</view>
 			</view>
 			<view class="fill fill_four">
@@ -94,16 +94,16 @@
 					</view> -->
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入支付密码" class="input" v-model="formData.pay_password"/>
+					<input placeholder="请输入支付密码" :password="true" class="input" v-model="formData.pay_password"/>
 				</view>
 			</view>
 		</view>
 		<view class="info">
 			<view class="info_left">
-				实到数量：0
+				实到数量：{{actNum}}
 			</view>
 			<view class="info_right">
-				节点费用：0
+				节点费用：{{cutNum}}
 			</view>
 		</view>
 		<view class="sub_btn" @tap="balanceUserRoll">
@@ -139,7 +139,10 @@
 					num:0,
 					pay_password:'',
 					in_mobile:''
-				}
+				},
+				actNum:0,
+				cutNum:0,
+				sxf:null,//系数
 			};
 		},
 		computed:{
@@ -149,7 +152,30 @@
 				}
 			})
 		},
+		onLoad() {
+			this.getActsxf()
+		},
 		methods:{
+			...mapMutations(['dateUpInfo']),
+			getActNum(val) {
+				const sxf = (this.sxf.replace('%', '') - 0) / 100
+				const num = val.detail.value - 0
+				this.cutNum = sxf * num.toFixed(2)
+				this.actNum = num - sxf * num.toFixed(2)
+			},
+			//获取实际能获得数量
+			getActsxf() {
+				this.Post({
+					url: this.url.balanceWithdrawSxf,
+					data: {
+						type: this.typeLists[this.formData.type].id
+					}
+				}).then(res => {
+					if (res.code === 200) {
+						this.sxf = res.data
+					}
+				})
+			},
 			//选择类型
 			typeChange(e){
 				this.formData.type = e.detail.value;
@@ -157,6 +183,7 @@
 			//互转
 			balanceUserRoll(){
 				let onOff = true
+				const _this = this
 				for(var key in this.formData){
 					if(key !== 'type'){
 						if(!this.formData[key]){
@@ -186,6 +213,7 @@
 								title: res.msg,
 								duration: 1000,
 								success() {
+									_this.dateUpInfo(_this.personInfo.id)
 									uni.navigateTo({
 										url: '../InterturnIsOk/InterturnIsOk'
 									});
@@ -195,16 +223,13 @@
 					})
 				}else{
 					uni.showToast({
-						title: res.msg,
+						title: '请输入完整信息',
 						duration: 1000,
-						icon:"请填写完整信息"
+						icon:"none"
 					});
 				}
 			}
 		},
-		onLoad() {
-			console.log(this.personInfo)
-		}
 	}
 </script>
 

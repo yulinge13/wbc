@@ -1,6 +1,6 @@
 <template>
 	<view class="bankCard">
-<!-- 		<view class="login_name">
+		<!-- 		<view class="login_name">
 			注册
 		</view>
 		<view class="logo">
@@ -10,26 +10,26 @@
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/推荐拷贝3@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请输入持卡人" v-model="fromData.incode" />
+					<input placeholder="请输入持卡人" v-model="fromData.name" />
+				</view>
+			</view>
+			<view class="fill">
+				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
+				<view class="fill_val">
+					<input placeholder="请输入银行卡号" :password="true" v-model="fromData.newBankAccount" />
+				</view>
+			</view>
+			<view class="fill">
+				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
+				<view class="fill_val">
+					<input placeholder="请确认银行卡号" :password="true" v-model="fromData.bank_account" />
 				</view>
 			</view>
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请输入银行卡号" :password="true" v-model="fromData.password" />
-				</view>
-			</view>
-			<view class="fill">
-				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
-				<view class="fill_val">
-					<input placeholder="请确认银行卡号" :password="true" v-model="fromData.surePassword" />
-				</view>
-			</view>
-			<view class="fill">
-				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
-				<view class="fill_val">
-					<picker class="input" mode="selector" @change="typeChange" :value="0" :range="bankLists" range-key="bank_name">
-						<view>{{bankLists[bankListsIndex].bank_name}}</view>
+					<picker class="input" mode="selector" @change="typeChange" :range="bankLists" :value="0" range-key="bank_name">
+						<view v-if="bankLists[bankListsIndex]">{{bankLists[bankListsIndex].bank_name}}</view>
 					</picker>
 				</view>
 			</view>
@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import TimeBtn from '../../components/tiemBtn.vue'
-import {
+	import TimeBtn from '../../components/tiemBtn.vue'
+	import {
 		mapState,
 		mapMutations
 	} from 'vuex'
@@ -51,23 +51,19 @@ import {
 		data() {
 			return {
 				fromData: {
-					uid : '',
-					name :'',
-					bank_id :'',
-					bank_account :'',
-					default :1,
+					name: '',
+					bank_id: '',
+					bank_account: '',
+					default: 1,
+					newBankAccount: ''
 				}, //注册的数据
-				bankLists:[
-					{
-						bank_name:'请选择开户行'
-					}
-				],//开户行列表
-				bankListsIndex:0,//开户行的索引
+				bankLists: [], //开户行列表
+				bankListsIndex: 0, //开户行的索引
 			};
 		},
-		computed:{
+		computed: {
 			...mapState({
-				personInfo:state =>{
+				personInfo: state => {
 					return state.personInfo
 				}
 			})
@@ -80,17 +76,16 @@ import {
 		},
 		methods: {
 			//选择银行
-			typeChange(e){
+			typeChange(e) {
 				this.bankListsIndex = e.detail.value;
 			},
 			//获取数据能开户的银行
-			getBnakLits(){
+			getBnakLits() {
 				this.Post({
 					url: this.url.balanceGetBank,
-					data: {
-					}
+					data: {}
 				}).then(res => {
-					if(res.code === 200){
+					if (res.code === 200) {
 						this.bankLists = res.data
 					}
 				})
@@ -98,31 +93,31 @@ import {
 			//注册
 			register() {
 				const {
-				name,
-				bank_id,
-				bank_account
+					name,
+					bank_account,
+					newBankAccount
 				} = this.fromData
-				if (name && bank_id && bank_account) {
-// 					if(surePassword !== password){
-// 						uni.showToast({
-// 							title: '输入的密码和确认密码不一样',
-// 							duration: 1000,
-// 							icon: 'none'
-// 						});
-// 					}
+				if (name && bank_account && newBankAccount) {
+					if (newBankAccount !== bank_account) {
+						uni.showToast({
+							title: '输入的银行卡号不一样',
+							duration: 1000,
+							icon: 'none'
+						});
+						return 
+					}
 					this.Post({
-						url: this.url.userReg,
+						url: this.url.balanceAddbank,
 						data: {
-							...this.fromData
+							uid:this.personInfo.id,
+							...this.fromData,
+							bank_id:this.bankLists[this.bankListsIndex].bank_id
 						}
 					}).then(res => {
-						if(res.code === 200){
+						if (res.code === 200) {
 							uni.showToast({
 								title: res.msg,
 								duration: 1000,
-							});
-							uni.navigateTo({
-								url: '../login/login'
 							});
 						}
 					})
@@ -139,13 +134,14 @@ import {
 </script>
 
 <style scoped>
-	.bankCard{
+	.bankCard {
 		padding-top: 45upx;
 	}
+
 	.small {
 		padding-right: 216upx;
 	}
-	
+
 	.login_page {
 		background: url(http://www.dbl.name/wbc/static/images/bg.png) no-repeat center;
 		width: 100%;
@@ -198,6 +194,7 @@ import {
 		height: 60upx;
 		line-height: 60upx;
 		font-size: 30upx;
+		flex: 1;
 	}
 
 	.fill .fill_val input {

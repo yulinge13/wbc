@@ -34,7 +34,7 @@
 							</view>
 						</view>
 						<view class="slider_list_num">
-							{{$store.state.personInfo.balance}}
+							{{personInfo.balance || 0}}
 						</view>
 					</view>
 					<view class="slider_line">
@@ -48,7 +48,7 @@
 							</view>
 						</view>
 						<view class="slider_list_num">
-							106,705.0000
+							{{personInfo.total_points || 0}}
 						</view>
 					</view>
 				</view>
@@ -73,10 +73,21 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	import Nav from '../../components/nav.vue'
 	export default {
 		components: {
 			Nav
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
 		},
 		data() {
 			return {
@@ -192,6 +203,12 @@
 							});
 						}
 					}
+				}else{
+					uni.showToast({
+						title: '暂未开放',
+						duration: 1000,
+						icon:'none'
+					});
 				}
 			}
 		}

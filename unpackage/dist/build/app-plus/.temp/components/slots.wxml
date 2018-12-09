@@ -2,37 +2,37 @@
 <import src="/components/pop.vue.wxml" />
 <import src="/components/numBox.vue.wxml" />
 <import src="/components/linkCom.vue.wxml" />
-<template name="data-v-02e2376b-default-H7f-0">
-  <view class="_view data-v-02e2376b modal_cont">
-    <view class="_view data-v-02e2376b title">
-      <view class="_view data-v-02e2376b close" bindtap="handleProxy" data-eventid="{{'nsr-1'}}" data-comkey="{{$k}}"> X </view> 确认付款 </view>
-    <view class="_view data-v-02e2376b num"> ￥200.00 </view>
-    <view class="_view data-v-02e2376b pay_type"> 请选择付款方式 </view>
-    <view class="_view data-v-02e2376b wora">
-      <image src="http://www.dbl.name/wbc/static/images/微信.png" class="_image data-v-02e2376b img" bindtap="handleProxy" data-eventid="{{'DSh-2'}}" data-comkey="{{$k}}"></image>
-      <image src="http://www.dbl.name/wbc/static/images/支付宝 copy.png" class="_image data-v-02e2376b img" bindtap="handleProxy" data-eventid="{{'lPW-3'}}" data-comkey="{{$k}}"></image>
+<template name="data-v-597477a0-default-DgY-0">
+  <view class="_view data-v-597477a0 modal_cont">
+    <view class="_view data-v-597477a0 title">
+      <view class="_view data-v-597477a0 close" bindtap="handleProxy" data-eventid="{{'606-1'}}" data-comkey="{{$k}}"> X </view> 确认付款 </view>
+    <view class="_view data-v-597477a0 num"> ￥200.00 </view>
+    <view class="_view data-v-597477a0 pay_type"> 请选择付款方式 </view>
+    <view class="_view data-v-597477a0 wora">
+      <image src="http://www.dbl.name/wbc/static/images/微信.png" class="_image data-v-597477a0 img" bindtap="handleProxy" data-eventid="{{'iqS-2'}}" data-comkey="{{$k}}"></image>
+      <image src="http://www.dbl.name/wbc/static/images/支付宝 copy.png" class="_image data-v-597477a0 img" bindtap="handleProxy" data-eventid="{{'LK1-3'}}" data-comkey="{{$k}}"></image>
     </view>
   </view>
 </template>
-<template name="data-v-02e2376b-default-qR1-2">
-  <view class="_view data-v-02e2376b pay_modal">
-    <view class="_view data-v-02e2376b pay_top">
-      <view class="_view data-v-02e2376b money_icon">
-        <image src="http://www.dbl.name/wbc/static/images/BTC-比特币.png" class="_image data-v-02e2376b"></image>
+<template name="data-v-597477a0-default-McP-2">
+  <view class="_view data-v-597477a0 pay_modal">
+    <view class="_view data-v-597477a0 pay_top">
+      <view class="_view data-v-597477a0 money_icon">
+        <image src="http://www.dbl.name/wbc/static/images/BTC-比特币.png" class="_image data-v-597477a0"></image>
       </view>
-      <view class="_view data-v-02e2376b money_num"> ￥200.00 </view>
+      <view class="_view data-v-597477a0 money_num"> ￥{{this.price}}.00 </view>
     </view>
-    <view class="_view data-v-02e2376b pay_mid">
-      <view class="_view data-v-02e2376b pay_name"> 购买数量 </view>
-      <view class="_view data-v-02e2376b pay_num">
-        <template bindchange="handleProxy" data-eventid="{{'OCJ-5'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'3s3-1'],$root}}" is="7d72940d"></template>
+    <view class="_view data-v-597477a0 pay_mid">
+      <view class="_view data-v-597477a0 pay_name"> 购买数量 </view>
+      <view class="_view data-v-597477a0 pay_num">
+        <template bindchange="handleProxy" data-eventid="{{'vYC-5'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'ZMc-1'],$root}}" is="3dffd685"></template>
       </view>
     </view>
-    <view class="_view data-v-02e2376b pay_mid">
-      <view class="_view data-v-02e2376b pay_name"> 附加值 </view>
-      <view class="_view data-v-02e2376b pay_num"> 冬革阿里产品
-        <text class="_text data-v-02e2376b">1</text>件 </view>
+    <view class="_view data-v-597477a0 pay_mid">
+      <view class="_view data-v-597477a0 pay_name"> 附加值 </view>
+      <view class="_view data-v-597477a0 pay_num"> 冬革阿里产品
+        <text class="_text data-v-597477a0">1</text>件 </view>
     </view>
-    <view class="_view data-v-02e2376b btn order_btn"> 确认订单 </view>
+    <view class="_view data-v-597477a0 btn order_btn" bindtap="handleProxy" data-eventid="{{'3p9-6'}}" data-comkey="{{$k}}"> 确认订单 </view>
   </view>
 </template>

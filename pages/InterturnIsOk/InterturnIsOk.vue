@@ -22,6 +22,13 @@
 			return {
 				
 			};
+		},
+		onLoad() {
+			setTimeout(() =>{
+				uni.switchTab({
+					url: '../index/index'
+				});
+			},5000)
 		}
 	}
 </script>

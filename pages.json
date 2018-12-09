@@ -7,6 +7,28 @@
 			}
 		},
 		{
+			"path": "pages/qrc/qrc",
+			"style": {
+				"navigationBarTitleText": "我的二维码",
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#fff"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/changeTransactionPasswordTwo/changeTransactionPasswordTwo",
+			"style": {
+				"navigationBarTitleText": "我的银行卡",
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#fff"
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/bankCard/bankCard",
 			"style": {
 				"navigationBarTitleText": "我的银行卡",

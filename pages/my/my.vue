@@ -38,6 +38,10 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	import LinkCom from '../../components/linkCom.vue'
 	export default {
 		data() {
@@ -63,19 +67,37 @@
 						url: 'http://www.dbl.name/wbc/static/images/安全设置 (1).png',
 						link: '../saft/saft',
 						isLogin:true
+					},
+					{
+						name: '添加银行卡',
+						url: 'http://www.dbl.name/wbc/static/images/安全设置 (1).png',
+						link: '../bankCard/bankCard',
+						isLogin:true
 					}
 				],
-				personInfo: {}, //用户信息
-				isLogin: false, //是否登陆
 			};
 		},
 		components: {
 			LinkCom
 		},
-		onShow() {
-			this.getLoginInfo()
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			}),
+			isLogin(){
+				let isLogin = false
+				if (this.personInfo.id) {
+					isLogin = true
+				} else {
+					isLogin = false
+				}
+				return isLogin
+			}
 		},
 		methods: {
+			...mapMutations(['clearPersonInfo']),
 			//注册
 			linkToReg(){
 				uni.navigateTo({
@@ -90,9 +112,7 @@
 					content: '是否确认退出登陆',
 					success: function(res) {
 						if (res.confirm) {
-							uni.removeStorageSync('personInfo');
-							_this.$store.state.personInfo = {}
-							_this.isLogin = false
+							_this.clearPersonInfo()
 							uni.showToast({
 								title: '退出登陆成功',
 								duration: 1000,
@@ -100,16 +120,6 @@
 						}
 					}
 				});
-			},
-			//获取登陆信息
-			getLoginInfo() {
-				console.log(this.$store.state.personInfo)
-				this.personInfo = uni.getStorageSync('personInfo') || this.$store.state.personInfo || {}
-				if (this.personInfo.id) {
-					this.isLogin = true
-				} else {
-					this.isLogin = false
-				}
 			},
 			//登陸
 			linkToLogin() {

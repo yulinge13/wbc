@@ -9,22 +9,22 @@
 					</view>
 				</view>
 				<view class="num">
-					100.10100
+					{{personInfo.points || 0}}
 				</view>
 			</view>
 			<view class="header_right">
 				<view class="title">
 					<image src="http://www.dbl.name/wbc/static/images/22561832357606129.png"></image>
 					<view class="title_text">
-						预期收益数量
+						储存收益数量
 					</view>
 				</view>
 				<view class="num">
-					100.10100
+					{{personInfo.balance || 0}}
 				</view>
 			</view>
 		</view>
-		<view class="btn">
+		<view class="btn" @tap="submit">
 			收益归集
 		</view>
 		<view class="tishi">
@@ -35,11 +35,39 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
+	import TimeBtn from '../../components/tiemBtn.vue'
 	export default {
 		data() {
 			return {
 				
 			};
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			}),
+		},
+		onLoad() {
+		},
+		methods:{
+			//获取收益
+			submit(){
+				console.log(this.personInfo)
+				this.Post({
+					url:this.url.balanceWithdraw,
+					data:{
+						uid:this.personInfo.id,
+						type:3,
+						num:this.personInfo.points,
+					}
+				})
+			}
 		}
 	}
 </script>
