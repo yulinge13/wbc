@@ -1,0 +1,11 @@
+<template name="e7c58b28">
+  <view class="_view data-v-4d8de0ab InterturnIsOk">
+    <view class="_view data-v-4d8de0ab top">
+      <image src="http://www.dbl.name/wbc/static/images/已完成 (1).png" class="_image data-v-4d8de0ab"></image>
+      <view class="_view data-v-4d8de0ab name"> 互转成功！ </view>
+    </view>
+    <view class="_view data-v-4d8de0ab moble_name"> 5秒后将自动跳回首页... </view>
+    <view class="_view data-v-4d8de0ab btn"> 回到首页 </view>
+    <image src="http://www.dbl.name/wbc/static/images/互转成功.png" class="_image data-v-4d8de0ab bg"></image>
+  </view>
+</template>

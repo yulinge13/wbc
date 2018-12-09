@@ -1,0 +1,1 @@
+<import src="/pages/saft/saft.vue.wxml" /><template is="e8add034" data="{{ ...$root['0'], $root }}"/>

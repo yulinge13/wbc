@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead([[2,1],"wx-uni-page-body.",[1],"data-v-5abe9b6d{height:100%}\n.",[1],"teamAward.",[1],"data-v-5abe9b6d{height:100%;background:#f7f7f7}\n.",[1],"header.",[1],"data-v-5abe9b6d{background:#fff;padding:0 ",[0,30],";margin-bottom:",[0,30],";display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;height:",[0,174],"}\n.",[1],"header wx-image.",[1],"data-v-5abe9b6d{width:",[0,99],";height:",[0,84],"}\n.",[1],"header .",[1],"header_cont.",[1],"data-v-5abe9b6d{margin-left:",[0,20],"}\n.",[1],"header .",[1],"header_cont .",[1],"header_name.",[1],"data-v-5abe9b6d{height:",[0,38],";line-height:",[0,38],";font-size:",[0,40],";color:#333;padding-bottom:",[0,28],"}\n.",[1],"header .",[1],"header_cont .",[1],"header_num.",[1],"data-v-5abe9b6d{height:",[0,34],";line-height:",[0,34],";font-size:",[0,44],";color:#02d46a}\n.",[1],"has_num.",[1],"data-v-5abe9b6d{display:-webkit-box;display:-webkit-flex;display:flex;height:",[0,104],";line-height:",[0,104],";font-size:",[0,30],";color:#333;padding:0 ",[0,30],";background:#fff}\n.",[1],"has_num .",[1],"num.",[1],"data-v-5abe9b6d{padding-left:",[0,40],";color:#3574fa;font-size:",[0,40],"}\n.",[1],"faq.",[1],"data-v-5abe9b6d{padding:0 ",[0,30],";line-height:",[0,23],";display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;padding-top:",[0,15],";padding-bottom:",[0,90],"}\n.",[1],"faq\x3ewx-view.",[1],"data-v-5abe9b6d{-webkit-box-flex:1;-webkit-flex:1;flex:1}\n.",[1],"faq .",[1],"faq_list.",[1],"data-v-5abe9b6d{height:",[0,23],";font-size:",[0,24],";color:#999;padding-bottom:",[0,11],"}\n.",[1],"faq_right .",[1],"faq_list.",[1],"data-v-5abe9b6d{text-align:right}\n.",[1],"btn.",[1],"data-v-5abe9b6d{margin:0 ",[0,30],";height:",[0,80],";line-height:",[0,80],";text-align:center;color:#fff;border-radius:",[0,10],";font-size:",[0,30],";background:#3574fa}\n",],undefined,{path:"./pages/teamAward/teamAward.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/teamAward/teamAward.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

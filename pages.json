@@ -1,0 +1,307 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/qrc/qrc",
+			"style": {
+				"navigationBarTitleText": "互转二维码",
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#fff"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/InterturnIsOk/InterturnIsOk",
+			"style": {
+				"navigationBarTitleText": "互转已提交",
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/changePasswordSuccess/changePasswordSuccess",
+			"style": {
+				"navigationBarTitleText": "修改登陆密码",
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/changeMobileSuccess/changeMobileSuccess",
+			"style": {
+				"navigationBarTitleText": "修改手机号",
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/changMobileTwo/changMobileTwo",
+			"style": {
+				"navigationBarTitleText": "修改手机号",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/recommendedAward/recommendedAward",
+			"style": {
+				"navigationBarTitleText": "推荐奖励",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/wbcMoney/wbcMoney",
+			"style": {
+				"navigationBarTitleText": "WBC钱包",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/changeMobile/changeMobile",
+			"style": {
+				"navigationBarTitleText": "修改手机号",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/changeTransactionPassword/changeTransactionPassword",
+			"style": {
+				"navigationBarTitleText": "修改交易密码",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/changePassword/changePassword",
+			"style": {
+				"navigationBarTitleText": "修改登录密码",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/accumulatedIncome/accumulatedIncome",
+			"style": {
+				"navigationBarTitleText": "累计收益",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/teamAward/teamAward",
+			"style": {
+				"navigationBarTitleText": "团队奖励",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/buyWBC/buyWBC",
+			"style": {
+				"navigationBarTitleText": "购买WBC",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/extractDetails/extractDetails",
+			"style": {
+				"navigationBarTitleText": "提取WBC明细",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/mutualTransferdetails/mutualTransferdetails",
+			"style": {
+				"navigationBarTitleText": "互转明细",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/transactionDetails/transactionDetails",
+			"style": {
+				"navigationBarTitleText": "交易明细",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/saft/saft",
+			"style": {
+				"navigationBarTitleText": "安全设置",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/Interturn/Interturn",
+			"style": {
+				"navigationBarTitleText": "转换",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#3574fa"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#4b72da"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#4b72da"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登陆",
+				// "backgroundColorTop":"#7A7E83"
+				// "navigationBarTextStyle":"rgba(75,114,218)"
+				"app-plus":{
+					"titleNView":{
+						"backgroundColor":"#4b72da"
+					}
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+        "color": "#bfbfbf",
+        "selectedColor": "#1b62ff",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/home1.png",
+				"selectedIconPath": "static/images/home.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/Interturn/Interturn",
+				"iconPath": "static/images/change1.png",
+				"selectedIconPath": "static/images/change.png",
+				"text": "互转区"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/images/team1.png",
+				"selectedIconPath": "static/images/team.png",
+				"text": "我的"
+			}
+		]
+    }
+}

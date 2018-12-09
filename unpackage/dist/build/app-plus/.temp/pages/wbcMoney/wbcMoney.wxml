@@ -1,0 +1,1 @@
+<import src="/pages/wbcMoney/wbcMoney.vue.wxml" /><template is="45271366" data="{{ ...$root['0'], $root }}"/>

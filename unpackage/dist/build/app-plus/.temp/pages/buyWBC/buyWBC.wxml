@@ -1,0 +1,1 @@
+<import src="/pages/buyWBC/buyWBC.vue.wxml" /><template is="17863e26" data="{{ ...$root['0'], $root }}"/>

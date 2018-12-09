@@ -1,0 +1,23 @@
+<template name="7fa68804">
+  <view class="_view data-v-5b9a4dc3 accumulatedIncome">
+    <view class="_view data-v-5b9a4dc3 header">
+      <view class="_view data-v-5b9a4dc3 header_left">
+        <view class="_view data-v-5b9a4dc3 title">
+          <image src="http://www.dbl.name/wbc/static/images/119849048695120235.png" class="_image data-v-5b9a4dc3"></image>
+          <view class="_view data-v-5b9a4dc3 title_text"> 预期收益数量 </view>
+        </view>
+        <view class="_view data-v-5b9a4dc3 num"> 100.10100 </view>
+      </view>
+      <view class="_view data-v-5b9a4dc3 header_right">
+        <view class="_view data-v-5b9a4dc3 title">
+          <image src="http://www.dbl.name/wbc/static/images/22561832357606129.png" class="_image data-v-5b9a4dc3"></image>
+          <view class="_view data-v-5b9a4dc3 title_text"> 预期收益数量 </view>
+        </view>
+        <view class="_view data-v-5b9a4dc3 num"> 100.10100 </view>
+      </view>
+    </view>
+    <view class="_view data-v-5b9a4dc3 btn"> 收益归集 </view>
+    <view class="_view data-v-5b9a4dc3 tishi"> 执行操作会自动将收益归集到WBC钱包 </view>
+    <image src="http://www.dbl.name/wbc/static/images/309667562730824656.png" class="_image data-v-5b9a4dc3 bg"></image>
+  </view>
+</template>

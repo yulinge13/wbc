@@ -1,0 +1,34 @@
+<template name="0487b7c0">
+  <view class="_view data-v-09c9deff login_page">
+    <view class="_view data-v-09c9deff login_name"> 登陆 </view>
+    <view class="_view data-v-09c9deff logo">
+      <image src="http://www.dbl.name/wbc/static/images/logo_1拷贝2@2x.png" class="_image data-v-09c9deff"></image>
+    </view>
+    <view class="_view data-v-09c9deff login_modal">
+      <view class="_view data-v-09c9deff fill">
+        <image src="http://www.dbl.name/wbc/static/images/账号@2x.png" class="_image data-v-09c9deff fill_pic"></image>
+        <view class="_view data-v-09c9deff fill_val">
+          <input placeholder="请输入账号" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'Ykt-0'}}" data-comkey="{{$k}}" class="_input data-v-09c9deff" />
+        </view>
+      </view>
+      <view class="_view data-v-09c9deff fill">
+        <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-09c9deff fill_pic"></image>
+        <view class="_view data-v-09c9deff fill_val">
+          <input placeholder="请输入密码" password="{{true}}" value="{{password}}" bindinput="handleProxy" data-eventid="{{'kAJ-1'}}" data-comkey="{{$k}}" class="_input data-v-09c9deff" />
+        </view>
+      </view>
+      <view class="_view data-v-09c9deff fill">
+        <image src="http://www.dbl.name/wbc/static/images/验证码拷贝@2x.png" class="_image data-v-09c9deff fill_pic"></image>
+        <view class="_view data-v-09c9deff fill_val">
+          <input placeholder="请输入验证码" class="_input data-v-09c9deff" />
+        </view>
+      </view>
+      <button class="_button data-v-09c9deff login_btn" bindtap="handleProxy" data-eventid="{{'1mj-2'}}" data-comkey="{{$k}}">登陆</button>
+      <view class="_view data-v-09c9deff login_or_zhu">
+        <view class="_view data-v-09c9deff login_text" bindtap="handleProxy" data-eventid="{{'pXm-3'}}" data-comkey="{{$k}}"> 注册 </view>
+        <view class="_view data-v-09c9deff zhu_text"> 忘记密码? </view>
+      </view>
+    </view>
+    <view class="_view data-v-09c9deff footer"> 冬宝链 </view>
+  </view>
+</template>

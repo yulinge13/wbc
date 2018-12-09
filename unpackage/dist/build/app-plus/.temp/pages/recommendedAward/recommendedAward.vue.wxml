@@ -1,0 +1,59 @@
+<import src="/components/tiemBtn.vue.wxml" />
+<template name="1822d2a6">
+  <view class="_view data-v-6a0a832b recommendedAward">
+    <view class="_view data-v-6a0a832b header">
+      <image src="http://www.dbl.name/wbc/static/images/logo.png" class="_image data-v-6a0a832b"></image>
+      <view class="_view data-v-6a0a832b header_cont">
+        <view class="_view data-v-6a0a832b header_name"> 冬宝链（WBC） </view>
+        <view class="_view data-v-6a0a832b header_num"> 1253.3000 </view>
+      </view>
+    </view>
+    <view class="_view data-v-6a0a832b cont">
+      <view class="_view data-v-6a0a832b fill fill_one">
+        <view class="_view data-v-6a0a832b fill_title">
+          <view class="_view data-v-6a0a832b fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png" class="_image data-v-6a0a832b"></image>
+            <view class="_view data-v-6a0a832b fill_left_name"> 已绑定银行卡 </view>
+          </view>
+        </view>
+        <view class="_view data-v-6a0a832b fill_cont">
+          <input placeholder="请输入转入账户" class="_input data-v-6a0a832b input" />
+        </view>
+      </view>
+      <view class="_view data-v-6a0a832b fill fill_three">
+        <view class="_view data-v-6a0a832b fill_title">
+          <view class="_view data-v-6a0a832b fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png" class="_image data-v-6a0a832b"></image>
+            <view class="_view data-v-6a0a832b fill_left_name"> 请输入提取WBC数量 </view>
+          </view>
+        </view>
+        <view class="_view data-v-6a0a832b fill_cont">
+          <input placeholder="请输入提取数量" class="_input data-v-6a0a832b input" />
+        </view>
+      </view>
+      <view class="_view data-v-6a0a832b act_num">
+        <view class="_view data-v-6a0a832b act">
+          <view class="_view data-v-6a0a832b act_name"> 实际提现： </view>
+          <view class="_view data-v-6a0a832b act_val"> 5924.21 </view>
+        </view>
+        <view class="_view data-v-6a0a832b act">
+          <view class="_view data-v-6a0a832b act_name"> 扣除手续费用： </view>
+          <view class="_view data-v-6a0a832b act_val"> 5924.21 </view>
+        </view>
+      </view>
+      <view class="_view data-v-6a0a832b fill fill_four">
+        <view class="_view data-v-6a0a832b fill_title">
+          <view class="_view data-v-6a0a832b fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png" class="_image data-v-6a0a832b"></image>
+            <view class="_view data-v-6a0a832b fill_left_name"> 请输入手机验证码 </view>
+          </view>
+        </view>
+        <view class="_view data-v-6a0a832b fill_cont">
+          <input placeholder="请输入互转数量" class="_input data-v-6a0a832b input" />
+          <template mobile="15983750925" data="{{...$root['0'], ...$root[$kk+'4nt-0'],$root}}" is="88d97e72"></template>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-6a0a832b btn"> 提交 </view>
+  </view>
+</template>
