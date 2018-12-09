@@ -22,7 +22,7 @@
 				</view>
 			</view>
 			<view class="uid">
-				UID: admin
+				UID: {{personInfo.id || '请先登录'}}
 			</view>
 		</view>
 		<view class="links">

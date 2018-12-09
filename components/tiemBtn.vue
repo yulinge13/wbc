@@ -50,10 +50,14 @@
 						url: this.url.comCode,
 						data: {
 							mobile: this.mobile,
-							type: 'reg'
+							type: this.type || 'type'
 						},
 						fail(){
 							_this.init()
+						}
+					}).then(res => {
+						if(res.code === 200){
+							this.$store.state.code = res.data.code
 						}
 					})
 				}else{
@@ -62,12 +66,15 @@
 							url: this.url.comCode,
 							data: {
 								mobile: this.mobile,
-								type: this.type || 'type'
+								type: this.type
 							},
 							fail(){
 								_this.init()
 							}
 						}).then(res => {
+							if(res.code === 200){
+								this.$store.state.code = res.data.code
+							}
 						})
 					}else{
 					this.init()

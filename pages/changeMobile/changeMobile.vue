@@ -5,9 +5,9 @@
 		</view>
 		<view class="fill">
 			<view class="val">
-				<input placeholder="请输入手机短信验证码" v-model="code"/>
+				<input placeholder="请输入手机短信验证码" v-model="mobileCode"/>
 			</view>
-			<TimeBtn :mobile="personInfo.mobile"></TimeBtn>
+			<TimeBtn :mobile="personInfo.mobile" type="find"></TimeBtn>
 		</view>
 		<view class="btn" @tap="linkTo">
 			下一步
@@ -16,31 +16,42 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	import TimeBtn from '../../components/tiemBtn.vue'
 	export default {
 		data() {
 			return {
-				personInfo:{},//用户信息
-				code:'',//手机验证码
+				mobileCode:'',//手机验证码
 			};
 		},
 		components:{
 			TimeBtn
 		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				},
+				code:state => state.code
+			})
+		},
 		onLoad() {
-			this.personInfo = uni.getStorageSync('personInfo') || this.$store.state.personInfo
-			console.log(this.personInfo)
 		},
 		methods:{
 			//下一步
 			linkTo(){
-				if(this.code.length>0){
+				if(this.code.length>0 && this.mobileCode.length>0 && this.code === this.mobileCode){
 					uni.navigateTo({
 						url: '../changMobileTwo/changMobileTwo'
 					});
 				}else{
+					console.log(this.code)
+					console.log(this.mobileCode)
 					uni.showToast({
-						title: '请先验证手机!',
+						title: '手机验证码不对',
 						duration: 1000,
 						icon: 'none'
 					});

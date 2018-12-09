@@ -44,12 +44,12 @@
 							输入账号
 						</view>
 					</view>
-					<view class="fill_right">
+		<!-- 			<view class="fill_right">
 						验证
-					</view>
+					</view> -->
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入转入账户" class="input" />
+					<input placeholder="请输入转入账户" class="input" v-model="formData.in_mobile"/>
 				</view>
 			</view>
 			<view class="fill fill_two">
@@ -62,7 +62,7 @@
 					</view>
 				</view>
 				<view class="fill_cont">
-					<picker class="input" mode="selector" @change="typeChange" :value="formData.type" :range="typeLists" range-key="name">
+					<picker class="input" mode="selector" @change="typeChange" :value="0" :range="typeLists" range-key="name">
 						 <view>{{typeLists[formData.type].name}}</view>
 					</picker>
 					<image src="http://www.dbl.name/wbc/static/images/下 拉.png"></image>
@@ -78,7 +78,7 @@
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入互转数量" class="input" />
+					<input placeholder="请输入互转数量" class="input" v-model="formData.num"/>
 				</view>
 			</view>
 			<view class="fill fill_four">
@@ -86,15 +86,15 @@
 					<view class="fill_left">
 						<image src="http://www.dbl.name/wbc/static/images/验证码 (1).png"></image>
 						<view class="fill_left_name">
-							发送验证码
+							支付密码
 						</view>
 					</view>
-					<view class="fill_right">
+			<!-- 		<view class="fill_right">
 						手机
-					</view>
+					</view> -->
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入互转数量" class="input" />
+					<input placeholder="请输入支付密码" class="input" v-model="formData.pay_password"/>
 				</view>
 			</view>
 		</view>
@@ -106,38 +106,104 @@
 				节点费用：0
 			</view>
 		</view>
-		<view class="sub_btn">
+		<view class="sub_btn" @tap="balanceUserRoll">
 			提交
 		</view>
 	</view>
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
 				typeLists:[
 					{
-						name:'请选择互转类型',
+						name:'互转WBC',
+						id:1
 					},
 					{
-						name:'成都',
+						name:'互转团队收益',
+						id:2
 					},
 					{
-						name:'北京',
+						name:'互转预期收益',
+						id:3
 					}
 				],
 				formData:{
-					type:0
+					type:0,
+					num:0,
+					pay_password:'',
+					in_mobile:''
 				}
 			};
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
 		},
 		methods:{
 			//选择类型
 			typeChange(e){
-				console.log(e)
 				this.formData.type = e.detail.value;
+			},
+			//互转
+			balanceUserRoll(){
+				let onOff = true
+				for(var key in this.formData){
+					if(key !== 'type'){
+						if(!this.formData[key]){
+							onOff = false
+						}
+					}
+				}
+				if(!(/^1[34578]\d{9}$/.test(this.formData.in_mobile))){
+					uni.showToast({
+						title: '请输入正确的手机号',
+						duration: 1000,
+						icon: 'none'
+					});
+					return 
+				}
+				if(onOff){
+					this.Post({
+						url:this.url.balanceUserRoll,
+						data:{
+							uid:this.personInfo.id,
+							...this.formData,
+							type:this.typeLists[this.formData.type].id,
+						}
+					}).then(res => {
+						if(res.code === 200){
+							uni.showToast({
+								title: res.msg,
+								duration: 1000,
+								success() {
+									uni.navigateTo({
+										url: '../InterturnIsOk/InterturnIsOk'
+									});
+								}
+							});
+						}
+					})
+				}else{
+					uni.showToast({
+						title: res.msg,
+						duration: 1000,
+						icon:"请填写完整信息"
+					});
+				}
 			}
+		},
+		onLoad() {
+			console.log(this.personInfo)
 		}
 	}
 </script>

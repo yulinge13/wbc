@@ -5,29 +5,58 @@
 		</view>
 		<view class="fill">
 			<view class="val">
-				<input placeholder="请输入手机短信验证码" />
+				<input placeholder="请输入手机短信验证码" v-model="mobileCode"/>
 			</view>
-			<TimeBtn :mobile="personInfo.mobile" type="reg"></TimeBtn>
+			<TimeBtn :mobile="personInfo.mobile" type="find"></TimeBtn>
 		</view>
-		<view class="btn">
+		<view class="btn" @tap="next">
 			下一步
 		</view>
 	</view>
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	import TimeBtn from '../../components/tiemBtn.vue'
 	export default {
 		data() {
 			return {
-				personInfo:uni.getStorageSync('personInfo') || this.$store.state.personInfo || {}
+				mobileCode:'',//手机验证码
 			};
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				},
+				code:state => state.code
+			})
 		},
 		components: {
 			TimeBtn
 		},
 		onLoad() {
-			console.log(uni.getStorageSync('personInfo'))
+
+		},
+		methods:{
+			next(){
+				if(this.code.length>0 && this.mobileCode.length>0 && this.code === this.mobileCode){
+					
+				}else{
+					console.log(this.code)
+					console.log(this.mobileCode)
+					uni.showToast({
+						title: '手机验证码不对',
+						duration: 1000,
+						icon: 'none'
+					});
+				}
+
+	
+			}
 		}
 	}
 </script>

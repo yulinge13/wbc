@@ -7,9 +7,9 @@
 			}
 		},
 		{
-			"path": "pages/qrc/qrc",
+			"path": "pages/bankCard/bankCard",
 			"style": {
-				"navigationBarTitleText": "互转二维码",
+				"navigationBarTitleText": "我的银行卡",
 				"app-plus":{
 					"titleNView":{
 						"backgroundColor":"#fff"

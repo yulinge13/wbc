@@ -78,6 +78,10 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	import TimeBtn from '../../components/tiemBtn.vue'
 	export default {
 		data() {
@@ -85,9 +89,23 @@
 
 			};
 		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
+		},
 		components:{
 			TimeBtn
+		},
+		methods:{
+			//获取实际能获得数量
+			getActNum(){
+				
+			}
 		}
+		
 	}
 </script>
 

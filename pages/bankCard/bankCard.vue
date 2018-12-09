@@ -1,56 +1,39 @@
 <template>
-	<view class="login_page">
-		<view class="login_name">
+	<view class="bankCard">
+<!-- 		<view class="login_name">
 			注册
 		</view>
 		<view class="logo">
 			<image src="http://www.dbl.name/wbc/static/images/logo_1拷贝2@2x.png"></image>
-		</view>
+		</view> -->
 		<view class="login_modal">
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/推荐拷贝3@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请输入推荐人账号" v-model="fromData.incode" />
-				</view>
-			</view>
-			<view class="fill">
-				<image src="http://www.dbl.name/wbc/static/images/账号@2x.png" class="fill_pic"></image>
-				<view class="fill_val">
-					<input placeholder="请输入个人账号昵称" v-model="fromData.nickname" />
+					<input placeholder="请输入持卡人" v-model="fromData.incode" />
 				</view>
 			</view>
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请输入密码" :password="true" v-model="fromData.password" />
+					<input placeholder="请输入银行卡号" :password="true" v-model="fromData.password" />
 				</view>
 			</view>
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请确认密码" :password="true" v-model="fromData.surePassword" />
+					<input placeholder="请确认银行卡号" :password="true" v-model="fromData.surePassword" />
 				</view>
 			</view>
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请输入支付密码" :password="true" v-model="fromData.pay_password" />
+					<picker class="input" mode="selector" @change="typeChange" :value="0" :range="bankLists" range-key="bank_name">
+						<view>{{bankLists[bankListsIndex].bank_name}}</view>
+					</picker>
 				</view>
 			</view>
-			<view class="fill">
-				<image src="http://www.dbl.name/wbc/static/images/手机号@2x.png" class="fill_pic"></image>
-				<view class="fill_val small">
-					<input placeholder="请输入手机号" v-model="fromData.mobile" />
-				</view>
-			</view>
-			<view class="fill">
-				<image src="http://www.dbl.name/wbc/static/images/验证码拷贝@2x.png" class="fill_pic"></image>
-				<view class="fill_val">
-					<input placeholder="请输入手机验证码" v-model="fromData.code" />
-				</view>
-				<TimeBtn :mobile="fromData.mobile" type="reg"></TimeBtn>
-			</view>
-			<button class="login_btn" @tap="register">注册</button>
+			<button class="login_btn" @tap="register">添加</button>
 		</view>
 		<view class="footer">
 			冬宝链
@@ -59,62 +42,74 @@
 </template>
 
 <script>
-	import TimeBtn from '../../components/tiemBtn.vue'
+import TimeBtn from '../../components/tiemBtn.vue'
+import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
 				fromData: {
-					code: '',
-					incode: '',
-					nickname: "",
-					mobile: '',
-					password: '',
-					pay_password: "",
-					surePassword: ''
+					uid : '',
+					name :'',
+					bank_id :'',
+					bank_account :'',
+					default :1,
 				}, //注册的数据
+				bankLists:[
+					{
+						bank_name:'请选择开户行'
+					}
+				],//开户行列表
+				bankListsIndex:0,//开户行的索引
 			};
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
 		},
 		components: {
 			TimeBtn
 		},
+		onLoad() {
+			this.getBnakLits()
+		},
 		methods: {
+			//选择银行
+			typeChange(e){
+				this.bankListsIndex = e.detail.value;
+			},
+			//获取数据能开户的银行
+			getBnakLits(){
+				this.Post({
+					url: this.url.balanceGetBank,
+					data: {
+					}
+				}).then(res => {
+					if(res.code === 200){
+						this.bankLists = res.data
+					}
+				})
+			},
 			//注册
 			register() {
 				const {
-					code,
-					incode,
-					nickname,
-					mobile,
-					password,
-					pay_password,
-					surePassword
+				name,
+				bank_id,
+				bank_account
 				} = this.fromData
-				if (code && nickname && mobile && password && surePassword && pay_password) {
-					if(surePassword !== password){
-						uni.showToast({
-							title: '输入的密码和确认密码不一样',
-							duration: 1000,
-							icon: 'none'
-						});
-					}else if(!(/^1[34578]\d{9}$/.test(mobile))){
-						uni.showToast({
-							title: '请输入正确的手机号',
-							duration: 1000,
-							icon: 'none'
-						});
-					}else if(password.length<6){
-						uni.showToast({
-							title: '请输入6位数以上的手机密码',
-							duration: 1000,
-							icon: 'none'
-						});
-					}else if(pay_password.length<6){
-						uni.showToast({
-							title: '请输入6位数以上的交易密码',
-							duration: 1000,
-							icon: 'none'
-						});
-					}
+				if (name && bank_id && bank_account) {
+// 					if(surePassword !== password){
+// 						uni.showToast({
+// 							title: '输入的密码和确认密码不一样',
+// 							duration: 1000,
+// 							icon: 'none'
+// 						});
+// 					}
 					this.Post({
 						url: this.url.userReg,
 						data: {
@@ -144,18 +139,17 @@
 </script>
 
 <style scoped>
+	.bankCard{
+		padding-top: 45upx;
+	}
 	.small {
 		padding-right: 216upx;
 	}
-
+	
 	.login_page {
 		background: url(http://www.dbl.name/wbc/static/images/bg.png) no-repeat center;
 		width: 100%;
 		height: 100%;
-		/* 		position: fixed;
-		left: 0;
-		top: 0;
-		z-index: -10; */
 	}
 
 	.login_name {
@@ -163,7 +157,6 @@
 		font-family: PingFang-SC-Regular;
 		color: #FFFFFF;
 		padding-left: 33upx;
-		/* padding-top: 89upx; */
 	}
 
 	.logo {
@@ -180,7 +173,6 @@
 
 	.login_modal {
 		margin: 0 31upx;
-		margin-top: 45upx;
 		background: #fff;
 		border-radius: 16upx;
 		box-shadow: 0 0 6upx 1upx rgba(110, 181, 229, .2);

@@ -50,7 +50,7 @@
 						冬革阿里产品<text>1</text>件
 					</view>
 				</view>
-				<view class="btn order_btn">
+				<view class="btn order_btn" @tap="pay">
 					确认订单
 				</view>
 			</view>
@@ -61,17 +61,28 @@
 <script>
 	import Pop from '../../components/pop.vue'
 	import NumBox from '../../components/numBox.vue'
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
 				modalShow:false,
-				payShow:true,
+				payShow:false,
 				num:1
 			};
 		},
 		components: {
 			Pop,
 			NumBox
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
 		},
 		methods:{
 			//获取数量
@@ -92,6 +103,34 @@
 			},
 			alipay(){
 				this.payShow = true
+			},
+			pay(){
+				uni.request({
+					method: 'POST',
+					url: 'http://www.dbl.name/index.php/' + this.url.alipayMobilePay, //仅为示例，并非真实接口地址。
+					data: {
+						uid:this.personInfo.id,
+						goods_name:'wbc充值',
+						charge:0.01,
+						type:'wbc',
+						num:1000
+					},
+					header: {
+						"Content-Type": "application/x-www-form-urlencoded" //自定义请求头信息
+					},
+					success(res) {
+						uni.requestPayment({
+							provider: 'alipay',
+							orderInfo:res.data , //订单数据
+							success: function (res) {
+								console.log('success:' + JSON.stringify(res));
+							},
+							fail: function (err) {
+								console.log('fail:' + JSON.stringify(err));
+							}
+						});
+					}
+				});
 			}
 		}
 	}

@@ -12,18 +12,7 @@
 			</view>
 		</view>
 		<view class="lists">
-			<view class="list">
-				<view class="time">
-					2018-04-01 18:10
-				</view>
-				<view class="type">
-					转出
-				</view>
-				<view class="num">
-					-10
-				</view>
-			</view>
-			<view class="list">
+			<view class="list" v-for="(i,index) in lists" :key="index">
 				<view class="time">
 					2018-04-01 18:10
 				</view>
@@ -39,11 +28,38 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
-
+				lists:[],//
 			};
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
+		},
+		methods:{
+			//获取互转明细列表
+			getLists(){
+				this.Post({
+					url:this.url.indexLogs,
+					data:{
+						uid:this.personInfo.id,
+						type:1,
+						page:1
+					}
+				})
+			}
+		},
+		onLoad() {
+			this.getLists()
 		}
 	}
 </script>
