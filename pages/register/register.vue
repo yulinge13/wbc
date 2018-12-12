@@ -126,9 +126,11 @@
 								title: res.msg,
 								duration: 1000,
 							});
-							uni.navigateTo({
-								url: '../login/login'
-							});
+							setTimeout(() => {
+								uni.navigateTo({
+									url: '../login/login'
+								});
+							},200)
 						}
 					})
 				} else {

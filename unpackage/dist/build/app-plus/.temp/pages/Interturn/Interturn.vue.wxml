@@ -1,81 +1,81 @@
-<template name="82b48550">
-  <view class="_view data-v-74c75ea4 interturn">
-    <view class="_view data-v-74c75ea4 header">
-      <view class="_view data-v-74c75ea4 header_top">
-        <view class="_view data-v-74c75ea4 header_name"> 冬宝链 (WBC) </view>
-        <image src="http://www.dbl.name/wbc/static/images/20181202213613.png" class="_image data-v-74c75ea4"></image>
+<template name="6b70c37a">
+  <view class="_view data-v-76220407 interturn">
+    <view class="_view data-v-76220407 header">
+      <view class="_view data-v-76220407 header_top">
+        <view class="_view data-v-76220407 header_name"> 冬宝链 (WBC) </view>
+        <image src="http://www.dbl.name/wbc/static/images/20181202213613.png" class="_image data-v-76220407"></image>
       </view>
-      <view class="_view data-v-74c75ea4 header_num"> {{personInfo.balance}} </view>
-      <view class="_view data-v-74c75ea4 header_lists">
-        <view class="_view data-v-74c75ea4 header_list">
-          <image src="http://www.dbl.name/wbc/static/images/微信图片_20181202214237.png" class="_image data-v-74c75ea4"></image>
-          <view class="_view data-v-74c75ea4 header_list_cont">
-            <view class="_view data-v-74c75ea4 header_list_name"> 预存WBC </view>
-            <view class="_view data-v-74c75ea4 header_list_num"> ￥{{personInfo.corpus_bill}} </view>
+      <view class="_view data-v-76220407 header_num"> {{personInfo.balance}} </view>
+      <view class="_view data-v-76220407 header_lists">
+        <view class="_view data-v-76220407 header_list">
+          <image src="http://www.dbl.name/wbc/static/images/微信图片_20181202214237.png" class="_image data-v-76220407"></image>
+          <view class="_view data-v-76220407 header_list_cont">
+            <view class="_view data-v-76220407 header_list_name"> 预存WBC </view>
+            <view class="_view data-v-76220407 header_list_num"> ￥{{personInfo.corpus_bill}} </view>
           </view>
         </view>
-        <view class="_view data-v-74c75ea4 header_list">
-          <image src="http://www.dbl.name/wbc/static/images/微信图片_20181202214232.png" class="_image data-v-74c75ea4"></image>
-          <view class="_view data-v-74c75ea4 header_list_cont">
-            <view class="_view data-v-74c75ea4 header_list_name"> 补贴WBC </view>
-            <view class="_view data-v-74c75ea4 header_list_num"> ￥{{personInfo.corpus_point}} </view>
+        <view class="_view data-v-76220407 header_list">
+          <image src="http://www.dbl.name/wbc/static/images/微信图片_20181202214232.png" class="_image data-v-76220407"></image>
+          <view class="_view data-v-76220407 header_list_cont">
+            <view class="_view data-v-76220407 header_list_name"> 补贴WBC </view>
+            <view class="_view data-v-76220407 header_list_num"> ￥{{personInfo.corpus_point}} </view>
           </view>
         </view>
       </view>
     </view>
-    <view class="_view data-v-74c75ea4 cont">
-      <view class="_view data-v-74c75ea4 fill fill_one">
-        <view class="_view data-v-74c75ea4 fill_title">
-          <view class="_view data-v-74c75ea4 fill_left">
-            <image src="http://www.dbl.name/wbc/static/images/银行卡.png" class="_image data-v-74c75ea4"></image>
-            <view class="_view data-v-74c75ea4 fill_left_name"> 输入账号 </view>
+    <view class="_view data-v-76220407 cont">
+      <view class="_view data-v-76220407 fill fill_one">
+        <view class="_view data-v-76220407 fill_title">
+          <view class="_view data-v-76220407 fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/银行卡.png" class="_image data-v-76220407"></image>
+            <view class="_view data-v-76220407 fill_left_name"> 输入账号 </view>
           </view>
         </view>
-        <view class="_view data-v-74c75ea4 fill_cont">
-          <input placeholder="请输入转入账户" class="_input data-v-74c75ea4 input" value="{{formData.in_mobile}}" bindinput="handleProxy" data-eventid="{{'sXB-0'}}" data-comkey="{{$k}}" />
+        <view class="_view data-v-76220407 fill_cont">
+          <input placeholder="请输入转入账户" class="_input data-v-76220407 input" value="{{formData.in_mobile}}" bindinput="handleProxy" data-eventid="{{'9t7-0'}}" data-comkey="{{$k}}" />
         </view>
       </view>
-      <view class="_view data-v-74c75ea4 fill fill_two">
-        <view class="_view data-v-74c75ea4 fill_title">
-          <view class="_view data-v-74c75ea4 fill_left">
-            <image src="http://www.dbl.name/wbc/static/images/类型.png" class="_image data-v-74c75ea4"></image>
-            <view class="_view data-v-74c75ea4 fill_left_name"> 选择类型 </view>
+      <view class="_view data-v-76220407 fill fill_two">
+        <view class="_view data-v-76220407 fill_title">
+          <view class="_view data-v-76220407 fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/类型.png" class="_image data-v-76220407"></image>
+            <view class="_view data-v-76220407 fill_left_name"> 选择类型 </view>
           </view>
         </view>
-        <view class="_view data-v-74c75ea4 fill_cont">
-          <picker class="_picker data-v-74c75ea4 input" mode="selector" bindchange="handleProxy" value="{{0}}" range="{{typeLists}}" range-key="name" data-eventid="{{'FaO-1'}}" data-comkey="{{$k}}">
-            <view class="_view data-v-74c75ea4">{{typeLists[formData.type].name}}</view>
+        <view class="_view data-v-76220407 fill_cont">
+          <picker class="_picker data-v-76220407 input" mode="selector" bindchange="handleProxy" value="{{0}}" range="{{typeLists}}" range-key="name" data-eventid="{{'qhe-1'}}" data-comkey="{{$k}}">
+            <view class="_view data-v-76220407">{{typeLists[formData.type].name}}</view>
           </picker>
-          <image src="http://www.dbl.name/wbc/static/images/下 拉.png" class="_image data-v-74c75ea4"></image>
+          <image src="http://www.dbl.name/wbc/static/images/下 拉.png" class="_image data-v-76220407"></image>
         </view>
       </view>
-      <view class="_view data-v-74c75ea4 fill fill_three">
-        <view class="_view data-v-74c75ea4 fill_title">
-          <view class="_view data-v-74c75ea4 fill_left">
-            <image src="http://www.dbl.name/wbc/static/images/数量阶梯价.png" class="_image data-v-74c75ea4"></image>
-            <view class="_view data-v-74c75ea4 fill_left_name"> 互转数量 </view>
+      <view class="_view data-v-76220407 fill fill_three">
+        <view class="_view data-v-76220407 fill_title">
+          <view class="_view data-v-76220407 fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/数量阶梯价.png" class="_image data-v-76220407"></image>
+            <view class="_view data-v-76220407 fill_left_name"> 互转数量 </view>
           </view>
         </view>
-        <view class="_view data-v-74c75ea4 fill_cont">
-          <input type="number" placeholder="请输入互转数量" class="_input data-v-74c75ea4 input" value="{{formData.num}}" bindinput="handleProxy" data-eventid="{{'BIw-2'}}" data-comkey="{{$k}}" />
+        <view class="_view data-v-76220407 fill_cont">
+          <input type="number" placeholder="请输入互转数量" class="_input data-v-76220407 input" value="{{formData.num}}" bindinput="handleProxy" data-eventid="{{'YV3-2'}}" data-comkey="{{$k}}" />
         </view>
       </view>
-      <view class="_view data-v-74c75ea4 fill fill_four">
-        <view class="_view data-v-74c75ea4 fill_title">
-          <view class="_view data-v-74c75ea4 fill_left">
-            <image src="http://www.dbl.name/wbc/static/images/验证码 (1).png" class="_image data-v-74c75ea4"></image>
-            <view class="_view data-v-74c75ea4 fill_left_name"> 支付密码 </view>
+      <view class="_view data-v-76220407 fill fill_four">
+        <view class="_view data-v-76220407 fill_title">
+          <view class="_view data-v-76220407 fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/验证码 (1).png" class="_image data-v-76220407"></image>
+            <view class="_view data-v-76220407 fill_left_name"> 支付密码 </view>
           </view>
         </view>
-        <view class="_view data-v-74c75ea4 fill_cont">
-          <input placeholder="请输入支付密码" password="{{true}}" class="_input data-v-74c75ea4 input" value="{{formData.pay_password}}" bindinput="handleProxy" data-eventid="{{'R2U-3'}}" data-comkey="{{$k}}" />
+        <view class="_view data-v-76220407 fill_cont">
+          <input placeholder="请输入支付密码" password="{{true}}" class="_input data-v-76220407 input" value="{{formData.pay_password}}" bindinput="handleProxy" data-eventid="{{'l04-3'}}" data-comkey="{{$k}}" />
         </view>
       </view>
     </view>
-    <view class="_view data-v-74c75ea4 info">
-      <view class="_view data-v-74c75ea4 info_left"> 实到数量：{{actNum}} </view>
-      <view class="_view data-v-74c75ea4 info_right"> 节点费用：{{cutNum}} </view>
+    <view class="_view data-v-76220407 info">
+      <view class="_view data-v-76220407 info_left"> 实到数量：{{actNum}} </view>
+      <view class="_view data-v-76220407 info_right"> 节点费用：{{cutNum}} </view>
     </view>
-    <view class="_view data-v-74c75ea4 sub_btn" bindtap="handleProxy" data-eventid="{{'nZh-4'}}" data-comkey="{{$k}}"> 提交 </view>
+    <view class="_view data-v-76220407 sub_btn" bindtap="handleProxy" data-eventid="{{'HDe-4'}}" data-comkey="{{$k}}"> 提交 </view>
   </view>
 </template>

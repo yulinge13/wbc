@@ -1,9 +1,9 @@
 <import src="/components/slots" />
-<template name="69aa513e">
-  <view class="_view data-v-5eb4f7fc">
+<template name="60c6527f">
+  <view class="_view data-v-002bd279">
     <template name="default"></template>
-    <view class="_view data-v-5eb4f7fc uni-mask" hidden="{{!(show)}}" bindtap="handleProxy" data-eventid="{{'m24-0'}}" data-comkey="{{$k}}" style=" {{('top:' + (offsetTop + 'px') + ';')}}"></view>
-    <view hidden="{{!(show)}}" class="_view data-v-5eb4f7fc {{['uni-popup', 'uni-popup-' + type]}}"> {{msg}}
+    <view class="_view data-v-002bd279 uni-mask" hidden="{{!(show)}}" bindtap="handleProxy" data-eventid="{{'sL3-0'}}" data-comkey="{{$k}}" style=" {{('top:' + (offsetTop + 'px') + ';')}}"></view>
+    <view hidden="{{!(show)}}" class="_view data-v-002bd279 {{['uni-popup', 'uni-popup-' + type]}}"> {{msg}}
       <template data="{{...$root['0'], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
     </view>
   </view>

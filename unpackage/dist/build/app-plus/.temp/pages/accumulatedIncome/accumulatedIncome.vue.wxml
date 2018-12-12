@@ -1,23 +1,23 @@
-<template name="13b1e27c">
-  <view class="_view data-v-b0906e70 accumulatedIncome">
-    <view class="_view data-v-b0906e70 header">
-      <view class="_view data-v-b0906e70 header_left">
-        <view class="_view data-v-b0906e70 title">
-          <image src="http://www.dbl.name/wbc/static/images/119849048695120235.png" class="_image data-v-b0906e70"></image>
-          <view class="_view data-v-b0906e70 title_text"> 预期收益数量 </view>
+<template name="7c40649e">
+  <view class="_view data-v-62d9482b accumulatedIncome">
+    <view class="_view data-v-62d9482b header">
+      <view class="_view data-v-62d9482b header_left">
+        <view class="_view data-v-62d9482b title">
+          <image src="http://www.dbl.name/wbc/static/images/119849048695120235.png" class="_image data-v-62d9482b"></image>
+          <view class="_view data-v-62d9482b title_text"> 预期收益数量 </view>
         </view>
-        <view class="_view data-v-b0906e70 num"> {{personInfo.points || 0}} </view>
+        <view class="_view data-v-62d9482b num"> {{personInfo.points || 0}} </view>
       </view>
-      <view class="_view data-v-b0906e70 header_right">
-        <view class="_view data-v-b0906e70 title">
-          <image src="http://www.dbl.name/wbc/static/images/22561832357606129.png" class="_image data-v-b0906e70"></image>
-          <view class="_view data-v-b0906e70 title_text"> 储存收益数量 </view>
+      <view class="_view data-v-62d9482b header_right">
+        <view class="_view data-v-62d9482b title">
+          <image src="http://www.dbl.name/wbc/static/images/22561832357606129.png" class="_image data-v-62d9482b"></image>
+          <view class="_view data-v-62d9482b title_text"> 储存收益数量 </view>
         </view>
-        <view class="_view data-v-b0906e70 num"> {{personInfo.balance || 0}} </view>
+        <view class="_view data-v-62d9482b num"> {{personInfo.balance || 0}} </view>
       </view>
     </view>
-    <view class="_view data-v-b0906e70 btn" bindtap="handleProxy" data-eventid="{{'gup-0'}}" data-comkey="{{$k}}"> 收益归集 </view>
-    <view class="_view data-v-b0906e70 tishi"> 执行操作会自动将收益归集到WBC钱包 </view>
-    <image src="http://www.dbl.name/wbc/static/images/309667562730824656.png" class="_image data-v-b0906e70 bg"></image>
+    <view class="_view data-v-62d9482b btn" bindtap="handleProxy" data-eventid="{{'7LL-0'}}" data-comkey="{{$k}}"> 收益归集 </view>
+    <view class="_view data-v-62d9482b tishi"> 执行操作会自动将收益归集到WBC钱包 </view>
+    <image src="http://www.dbl.name/wbc/static/images/309667562730824656.png" class="_image data-v-62d9482b bg"></image>
   </view>
 </template>

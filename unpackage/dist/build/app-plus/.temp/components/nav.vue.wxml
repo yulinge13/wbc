@@ -1,8 +1,8 @@
-<template name="49cf1533">
-  <view class="_view data-v-454d9464 nav_lists">
-    <view class="_view data-v-454d9464 nav_list" wx:key="index" key="{{index}}" wx:for="{{navLists}}" wx:for-index="index" wx:for-item="i">
-      <image src="{{avtive===index?i.activePath:i.path}}" class="_image data-v-454d9464"></image>
-      <view class="_view data-v-454d9464 nav_list_name" style=" {{avtive === index ? 'color:#1b62ff' : ''}}"> {{i.name}} </view>
+<template name="412adf5e">
+  <view class="_view data-v-7ed0104b nav_lists">
+    <view class="_view data-v-7ed0104b nav_list" wx:key="index" key="{{index}}" wx:for="{{navLists}}" wx:for-index="index" wx:for-item="i">
+      <image src="{{avtive===index?i.activePath:i.path}}" class="_image data-v-7ed0104b"></image>
+      <view class="_view data-v-7ed0104b nav_list_name" style=" {{avtive === index ? 'color:#1b62ff' : ''}}"> {{i.name}} </view>
     </view>
   </view>
 </template>

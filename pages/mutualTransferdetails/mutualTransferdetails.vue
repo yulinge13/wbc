@@ -98,7 +98,7 @@
 								i.icon = '+'
 							} else if (this.type == 3) {
 								i.money = i.charge
-								i.whitchType = '提现'
+								i.whitchType = '转入'
 								i.color = '#ed3735'
 								i.icon = '-'
 							}

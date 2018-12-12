@@ -16,13 +16,13 @@
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请输入银行卡号" :password="true" v-model="fromData.newBankAccount" />
+					<input placeholder="请输入银行卡号" type="number" v-model="fromData.newBankAccount" />
 				</view>
 			</view>
 			<view class="fill">
 				<image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="fill_pic"></image>
 				<view class="fill_val">
-					<input placeholder="请确认银行卡号" :password="true" v-model="fromData.bank_account" />
+					<input placeholder="请确认银行卡号" type="number" v-model="fromData.bank_account" />
 				</view>
 			</view>
 			<view class="fill">

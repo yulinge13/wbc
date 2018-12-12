@@ -1,28 +1,28 @@
-<template name="75d60b90">
-  <view class="_view data-v-9e784df8 login_page">
-    <view class="_view data-v-9e784df8 login_name"> 登陆 </view>
-    <view class="_view data-v-9e784df8 logo">
-      <image src="http://www.dbl.name/wbc/static/images/logo_1拷贝2@2x.png" class="_image data-v-9e784df8"></image>
+<template name="84dd7b4c">
+  <view class="_view data-v-76df9167 login_page">
+    <view class="_view data-v-76df9167 login_name"> 登陆 </view>
+    <view class="_view data-v-76df9167 logo">
+      <image src="http://www.dbl.name/wbc/static/images/logo_1拷贝2@2x.png" class="_image data-v-76df9167"></image>
     </view>
-    <view class="_view data-v-9e784df8 login_modal">
-      <view class="_view data-v-9e784df8 fill">
-        <image src="http://www.dbl.name/wbc/static/images/账号@2x.png" class="_image data-v-9e784df8 fill_pic"></image>
-        <view class="_view data-v-9e784df8 fill_val">
-          <input placeholder="请输入账号" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'JL1-0'}}" data-comkey="{{$k}}" class="_input data-v-9e784df8" />
+    <view class="_view data-v-76df9167 login_modal">
+      <view class="_view data-v-76df9167 fill">
+        <image src="http://www.dbl.name/wbc/static/images/账号@2x.png" class="_image data-v-76df9167 fill_pic"></image>
+        <view class="_view data-v-76df9167 fill_val">
+          <input placeholder="请输入账号" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'YND-0'}}" data-comkey="{{$k}}" class="_input data-v-76df9167" />
         </view>
       </view>
-      <view class="_view data-v-9e784df8 fill">
-        <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-9e784df8 fill_pic"></image>
-        <view class="_view data-v-9e784df8 fill_val">
-          <input placeholder="请输入密码" password="{{true}}" value="{{password}}" bindinput="handleProxy" data-eventid="{{'PUV-1'}}" data-comkey="{{$k}}" class="_input data-v-9e784df8" />
+      <view class="_view data-v-76df9167 fill">
+        <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-76df9167 fill_pic"></image>
+        <view class="_view data-v-76df9167 fill_val">
+          <input placeholder="请输入密码" password="{{true}}" value="{{password}}" bindinput="handleProxy" data-eventid="{{'ecM-1'}}" data-comkey="{{$k}}" class="_input data-v-76df9167" />
         </view>
       </view>
-      <button class="_button data-v-9e784df8 login_btn" bindtap="handleProxy" data-eventid="{{'7Pe-2'}}" data-comkey="{{$k}}">登陆</button>
-      <view class="_view data-v-9e784df8 login_or_zhu">
-        <view class="_view data-v-9e784df8 login_text" bindtap="handleProxy" data-eventid="{{'D9x-3'}}" data-comkey="{{$k}}"> 注册 </view>
-        <view class="_view data-v-9e784df8 zhu_text"> 忘记密码? </view>
+      <button class="_button data-v-76df9167 login_btn" bindtap="handleProxy" data-eventid="{{'MNg-2'}}" data-comkey="{{$k}}">登陆</button>
+      <view class="_view data-v-76df9167 login_or_zhu">
+        <view class="_view data-v-76df9167 login_text" bindtap="handleProxy" data-eventid="{{'Bcp-3'}}" data-comkey="{{$k}}"> 注册 </view>
+        <view class="_view data-v-76df9167 zhu_text"> 忘记密码? </view>
       </view>
     </view>
-    <view class="_view data-v-9e784df8 footer"> 冬宝链 </view>
+    <view class="_view data-v-76df9167 footer"> 冬宝链 </view>
   </view>
 </template>

@@ -1,15 +1,15 @@
-<template name="3e55b8be">
-  <view class="_view data-v-a64bcd60 extractDetails">
-    <view class="_view data-v-a64bcd60 header">
-      <view class="_view data-v-a64bcd60 title"> 日期 </view>
-      <view class="_view data-v-a64bcd60 title"> 类型 </view>
-      <view class="_view data-v-a64bcd60 title"> 数量 </view>
+<template name="681e0740">
+  <view class="_view data-v-415b9ef3 extractDetails">
+    <view class="_view data-v-415b9ef3 header">
+      <view class="_view data-v-415b9ef3 title"> 日期 </view>
+      <view class="_view data-v-415b9ef3 title"> 类型 </view>
+      <view class="_view data-v-415b9ef3 title"> 数量 </view>
     </view>
-    <view class="_view data-v-a64bcd60 lists">
-      <view class="_view data-v-a64bcd60 list" wx:key="index" key="{{index}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="i">
-        <view class="_view data-v-a64bcd60 time"> {{i.date}} </view>
-        <view class="_view data-v-a64bcd60 type"> {{i.whitchType}} </view>
-        <view class="_view data-v-a64bcd60 num" style=" {{'color:' + i.color}}"> {{i.icon}}{{i.money}} </view>
+    <view class="_view data-v-415b9ef3 lists">
+      <view class="_view data-v-415b9ef3 list" wx:key="index" key="{{index}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="i">
+        <view class="_view data-v-415b9ef3 time"> {{i.date}} </view>
+        <view class="_view data-v-415b9ef3 type"> {{i.whitchType}} </view>
+        <view class="_view data-v-415b9ef3 num" style=" {{'color:' + i.color}}"> {{i.icon}}{{i.money}} </view>
       </view>
     </view>
   </view>

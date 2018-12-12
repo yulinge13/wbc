@@ -1,13 +1,13 @@
 <import src="/components/tiemBtn.vue.wxml" />
-<template name="6bd9701e">
-  <view class="_view data-v-4e6e90f0 changeMobile">
-    <view class="_view data-v-4e6e90f0 header"> {{personInfo.mobile}} </view>
-    <view class="_view data-v-4e6e90f0 fill">
-      <view class="_view data-v-4e6e90f0 val">
-        <input placeholder="请输入手机短信验证码" value="{{mobileCode}}" bindinput="handleProxy" data-eventid="{{'K6r-0'}}" data-comkey="{{$k}}" class="_input data-v-4e6e90f0" />
+<template name="ff485680">
+  <view class="_view data-v-3d826013 changeMobile">
+    <view class="_view data-v-3d826013 header"> {{personInfo.mobile}} </view>
+    <view class="_view data-v-3d826013 fill">
+      <view class="_view data-v-3d826013 val">
+        <input placeholder="请输入手机短信验证码" value="{{mobileCode}}" bindinput="handleProxy" data-eventid="{{'Vme-0'}}" data-comkey="{{$k}}" class="_input data-v-3d826013" />
       </view>
-      <template type="find" data="{{...$root['0'], ...$root[$kk+'ly1-0'],$root}}" is="0cae4d4f"></template>
+      <template type="find" data="{{...$root['0'], ...$root[$kk+'5Wx-0'],$root}}" is="23bb096d"></template>
     </view>
-    <view class="_view data-v-4e6e90f0 btn" bindtap="handleProxy" data-eventid="{{'tt1-1'}}" data-comkey="{{$k}}"> 下一步 </view>
+    <view class="_view data-v-3d826013 btn" bindtap="handleProxy" data-eventid="{{'ClW-1'}}" data-comkey="{{$k}}"> 下一步 </view>
   </view>
 </template>

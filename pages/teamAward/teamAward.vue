@@ -7,16 +7,16 @@
 					团队业绩
 				</view>
 				<view class="header_num">
-					{{personInfo.team_bill}}
+					{{info.team_bill}}
 				</view>
 			</view>
 		</view>
 		<view class="has_num">
 			<view class="has_num_name">
-				拥有数量
+				奖励金额
 			</view>
 			<view class="num">
-				{{personInfo.team_bill}}
+				{{info.team_bill_open}}
 			</view>
 		</view>
 		<view class="faq">
@@ -43,7 +43,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="btn">
+		<view class="btn" @click="submit">
 			提现
 		</view>
 	</view>
@@ -57,6 +57,7 @@
 	export default {
 		data() {
 			return {
+				info:{}
 			};
 		},
 		computed:{
@@ -66,6 +67,51 @@
 				}
 			}),
 		},
+		onLoad() {
+			this.getData()
+		},
+		methods:{
+			//获取数据
+			getData(){
+				this.Post({
+					url:this.url.goodsTeamComesForApp,
+					data:{
+						uid:this.personInfo.id
+					}
+				}).then(res => {
+					if(res.code === 200){
+						this.info = res.data
+					}
+				})
+			},
+			submit(){
+				this.Post({
+					url:this.url.balanceWithdraw,
+					data:{
+						uid:this.personInfo.id,
+						type:5
+					}
+				}).then(res => {
+					if (res.code === 200) {
+						uni.showToast({
+							title: res.msg,
+							duration: 1000,
+						});
+						setTimeout(() => {
+							uni.switchTab({
+								url:'../index/index'
+							})
+						},200)
+					}else{
+						uni.showToast({
+							title: res.msg,
+							duration: 1000,
+							icon:"none"
+						});
+					}
+				})
+			}
+		}
 	}
 </script>
 

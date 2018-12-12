@@ -1,17 +1,17 @@
 <import src="/components/tiemBtn.vue.wxml" />
-<template name="9715db84">
-  <view class="_view data-v-22f972d0 changMobileTwo">
-    <view class="_view data-v-22f972d0 fill">
-      <view class="_view data-v-22f972d0 val">
-        <input placeholder="请输入修改后的手机号" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'F0E-0'}}" data-comkey="{{$k}}" class="_input data-v-22f972d0" />
+<template name="421055e0">
+  <view class="_view data-v-910a0f1a changMobileTwo">
+    <view class="_view data-v-910a0f1a fill">
+      <view class="_view data-v-910a0f1a val">
+        <input placeholder="请输入修改后的手机号" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'uMI-0'}}" data-comkey="{{$k}}" class="_input data-v-910a0f1a" />
       </view>
     </view>
-    <view class="_view data-v-22f972d0 fill">
-      <view class="_view data-v-22f972d0 val">
-        <input placeholder="请输入手机短信验证码" value="{{mobileCode}}" bindinput="handleProxy" data-eventid="{{'bl2-1'}}" data-comkey="{{$k}}" class="_input data-v-22f972d0" />
+    <view class="_view data-v-910a0f1a fill">
+      <view class="_view data-v-910a0f1a val">
+        <input placeholder="请输入手机短信验证码" value="{{mobileCode}}" bindinput="handleProxy" data-eventid="{{'csA-1'}}" data-comkey="{{$k}}" class="_input data-v-910a0f1a" />
       </view>
-      <template type="reg" data="{{...$root['0'], ...$root[$kk+'k6R-0'],$root}}" is="0cae4d4f"></template>
+      <template type="reg" data="{{...$root['0'], ...$root[$kk+'nrv-0'],$root}}" is="23bb096d"></template>
     </view>
-    <view bindtap="handleProxy" data-eventid="{{'xgv-2'}}" data-comkey="{{$k}}" class="_view data-v-22f972d0 {{isMobile ? 'btn no_btn' : 'btn'}}"> 下一步 </view>
+    <view bindtap="handleProxy" data-eventid="{{'I0u-2'}}" data-comkey="{{$k}}" class="_view data-v-910a0f1a {{isMobile ? 'btn no_btn' : 'btn'}}"> 下一步 </view>
   </view>
 </template>

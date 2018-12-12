@@ -2,37 +2,37 @@
 <import src="/components/linkCom.vue.wxml" />
 <import src="/components/pop.vue.wxml" />
 <import src="/components/numBox.vue.wxml" />
-<template name="data-v-597477a0-default-w5k-0">
-  <view class="_view data-v-597477a0 modal_cont">
-    <view class="_view data-v-597477a0 title">
-      <view class="_view data-v-597477a0 close" bindtap="handleProxy" data-eventid="{{'v5O-1'}}" data-comkey="{{$k}}"> X </view> 确认付款 </view>
-    <view class="_view data-v-597477a0 num"> ￥{{totalPrice}} </view>
-    <view class="_view data-v-597477a0 pay_type"> 请选择付款方式 </view>
-    <view class="_view data-v-597477a0 wora">
-      <image src="http://www.dbl.name/wbc/static/images/微信.png" class="_image data-v-597477a0 img" bindtap="handleProxy" data-eventid="{{'QMS-2'}}" data-comkey="{{$k}}"></image>
-      <image src="http://www.dbl.name/wbc/static/images/支付宝 copy.png" class="_image data-v-597477a0 img" bindtap="handleProxy" data-eventid="{{'2dW-3'}}" data-comkey="{{$k}}"></image>
+<template name="data-v-fd56205a-default-aXi-0">
+  <view class="_view data-v-fd56205a modal_cont">
+    <view class="_view data-v-fd56205a title">
+      <view class="_view data-v-fd56205a close" bindtap="handleProxy" data-eventid="{{'DIT-1'}}" data-comkey="{{$k}}"> X </view> 确认付款 </view>
+    <view class="_view data-v-fd56205a num"> ￥{{totalPrice}} </view>
+    <view class="_view data-v-fd56205a pay_type"> 请选择付款方式 </view>
+    <view class="_view data-v-fd56205a wora">
+      <image src="http://www.dbl.name/wbc/static/images/微信.png" class="_image data-v-fd56205a img" bindtap="handleProxy" data-eventid="{{'zpq-2'}}" data-comkey="{{$k}}"></image>
+      <image src="http://www.dbl.name/wbc/static/images/支付宝 copy.png" class="_image data-v-fd56205a img" bindtap="handleProxy" data-eventid="{{'fnK-3'}}" data-comkey="{{$k}}"></image>
     </view>
   </view>
 </template>
-<template name="data-v-597477a0-default-7PY-2">
-  <view class="_view data-v-597477a0 pay_modal">
-    <view class="_view data-v-597477a0 pay_top">
-      <view class="_view data-v-597477a0 money_icon">
-        <image src="{{productInfo.adv}}" class="_image data-v-597477a0"></image>
+<template name="data-v-fd56205a-default-aOS-2">
+  <view class="_view data-v-fd56205a pay_modal">
+    <view class="_view data-v-fd56205a pay_top">
+      <view class="_view data-v-fd56205a money_icon">
+        <image src="{{productInfo.adv}}" class="_image data-v-fd56205a"></image>
       </view>
-      <view class="_view data-v-597477a0 money_num"> ￥{{productInfo.price}} </view>
+      <view class="_view data-v-fd56205a money_num"> ￥{{productInfo.price}} </view>
     </view>
-    <view class="_view data-v-597477a0 pay_mid">
-      <view class="_view data-v-597477a0 pay_name"> 购买数量 </view>
-      <view class="_view data-v-597477a0 pay_num">
-        <template bindchange="handleProxy" data-eventid="{{'vha-5'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'qvh-1'],$root}}" is="3dffd685"></template>
+    <view class="_view data-v-fd56205a pay_mid">
+      <view class="_view data-v-fd56205a pay_name"> 购买数量 </view>
+      <view class="_view data-v-fd56205a pay_num">
+        <template bindchange="handleProxy" data-eventid="{{'00y-5'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'lnh-1'],$root}}" is="367c1ea7"></template>
       </view>
     </view>
-    <view class="_view data-v-597477a0 pay_mid">
-      <view class="_view data-v-597477a0 pay_name"> 附加值 </view>
-      <view class="_view data-v-597477a0 pay_num"> 冬革阿里产品
-        <text class="_text data-v-597477a0">1</text>件 </view>
+    <view class="_view data-v-fd56205a pay_mid">
+      <view class="_view data-v-fd56205a pay_name"> 附加值 </view>
+      <view class="_view data-v-fd56205a pay_num"> 冬革阿里产品
+        <text class="_text data-v-fd56205a">1</text>件 </view>
     </view>
-    <view class="_view data-v-597477a0 btn order_btn" bindtap="handleProxy" data-eventid="{{'9MN-6'}}" data-comkey="{{$k}}"> 确认订单 </view>
+    <view class="_view data-v-fd56205a btn order_btn" bindtap="handleProxy" data-eventid="{{'PKs-6'}}" data-comkey="{{$k}}"> 确认订单 </view>
   </view>
 </template>

@@ -20,4 +20,5 @@ export default {
 	goodsGoodslist:'api/goods/goodslist',//WBC产品价格等 post
 	indexTeamMember:'api/index/teamMember',//下级成员列表 post
 	goodsQuestion:'api/goods/question',//反馈 post
+	goodsTeamComesForApp:'api/goods/teamComesForApp',//团队业绩 post
 }
