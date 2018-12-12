@@ -1,6 +1,0 @@
-<import src="/components/linkCom.vue.wxml" />
-<template name="78990fe6">
-  <view class="_view data-v-68408eab transactionDetails">
-    <template wx:key="index" data="{{...$root['0'], ...$root[$kk+'JkQ-0-'+index],$root}}" is="b139bea2" wx:for="{{linkLists}}" wx:for-index="index" wx:for-item="i"></template>
-  </view>
-</template>
