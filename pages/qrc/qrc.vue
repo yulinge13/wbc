@@ -7,23 +7,33 @@
 		<view class="click">
 			长按保存二维码
 		</view>
-		<view class="name">
+<!-- 		<view class="name">
 			预存WBC可用
 		</view>
 		<view class="num">
-			446.0000
-		</view>
+			{{personInfo.balance}}
+		</view> -->
 	</view>
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
-				personInfo:uni.getStorageSync('personInfo') || this.$store.state.personInfo || {},
 				qrcUrl:''
 			};
 			
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			})
 		},
 		methods:{
 			//获取二维码
@@ -59,7 +69,7 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
 	.qrc{

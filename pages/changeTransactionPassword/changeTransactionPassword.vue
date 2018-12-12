@@ -44,7 +44,9 @@
 		methods:{
 			next(){
 				if(this.code.length>0 && this.mobileCode.length>0 && this.code === this.mobileCode){
-					
+					uni.navigateTo({
+						url: '../changeTransactionPasswordTwo/changeTransactionPasswordTwo'
+					});
 				}else{
 					console.log(this.code)
 					console.log(this.mobileCode)
@@ -62,10 +64,9 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
-
 	.changeTransactionPassword {
 		height: 100%;
 		background: #F7F7F7;

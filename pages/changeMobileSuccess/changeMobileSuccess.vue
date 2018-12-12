@@ -7,12 +7,12 @@
 			</view>
 		</view>
 		<view class="moble_name">
-			您的手机号已更改为：134****7182
+			您的手机号已更改成功
 		</view>
 		<view class="tishi">
 			下次请使用此号码登录，登录密码不变
 		</view>
-		<view class="btn">
+		<view class="btn" @tap="ok">
 			确定
 		</view>
 		<view class="beizhu">
@@ -22,16 +22,32 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
 				
 			};
+		},
+		methods:{
+			...mapMutations(['clearPersonInfo']),
+			ok() {
+				this.clearPersonInfo()
+				uni.switchTab({
+					url: '../index/index'
+				});
+			}
 		}
 	}
 </script>
 
 <style scoped>
+	page{
+		height: 100%;
+	}
 	.top{
 		display: flex;
 		padding: 0 75upx;

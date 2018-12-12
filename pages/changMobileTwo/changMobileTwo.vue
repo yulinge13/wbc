@@ -66,7 +66,7 @@
 							}
 						}).then(res => {
 							if(res.code === 200){
-								uni.navigateTo({
+								uni.reLaunch({
 									url: '../changeMobileSuccess/changeMobileSuccess'
 								});
 							}
@@ -93,7 +93,7 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
 

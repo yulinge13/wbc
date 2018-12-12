@@ -1,0 +1,1 @@
+<import src="/pages/recommendedAward/recommendedAward.vue.wxml" /><template is="5c9b29c4" data="{{ ...$root['0'], $root }}"/>

@@ -15,4 +15,9 @@ export default {
 	balanceAddbank:'api/balance/addbank',//添加银行卡 post
 	balanceGetUbank:'api/balance/get_ubank',//获取用户银行卡信息 post
 	balanceGetBank:'api/balance/get_bank',//获取数库银行信息 post
+	userEditpaypwd:'api/user/editpaypwd',//修改交易密码 post
+	userUserInfo:'api/user/user_info',//获取用户信息 post
+	goodsGoodslist:'api/goods/goodslist',//WBC产品价格等 post
+	indexTeamMember:'api/index/teamMember',//下级成员列表 post
+	goodsQuestion:'api/goods/question',//反馈 post
 }

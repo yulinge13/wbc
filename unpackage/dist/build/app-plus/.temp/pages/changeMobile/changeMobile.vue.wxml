@@ -1,0 +1,13 @@
+<import src="/components/tiemBtn.vue.wxml" />
+<template name="6bd9701e">
+  <view class="_view data-v-4e6e90f0 changeMobile">
+    <view class="_view data-v-4e6e90f0 header"> {{personInfo.mobile}} </view>
+    <view class="_view data-v-4e6e90f0 fill">
+      <view class="_view data-v-4e6e90f0 val">
+        <input placeholder="请输入手机短信验证码" value="{{mobileCode}}" bindinput="handleProxy" data-eventid="{{'K6r-0'}}" data-comkey="{{$k}}" class="_input data-v-4e6e90f0" />
+      </view>
+      <template type="find" data="{{...$root['0'], ...$root[$kk+'ly1-0'],$root}}" is="0cae4d4f"></template>
+    </view>
+    <view class="_view data-v-4e6e90f0 btn" bindtap="handleProxy" data-eventid="{{'tt1-1'}}" data-comkey="{{$k}}"> 下一步 </view>
+  </view>
+</template>

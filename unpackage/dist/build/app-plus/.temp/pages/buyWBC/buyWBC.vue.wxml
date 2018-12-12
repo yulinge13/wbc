@@ -1,0 +1,10 @@
+<import src="/components/pop.vue.wxml" />
+<import src="/components/numBox.vue.wxml" />
+<template name="2c667ac4">
+  <view class="_view data-v-597477a0 buyWBC">
+    <image src="http://www.dbl.name/wbc/static/images/链接你我.png" class="_image data-v-597477a0"></image>
+    <view class="_view data-v-597477a0 btn" bindtap="handleProxy" data-eventid="{{'nfH-0'}}" data-comkey="{{$k}}"> 立即购买 </view>
+    <template type="bottom" bindhidePopup="handleProxy" data-eventid="{{'V7j-4'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'w5k-0'],$root, $slotdefault:'data-v-597477a0-default-w5k-0'}}" is="69aa513e"></template>
+    <template type="bottom" bindhidePopup="handleProxy" data-eventid="{{'s1M-7'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'7PY-2'],$root, $slotdefault:'data-v-597477a0-default-7PY-2'}}" is="69aa513e"></template>
+  </view>
+</template>

@@ -1,0 +1,9 @@
+<template name="6b070eea">
+  <view class="_view data-v-453b3714 qrc">
+    <image src="http://www.dbl.name/wbc/static/images/形状 4.png" class="_image data-v-453b3714 bg"></image>
+    <view class="_view data-v-453b3714 qrc_box">
+      <image src="{{qrcUrl}}" class="_image data-v-453b3714"></image>
+    </view>
+    <view class="_view data-v-453b3714 click"> 长按保存二维码 </view>
+  </view>
+</template>

@@ -55,6 +55,12 @@
 							});
 						}
 					}
+				}else{
+					uni.showToast({
+						title: '暂未开放',
+						duration: 1000,
+						icon:'none'
+					});
 				}
 			}
 		}

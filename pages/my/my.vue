@@ -2,18 +2,18 @@
 	<view class="my_page">
 		<view class="person_info">
 			<image src="http://www.dbl.name/wbc/static/images/头像未登录.png" class="head_icon"></image>
-			<view class="login_or_res" v-show="!isLogin">
-				<text class="login" @tap="linkToLogin">
+			<view class="login_or_res" v-if="!isLogin">
+				<text class="login" @tap="linkToLogin" v-if="!isLogin">
 					登陆
 				</text>
-				<view class="line">
+				<view class="line" v-if="!isLogin">
 
 				</view>
-				<view class="res" @tap="linkToReg">
+				<view class="res" @tap="linkToReg" v-if="!isLogin">
 					注册
 				</view>
 			</view>
-			<view class="is_login" v-show="isLogin">
+			<view class="is_login" v-if="isLogin">
 				<view class="name">
 					{{personInfo.nickname}}
 				</view>
@@ -38,6 +38,10 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	import LinkCom from '../../components/linkCom.vue'
 	export default {
 		data() {
@@ -45,37 +49,61 @@
 				linkListsTop: [{
 						name: '我的分享',
 						url: 'http://www.dbl.name/wbc/static/images/我的分享.png',
-						link: ''
+						link: '../qrc/qrc',
+						isLogin:true
 					},
 					{
 						name: '我的团队',
 						url: 'http://www.dbl.name/wbc/static/images/左侧-我的团队1.png',
-						link: ''
+						link: '../myTeam/myTeam',
+						isLogin:true
 					}
 				],
 				linkListsBot: [{
 						name: '问题提交',
 						url: 'http://www.dbl.name/wbc/static/images/问题.png',
-						link: ''
+						link: '../feed/feed',
+						isLogin:true
 					},
 					{
 						name: '安全设置',
 						url: 'http://www.dbl.name/wbc/static/images/安全设置 (1).png',
 						link: '../saft/saft',
 						isLogin:true
+					},
+					{
+						name: '添加银行卡',
+						url: 'http://www.dbl.name/wbc/static/images/安全设置 (1).png',
+						link: '../bankCard/bankCard',
+						isLogin:true
 					}
 				],
-				personInfo: {}, //用户信息
-				isLogin: false, //是否登陆
 			};
 		},
 		components: {
 			LinkCom
 		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			}),
+			isLogin(){
+				let isLogin = false
+				if (this.personInfo.id) {
+					isLogin = true
+				} else {
+					isLogin = false
+				}
+				return isLogin
+			}
+		},
 		onShow() {
-			this.getLoginInfo()
+			this.personInfo.id && this.dateUpInfo(this.personInfo.id)
 		},
 		methods: {
+			...mapMutations(['clearPersonInfo','dateUpInfo']),
 			//注册
 			linkToReg(){
 				uni.navigateTo({
@@ -90,9 +118,7 @@
 					content: '是否确认退出登陆',
 					success: function(res) {
 						if (res.confirm) {
-							uni.removeStorageSync('personInfo');
-							_this.$store.state.personInfo = {}
-							_this.isLogin = false
+							_this.clearPersonInfo()
 							uni.showToast({
 								title: '退出登陆成功',
 								duration: 1000,
@@ -100,16 +126,6 @@
 						}
 					}
 				});
-			},
-			//获取登陆信息
-			getLoginInfo() {
-				console.log(this.$store.state.personInfo)
-				this.personInfo = uni.getStorageSync('personInfo') || this.$store.state.personInfo || {}
-				if (this.personInfo.id) {
-					this.isLogin = true
-				} else {
-					this.isLogin = false
-				}
 			},
 			//登陸
 			linkToLogin() {
@@ -122,7 +138,7 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
 
@@ -160,10 +176,8 @@
 
 	.person_info .login_or_res {
 		height: 38upx;
-		font-family: PingFang-SC-Medium;
 		font-size: 36upx;
 		color: #1b62ff;
-		opacity: 0.8;
 		line-height: 38upx;
 		padding-top: 122upx;
 		display: flex;

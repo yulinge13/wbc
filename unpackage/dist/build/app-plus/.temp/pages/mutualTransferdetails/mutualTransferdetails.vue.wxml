@@ -1,0 +1,18 @@
+<template name="76c3826c">
+  <view class="_view data-v-fe0a2990 mutualTransferdetails">
+    <view class="_view data-v-fe0a2990 header">
+      <view class="_view data-v-fe0a2990 title"> 日期 </view>
+      <view class="_view data-v-fe0a2990 title"> 类型 </view>
+      <view class="_view data-v-fe0a2990 title"> 数量 </view>
+    </view>
+    <scroll-view scroll-y bindscrolltolower="handleProxy" data-eventid="{{'YKD-0'}}" data-comkey="{{$k}}" class="_scroll-view data-v-fe0a2990" style=" {{'height:' + halfHeight}}">
+      <view class="_view data-v-fe0a2990 lists">
+        <view class="_view data-v-fe0a2990 list" wx:key="index" key="{{index}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="i">
+          <view class="_view data-v-fe0a2990 time"> {{i.date}} </view>
+          <view class="_view data-v-fe0a2990 type"> {{i.whitchType}} </view>
+          <view class="_view data-v-fe0a2990 num" style=" {{'color:' + i.color}}"> {{i.icon}}{{i.money}} </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

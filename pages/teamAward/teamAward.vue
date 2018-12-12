@@ -7,7 +7,7 @@
 					团队业绩
 				</view>
 				<view class="header_num">
-					100.0000
+					{{personInfo.team_bill}}
 				</view>
 			</view>
 		</view>
@@ -16,7 +16,7 @@
 				拥有数量
 			</view>
 			<view class="num">
-				100.0000
+				{{personInfo.team_bill}}
 			</view>
 		</view>
 		<view class="faq">
@@ -50,19 +50,29 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
 		data() {
 			return {
-				
 			};
-		}
+		},
+		computed:{
+			...mapState({
+				personInfo:state =>{
+					return state.personInfo
+				}
+			}),
+		},
 	}
 </script>
 
 <style scoped>
-uni-page-body{
-	height: 100%;
-}
+	page{
+		height: 100%;
+	}
 .teamAward{
 	height: 100%;
 	background: #f7f7f7;

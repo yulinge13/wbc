@@ -13,7 +13,7 @@
 				原密码
 			</view>
 			<view class="val">
-				<input placeholder="填写原密码" :password="true" v-model="oldPassword"/>
+				<input class="input" placeholder="填写原密码" :password="true" v-model="oldPassword"/>
 			</view>
 		</view>
 		<view class="fill">
@@ -21,7 +21,7 @@
 				新密码
 			</view>
 			<view class="val">
-				<input placeholder="填写新密码" :password="true" v-model="newPassword"/>
+				<input class="input" placeholder="填写新密码" :password="true" v-model="newPassword"/>
 			</view>
 		</view>
 		<view class="fill">
@@ -29,7 +29,7 @@
 				确认密码
 			</view>
 			<view class="val">
-				<input placeholder="再次填写确认" :password="true" v-model="newPasswordTwo"/>
+				<input class="input" placeholder="再次填写确认" :password="true" v-model="newPasswordTwo"/>
 			</view>
 		</view>
 		<view class="forget">
@@ -67,7 +67,7 @@
 							}
 						}).then(res => {
 							if(res.code === 200){
-								uni.navigateTo({
+								uni.reLaunch({
 									url: '../changePasswordSuccess/changePasswordSuccess'
 								});
 							}else{
@@ -104,10 +104,12 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+/* 	uni-page-body {
+		height: 100%;
+	} */
+	page{
 		height: 100%;
 	}
-
 	.changePassword {
 		height: 100%;
 		background: #F7F7F7;
@@ -150,10 +152,13 @@
 	.fill .val{
 		color: #999999;
 		font-size: 30upx;
+		flex: 1;
+		height: 104upx;
+		line-height: 104upx;
 	}
-	.fill .val input{
-		height: 100%;
-		line-height: 100%;
+	.fill .val .input{
+		height: 104upx;
+		line-height: 104upx;
 	}
 	.forget{
 		height: 23upx;

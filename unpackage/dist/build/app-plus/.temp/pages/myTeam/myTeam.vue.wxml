@@ -1,0 +1,31 @@
+<template name="5249cabe">
+  <view class="_view data-v-3bc2cc50 myTeam">
+    <view class="_view data-v-3bc2cc50 header">
+      <view class="_view data-v-3bc2cc50 title">
+        <view class="_view data-v-3bc2cc50 title_name"> 今日团队业绩 </view>
+        <image src="http://www.dbl.name/wbc/static/images/今日.png" mode class="_image data-v-3bc2cc50"></image>
+        <view class="_view data-v-3bc2cc50 title_num"> {{todayNum}} </view>
+      </view>
+      <view class="_view data-v-3bc2cc50 title">
+        <view class="_view data-v-3bc2cc50 title_name"> 昨日团队业绩 </view>
+        <image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png" mode class="_image data-v-3bc2cc50"></image>
+        <view class="_view data-v-3bc2cc50 title_num"> {{yesterdayNum}} </view>
+      </view>
+      <view class="_view data-v-3bc2cc50 title">
+        <view class="_view data-v-3bc2cc50 title_name"> 主要分享节点数 </view>
+        <image src="http://www.dbl.name/wbc/static/images/分享.png" mode class="_image data-v-3bc2cc50"></image>
+        <view class="_view data-v-3bc2cc50 title_num"> {{memberNum}} </view>
+      </view>
+    </view>
+    <view class="_view data-v-3bc2cc50 lists_title">
+      <view class="_view data-v-3bc2cc50 lists_title_left"> 主要分享节点 </view>
+      <view class="_view data-v-3bc2cc50 lists_title_right"> 注册日期 </view>
+    </view>
+    <view class="_view data-v-3bc2cc50 lists">
+      <view class="_view data-v-3bc2cc50 list" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'9mQ-0-'+index}}" data-comkey="{{$k}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="i">
+        <view class="_view data-v-3bc2cc50 lists_title_left"> {{i.nickname}} </view>
+        <view class="_view data-v-3bc2cc50 lists_title_right"> {{i.reg_time}} </view>
+      </view>
+    </view>
+  </view>
+</template>
