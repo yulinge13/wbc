@@ -108,6 +108,9 @@
 </script>
 
 <style scoped>
+	page{
+		height: 100%;
+	}
 	.login_page {
 		background: url(http://www.dbl.name/wbc/static/images/bg.png) no-repeat center;
 		width: 100%;

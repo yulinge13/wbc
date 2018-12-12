@@ -1,5 +1,5 @@
 <template name="0f03a592">
-  <view class="_view data-v-fafeef5c link_com" bindtap="handleProxy" data-eventid="{{'Wa8-0'}}" data-comkey="{{$k}}">
+  <view class="_view data-v-fafeef5c link_com" bindtap="handleProxy" data-eventid="{{'d4e-0'}}" data-comkey="{{$k}}">
     <view class="_view data-v-fafeef5c link_left">
       <image wx:if="{{linkInfo.url}}" src="{{linkInfo.url}}" class="_image data-v-fafeef5c icon" style=" {{'width:' + linkInfo.width + 'px;height:' + linkInfo.height + 'px'}}"></image>
       <view class="_view data-v-fafeef5c bg_point" wx:else style=" {{'background:' + linkInfo.bgColor}}"></view>

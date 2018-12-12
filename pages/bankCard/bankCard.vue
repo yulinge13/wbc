@@ -104,14 +104,14 @@
 							duration: 1000,
 							icon: 'none'
 						});
-						return 
+						return
 					}
 					this.Post({
 						url: this.url.balanceAddbank,
 						data: {
-							uid:this.personInfo.id,
+							uid: this.personInfo.id,
 							...this.fromData,
-							bank_id:this.bankLists[this.bankListsIndex].bank_id
+							bank_id: this.bankLists[this.bankListsIndex].bank_id
 						}
 					}).then(res => {
 						if (res.code === 200) {
@@ -120,6 +120,11 @@
 								duration: 1000,
 							});
 						}
+						setTimeout(() => {
+							uni.navigateBack({
+								delta: 1
+							});
+						}, 200)
 					})
 				} else {
 					uni.showToast({
@@ -134,6 +139,10 @@
 </script>
 
 <style scoped>
+	page {
+		height: 100%;
+	}
+
 	.bankCard {
 		padding-top: 45upx;
 	}

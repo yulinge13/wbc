@@ -43,28 +43,50 @@
 	export default {
 		data() {
 			return {
-				
+				num:0.15
 			};
 		},
-		computed:{
+		computed: {
 			...mapState({
-				personInfo:state =>{
+				personInfo: state => {
 					return state.personInfo
 				}
 			}),
 		},
 		onLoad() {
+// 			this.Post({
+// 				url:this.url.balanceWithdrawSxf,
+// 				data:{
+// 					type:3
+// 				}
+// 			}).then(res => {
+// 				if(res.code === 200){
+// 					this.num = (this.sxf.replace('%', '') - 0) / 100
+// 				}
+// 			})
 		},
-		methods:{
+		methods: {
 			//获取收益
-			submit(){
+			submit() {
 				console.log(this.personInfo)
 				this.Post({
-					url:this.url.balanceWithdraw,
-					data:{
-						uid:this.personInfo.id,
-						type:3,
-						num:this.personInfo.points,
+					url: this.url.balanceWithdraw,
+					data: {
+						uid: this.personInfo.id,
+						type: 3,
+						num: this.personInfo.points
+					}
+				}).then(res => {
+					if(res.code === 200){
+						uni.showToast({
+							title: res.msg,
+							duration: 1000
+						});
+						setTimeout(() => {
+							uni.switchTab({
+								url:'../index/index'
+							})
+						},900)
 					}
 				})
 			}
@@ -73,82 +95,93 @@
 </script>
 
 <style scoped>
-uni-page-body{
-	height: 100%;
-}
-.accumulatedIncome{
-	background: #F7F7F7;
-	height: 100%;
-}
-.header{
-	display: flex;
-	height: 290upx;
-	background: #fff;
-	padding: 0 36upx;
-	align-items: center;
-	margin-bottom: 56upx;
-}
-.header>view{
-	flex: 1;
-	height: 200upx;
-	border-radius: 20upx;
-	position: relative;
-	margin-right: 35upx;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.header .header_left{
-	background: url(http://www.dbl.name/wbc/static/images/微信图片_20181203235505.png) no-repeat center;
-	background-size: 100%;
-}
-.header .header_right{
-	margin-right: 0;
-	background: url(http://www.dbl.name/wbc/static/images/微信图片_20181203235454.png) no-repeat center;
-	background-size: 100%;
-}
-.header>view .title{
-	display: flex;
-	height: 40upx;
-	line-height: 40upx;
-	padding-bottom: 24upx;
-	font-size: 24upx;
-	color: #fff;
-}
-.header>view .title>image{
-	width: 40upx;
-	height: 40upx;
-	margin-right: 10upx;
-}
-.header>view .num{
-	font-size: 50upx;
-	height: 38upx;
-	line-height: 38upx;
-	color: #fff;
-}
-.btn{
-	margin: 0 30upx;
-	height: 80upx;
-	line-height: 80upx;
-	border-radius: 10upx;
-	text-align: center;
-	font-size: 30upx;
-	color: #fff;
-	background: #3574fa;
-}
-.tishi{
-	font-size: 24upx;
-	height: 23upx;
-	line-height: 23upx;
-	color: #999999;
-	padding-top: 14upx;
-	padding-bottom: 320upx;
-	text-align: center;
-}
-.bg{
-	width: 334upx;
-	height: 251upx;
-	margin: 0 auto;
-}
+	page {
+		height: 100%;
+	}
+
+	.accumulatedIncome {
+		background: #F7F7F7;
+		height: 100%;
+	}
+
+	.header {
+		display: flex;
+		height: 290upx;
+		background: #fff;
+		padding: 0 36upx;
+		align-items: center;
+		margin-bottom: 56upx;
+	}
+
+	.header>view {
+		flex: 1;
+		height: 200upx;
+		border-radius: 20upx;
+		position: relative;
+		margin-right: 35upx;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header .header_left {
+		background: url(http://www.dbl.name/wbc/static/images/微信图片_20181203235505.png) no-repeat center;
+		background-size: 100%;
+	}
+
+	.header .header_right {
+		margin-right: 0;
+		background: url(http://www.dbl.name/wbc/static/images/微信图片_20181203235454.png) no-repeat center;
+		background-size: 100%;
+	}
+
+	.header>view .title {
+		display: flex;
+		height: 40upx;
+		line-height: 40upx;
+		padding-bottom: 24upx;
+		font-size: 24upx;
+		color: #fff;
+	}
+
+	.header>view .title>image {
+		width: 40upx;
+		height: 40upx;
+		margin-right: 10upx;
+	}
+
+	.header>view .num {
+		font-size: 50upx;
+		height: 38upx;
+		line-height: 38upx;
+		color: #fff;
+	}
+
+	.btn {
+		margin: 0 30upx;
+		height: 80upx;
+		line-height: 80upx;
+		border-radius: 10upx;
+		text-align: center;
+		font-size: 30upx;
+		color: #fff;
+		background: #3574fa;
+	}
+
+	.tishi {
+		font-size: 24upx;
+		height: 23upx;
+		line-height: 23upx;
+		color: #999999;
+		padding-top: 14upx;
+		padding-bottom: 320upx;
+		text-align: center;
+	}
+
+	.bg {
+		width: 334upx;
+		height: 251upx;
+		margin: 0 auto;
+	}
 </style>

@@ -4,7 +4,7 @@
       <image src="http://www.dbl.name/wbc/static/images/logo.png" class="_image data-v-48ca0d30"></image>
       <view class="_view data-v-48ca0d30 header_cont">
         <view class="_view data-v-48ca0d30 header_name"> 冬宝链（WBC） </view>
-        <view class="_view data-v-48ca0d30 header_num"> {{personInfo.reward || 0}} </view>
+        <view class="_view data-v-48ca0d30 header_num"> {{personInfo.balance || 0}} </view>
       </view>
     </view>
     <view class="_view data-v-48ca0d30 cont">
@@ -17,7 +17,7 @@
         </view>
         <view class="_view data-v-48ca0d30 fill_cont">
           <view class="_view data-v-48ca0d30" wx:if="{{cardInfo.id}}"> {{cardInfo.bank_account}} </view>
-          <view class="_view data-v-48ca0d30" wx:else bindtap="handleProxy" data-eventid="{{'lfD-0'}}" data-comkey="{{$k}}"> 请添加银行卡号 </view>
+          <view class="_view data-v-48ca0d30" wx:else bindtap="handleProxy" data-eventid="{{'O70-0'}}" data-comkey="{{$k}}"> 请添加银行卡号 </view>
         </view>
       </view>
       <view class="_view data-v-48ca0d30 fill fill_three">
@@ -28,7 +28,7 @@
           </view>
         </view>
         <view class="_view data-v-48ca0d30 fill_cont">
-          <input type="number" placeholder="请输入提取数量" class="_input data-v-48ca0d30 input" value="{{formData.num}}" bindinput="handleProxy" data-eventid="{{'OsD-1'}}" data-comkey="{{$k}}" />
+          <input type="number" placeholder="请输入提取数量" class="_input data-v-48ca0d30 input" value="{{formData.num}}" bindinput="handleProxy" data-eventid="{{'Uu6-1'}}" data-comkey="{{$k}}" />
         </view>
       </view>
       <view class="_view data-v-48ca0d30 act_num">
@@ -49,10 +49,10 @@
           </view>
         </view>
         <view class="_view data-v-48ca0d30 fill_cont">
-          <input placeholder="请输入交易密码" password="{{true}}" class="_input data-v-48ca0d30 input" value="{{formData.pay_password}}" bindinput="handleProxy" data-eventid="{{'KGV-2'}}" data-comkey="{{$k}}" />
+          <input placeholder="请输入交易密码" password="{{true}}" class="_input data-v-48ca0d30 input" value="{{formData.pay_password}}" bindinput="handleProxy" data-eventid="{{'Cdc-2'}}" data-comkey="{{$k}}" />
         </view>
       </view>
     </view>
-    <view class="_view data-v-48ca0d30 btn" bindtap="handleProxy" data-eventid="{{'etD-3'}}" data-comkey="{{$k}}"> 提交 </view>
+    <view class="_view data-v-48ca0d30 btn" bindtap="handleProxy" data-eventid="{{'yCX-3'}}" data-comkey="{{$k}}"> 提交 </view>
   </view>
 </template>

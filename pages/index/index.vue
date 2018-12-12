@@ -8,13 +8,13 @@
 						冬宝链
 					</view>
 				</view>
-				<view class="header_right">
+<!-- 				<view class="header_right">
 					<image src="http://www.dbl.name/wbc/static/images/扫一扫@2x.png" class="sao"></image>
-				</view>
+				</view> -->
 			</view>
 			<view class="profit">
 				<view class="profit_name">产链权益系数</view>
-				<view class="profit_num">{{coefficient}}</view>
+				<view class="profit_num">0.2%</view>
 			</view>
 			<view class="banner">
 				<image class="banner_pic" src="http://www.dbl.name/wbc/static/images/banner.png">
@@ -34,7 +34,7 @@
 							</view>
 						</view>
 						<view class="slider_list_num">
-							{{personInfo.balance || 0}}
+							{{personInfo.corpus_bill || 0}}
 						</view>
 					</view>
 					<view class="slider_line">
@@ -48,7 +48,7 @@
 							</view>
 						</view>
 						<view class="slider_list_num">
-							{{personInfo.total_points || 0}}
+							{{personInfo.corpus_point || 0}}
 						</view>
 					</view>
 				</view>
@@ -146,9 +146,19 @@
 			}
 		},
 		onLoad() {
-			this.getTax()
+			// this.getTax()
+		},
+		onShow() {
+			if(!this.personInfo.id){
+				uni.navigateTo({
+					url: '../login/login'
+				});
+			}else{
+				this.dateUpInfo(this.personInfo.id)
+			}
 		},
 		methods: {
+			...mapMutations(['dateUpInfo']),
 			//买币
 			buyWbc() {
 				const personInfo = uni.getStorageSync('personInfo') || this.$store.state.personInfo
@@ -168,7 +178,9 @@
 			getTax() {
 				this.Get({
 					url: this.url.indexEquityTax,
-					data: {}
+					data: {
+						id:11111111111
+					}
 				}).then(res => {
 					if(res.code === 200){
 						this.coefficient = res.data.equity_tax || 0
@@ -216,6 +228,9 @@
 </script>
 
 <style scoped>
+/* 	page{
+		height: 100%;
+	} */
 	.index_page_top {
 		padding: 0 31upx;
 		padding-bottom: 20upx;
@@ -296,12 +311,12 @@
 		padding-left: 30upx;
 		width: 100%;
 		box-sizing: border-box;
+		align-items: center;
 	}
 
 	.banner .banner_text .notice_pic {
 		width: 25upx;
 		height: 22upx;
-		margin-top: 14upx;
 		margin-right: 11upx;
 	}
 

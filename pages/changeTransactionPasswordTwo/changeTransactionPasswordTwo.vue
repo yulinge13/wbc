@@ -80,7 +80,7 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
 

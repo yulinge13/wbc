@@ -8,18 +8,18 @@
       <view class="_view data-v-9e784df8 fill">
         <image src="http://www.dbl.name/wbc/static/images/账号@2x.png" class="_image data-v-9e784df8 fill_pic"></image>
         <view class="_view data-v-9e784df8 fill_val">
-          <input placeholder="请输入账号" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'bUy-0'}}" data-comkey="{{$k}}" class="_input data-v-9e784df8" />
+          <input placeholder="请输入账号" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'JL1-0'}}" data-comkey="{{$k}}" class="_input data-v-9e784df8" />
         </view>
       </view>
       <view class="_view data-v-9e784df8 fill">
         <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-9e784df8 fill_pic"></image>
         <view class="_view data-v-9e784df8 fill_val">
-          <input placeholder="请输入密码" password="{{true}}" value="{{password}}" bindinput="handleProxy" data-eventid="{{'Ls0-1'}}" data-comkey="{{$k}}" class="_input data-v-9e784df8" />
+          <input placeholder="请输入密码" password="{{true}}" value="{{password}}" bindinput="handleProxy" data-eventid="{{'PUV-1'}}" data-comkey="{{$k}}" class="_input data-v-9e784df8" />
         </view>
       </view>
-      <button class="_button data-v-9e784df8 login_btn" bindtap="handleProxy" data-eventid="{{'nok-2'}}" data-comkey="{{$k}}">登陆</button>
+      <button class="_button data-v-9e784df8 login_btn" bindtap="handleProxy" data-eventid="{{'7Pe-2'}}" data-comkey="{{$k}}">登陆</button>
       <view class="_view data-v-9e784df8 login_or_zhu">
-        <view class="_view data-v-9e784df8 login_text" bindtap="handleProxy" data-eventid="{{'h1u-3'}}" data-comkey="{{$k}}"> 注册 </view>
+        <view class="_view data-v-9e784df8 login_text" bindtap="handleProxy" data-eventid="{{'D9x-3'}}" data-comkey="{{$k}}"> 注册 </view>
         <view class="_view data-v-9e784df8 zhu_text"> 忘记密码? </view>
       </view>
     </view>

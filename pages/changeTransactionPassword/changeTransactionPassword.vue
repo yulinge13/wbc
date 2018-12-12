@@ -64,10 +64,9 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
-
 	.changeTransactionPassword {
 		height: 100%;
 		background: #F7F7F7;

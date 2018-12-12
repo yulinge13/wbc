@@ -2,7 +2,7 @@
 <template name="0dd6cf44">
   <view class="_view data-v-22d21a30 saft">
     <view class="_view data-v-22d21a30 links">
-      <template wx:key="index" data="{{...$root['0'], ...$root[$kk+'6SE-0-'+index],$root}}" is="0f03a592" wx:for="{{linkLists}}" wx:for-index="index" wx:for-item="i"></template>
+      <template wx:key="index" data="{{...$root['0'], ...$root[$kk+'OQB-0-'+index],$root}}" is="0f03a592" wx:for="{{linkLists}}" wx:for-index="index" wx:for-item="i"></template>
     </view>
     <image src="http://www.dbl.name/wbc/static/images/色相_饱和度 754.png" class="_image data-v-22d21a30 bg"></image>
   </view>

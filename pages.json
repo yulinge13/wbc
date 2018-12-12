@@ -7,12 +7,34 @@
 			}
 		},
 		{
+			"path": "pages/feed/feed",
+			"style": {
+				"navigationBarTitleText": "问题反馈",
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#fff"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/myTeam/myTeam",
+			"style": {
+				"navigationBarTitleText": "我的团队",
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#fff"
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/qrc/qrc",
 			"style": {
 				"navigationBarTitleText": "我的二维码",
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#fff"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#fff"
 					}
 				}
 			}
@@ -21,9 +43,9 @@
 			"path": "pages/changeTransactionPasswordTwo/changeTransactionPasswordTwo",
 			"style": {
 				"navigationBarTitleText": "我的银行卡",
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#fff"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#fff"
 					}
 				}
 			}
@@ -32,9 +54,9 @@
 			"path": "pages/bankCard/bankCard",
 			"style": {
 				"navigationBarTitleText": "我的银行卡",
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#fff"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#fff"
 					}
 				}
 			}
@@ -43,9 +65,9 @@
 			"path": "pages/InterturnIsOk/InterturnIsOk",
 			"style": {
 				"navigationBarTitleText": "互转已提交",
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -54,9 +76,9 @@
 			"path": "pages/changePasswordSuccess/changePasswordSuccess",
 			"style": {
 				"navigationBarTitleText": "修改登陆密码",
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -65,9 +87,9 @@
 			"path": "pages/changeMobileSuccess/changeMobileSuccess",
 			"style": {
 				"navigationBarTitleText": "修改手机号",
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -78,9 +100,9 @@
 				"navigationBarTitleText": "修改手机号",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -91,9 +113,9 @@
 				"navigationBarTitleText": "推荐奖励",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -104,9 +126,9 @@
 				"navigationBarTitleText": "WBC钱包",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -117,9 +139,9 @@
 				"navigationBarTitleText": "修改手机号",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -130,9 +152,9 @@
 				"navigationBarTitleText": "修改交易密码",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -143,9 +165,9 @@
 				"navigationBarTitleText": "修改登录密码",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -156,9 +178,9 @@
 				"navigationBarTitleText": "累计收益",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -169,9 +191,9 @@
 				"navigationBarTitleText": "团队奖励",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -182,9 +204,9 @@
 				"navigationBarTitleText": "购买WBC",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -195,9 +217,9 @@
 				"navigationBarTitleText": "提取WBC明细",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -208,9 +230,9 @@
 				"navigationBarTitleText": "互转明细",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -221,9 +243,9 @@
 				"navigationBarTitleText": "交易明细",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -234,9 +256,9 @@
 				"navigationBarTitleText": "安全设置",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -247,9 +269,9 @@
 				"navigationBarTitleText": "转换",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#3574fa"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#3574fa"
 					}
 				}
 			}
@@ -260,9 +282,9 @@
 				"navigationBarTitleText": "我的",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#4b72da"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#4b72da"
 					}
 				}
 			}
@@ -273,9 +295,9 @@
 				"navigationBarTitleText": "注册",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#4b72da"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#4b72da"
 					}
 				}
 			}
@@ -286,9 +308,9 @@
 				"navigationBarTitleText": "登陆",
 				// "backgroundColorTop":"#7A7E83"
 				// "navigationBarTextStyle":"rgba(75,114,218)"
-				"app-plus":{
-					"titleNView":{
-						"backgroundColor":"#4b72da"
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#4b72da"
 					}
 				}
 			}
@@ -301,12 +323,11 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-        "color": "#bfbfbf",
-        "selectedColor": "#1b62ff",
-        "borderStyle": "black",
-        "backgroundColor": "#ffffff",
-        "list": [
-			{
+		"color": "#bfbfbf",
+		"selectedColor": "#1b62ff",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
 				"pagePath": "pages/index/index",
 				"iconPath": "static/images/home1.png",
 				"selectedIconPath": "static/images/home.png",
@@ -325,5 +346,5 @@
 				"text": "我的"
 			}
 		]
-    }
+	}
 }

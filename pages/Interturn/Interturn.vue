@@ -44,12 +44,12 @@
 							输入账号
 						</view>
 					</view>
-		<!-- 			<view class="fill_right">
+					<!-- 			<view class="fill_right">
 						验证
 					</view> -->
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入转入账户" class="input" v-model="formData.in_mobile"/>
+					<input placeholder="请输入转入账户" class="input" v-model="formData.in_mobile" />
 				</view>
 			</view>
 			<view class="fill fill_two">
@@ -63,7 +63,7 @@
 				</view>
 				<view class="fill_cont">
 					<picker class="input" mode="selector" @change="typeChange" :value="0" :range="typeLists" range-key="name">
-						 <view>{{typeLists[formData.type].name}}</view>
+						<view>{{typeLists[formData.type].name}}</view>
 					</picker>
 					<image src="http://www.dbl.name/wbc/static/images/下 拉.png"></image>
 				</view>
@@ -78,7 +78,7 @@
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input type="number" placeholder="请输入互转数量" class="input" v-model="formData.num" @input="getActNum"/>
+					<input type="number" placeholder="请输入互转数量" class="input" v-model="formData.num" @input="getActNum" />
 				</view>
 			</view>
 			<view class="fill fill_four">
@@ -89,12 +89,12 @@
 							支付密码
 						</view>
 					</view>
-			<!-- 		<view class="fill_right">
+					<!-- 		<view class="fill_right">
 						手机
 					</view> -->
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入支付密码" :password="true" class="input" v-model="formData.pay_password"/>
+					<input placeholder="请输入支付密码" :password="true" class="input" v-model="formData.pay_password" />
 				</view>
 			</view>
 		</view>
@@ -120,34 +120,33 @@
 	export default {
 		data() {
 			return {
-				typeLists:[
-					{
-						name:'互转WBC',
-						id:1
+				typeLists: [{
+						name: '互转WBC',
+						id: 1
 					},
 					{
-						name:'互转团队收益',
-						id:2
+						name: '互转团队收益',
+						id: 2
 					},
 					{
-						name:'互转预期收益',
-						id:3
+						name: '互转预期收益',
+						id: 3
 					}
 				],
-				formData:{
-					type:0,
-					num:0,
-					pay_password:'',
-					in_mobile:''
+				formData: {
+					type: 0,
+					num: 0,
+					pay_password: '',
+					in_mobile: ''
 				},
-				actNum:0,
-				cutNum:0,
-				sxf:null,//系数
+				actNum: 0,
+				cutNum: 0,
+				sxf: null, //系数
 			};
 		},
-		computed:{
+		computed: {
 			...mapState({
-				personInfo:state =>{
+				personInfo: state => {
 					return state.personInfo
 				}
 			})
@@ -155,7 +154,7 @@
 		onLoad() {
 			this.getActsxf()
 		},
-		methods:{
+		methods: {
 			...mapMutations(['dateUpInfo']),
 			getActNum(val) {
 				const sxf = (this.sxf.replace('%', '') - 0) / 100
@@ -177,38 +176,44 @@
 				})
 			},
 			//选择类型
-			typeChange(e){
+			typeChange(e) {
 				this.formData.type = e.detail.value;
 			},
 			//互转
-			balanceUserRoll(){
+			balanceUserRoll() {
 				let onOff = true
 				const _this = this
-				for(var key in this.formData){
-					if(key !== 'type'){
-						if(!this.formData[key]){
+				for (var key in this.formData) {
+					if (key !== 'type') {
+						if (!this.formData[key]) {
 							onOff = false
 						}
 					}
 				}
-				if(!(/^1[34578]\d{9}$/.test(this.formData.in_mobile))){
+				if (!(/^1[34578]\d{9}$/.test(this.formData.in_mobile))) {
 					uni.showToast({
 						title: '请输入正确的手机号',
 						duration: 1000,
 						icon: 'none'
 					});
-					return 
+					return
 				}
-				if(onOff){
+				if (onOff) {
 					this.Post({
-						url:this.url.balanceUserRoll,
-						data:{
-							uid:this.personInfo.id,
+						url: this.url.balanceUserRoll,
+						data: {
+							uid: this.personInfo.id,
 							...this.formData,
-							type:this.typeLists[this.formData.type].id,
+							type: this.typeLists[this.formData.type].id,
 						}
 					}).then(res => {
-						if(res.code === 200){
+						if (res.code === 200) {
+							this.formData = {
+								type: 0,
+								num: 0,
+								pay_password: '',
+								in_mobile: ''
+							}
 							uni.showToast({
 								title: res.msg,
 								duration: 1000,
@@ -221,11 +226,11 @@
 							});
 						}
 					})
-				}else{
+				} else {
 					uni.showToast({
 						title: '请输入完整信息',
 						duration: 1000,
-						icon:"none"
+						icon: "none"
 					});
 				}
 			}
@@ -234,9 +239,13 @@
 </script>
 
 <style scoped>
-	.interturn{
+	/* 	page{
+		height: 100%;
+	} */
+	.interturn {
 		background: #f7f7f7;
 	}
+
 	.header {
 		background: #3574fa;
 		width: 100%;
@@ -358,7 +367,8 @@
 		color: #999999;
 		flex: 1;
 	}
-	.fill_cont image{
+
+	.fill_cont image {
 		width: 42upx;
 		height: 26upx;
 		margin-right: 40upx;
@@ -368,19 +378,23 @@
 		width: 40upx;
 		height: 32upx;
 	}
+
 	.fill_two .fill_title image {
 		width: 42upx;
 		height: 41upx;
 	}
+
 	.fill_three .fill_title image {
 		width: 42upx;
 		height: 41upx;
 	}
+
 	.fill_four .fill_title image {
 		width: 36upx;
 		height: 27upx;
 	}
-	.info{
+
+	.info {
 		display: flex;
 		padding: 0 72upx;
 		height: 29upx;
@@ -392,7 +406,8 @@
 		transform: translateY(-44upx);
 		padding-bottom: 66upx;
 	}
-	.sub_btn{
+
+	.sub_btn {
 		margin: 0 30upx;
 		height: 80upx;
 		line-height: 80upx;

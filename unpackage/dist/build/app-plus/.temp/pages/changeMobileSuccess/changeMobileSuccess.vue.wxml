@@ -6,7 +6,7 @@
     </view>
     <view class="_view data-v-03fedf94 moble_name"> 您的手机号已更改成功 </view>
     <view class="_view data-v-03fedf94 tishi"> 下次请使用此号码登录，登录密码不变 </view>
-    <view class="_view data-v-03fedf94 btn" bindtap="handleProxy" data-eventid="{{'Fjm-0'}}" data-comkey="{{$k}}"> 确定 </view>
+    <view class="_view data-v-03fedf94 btn" bindtap="handleProxy" data-eventid="{{'dr6-0'}}" data-comkey="{{$k}}"> 确定 </view>
     <view class="_view data-v-03fedf94 beizhu"> 备注：确定以后回到登录页面重新登录 </view>
   </view>
 </template>

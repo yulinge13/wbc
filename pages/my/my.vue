@@ -2,18 +2,18 @@
 	<view class="my_page">
 		<view class="person_info">
 			<image src="http://www.dbl.name/wbc/static/images/头像未登录.png" class="head_icon"></image>
-			<view class="login_or_res" v-show="!isLogin">
-				<text class="login" @tap="linkToLogin">
+			<view class="login_or_res" v-if="!isLogin">
+				<text class="login" @tap="linkToLogin" v-if="!isLogin">
 					登陆
 				</text>
-				<view class="line">
+				<view class="line" v-if="!isLogin">
 
 				</view>
-				<view class="res" @tap="linkToReg">
+				<view class="res" @tap="linkToReg" v-if="!isLogin">
 					注册
 				</view>
 			</view>
-			<view class="is_login" v-show="isLogin">
+			<view class="is_login" v-if="isLogin">
 				<view class="name">
 					{{personInfo.nickname}}
 				</view>
@@ -49,18 +49,21 @@
 				linkListsTop: [{
 						name: '我的分享',
 						url: 'http://www.dbl.name/wbc/static/images/我的分享.png',
-						link: ''
+						link: '../qrc/qrc',
+						isLogin:true
 					},
 					{
 						name: '我的团队',
 						url: 'http://www.dbl.name/wbc/static/images/左侧-我的团队1.png',
-						link: ''
+						link: '../myTeam/myTeam',
+						isLogin:true
 					}
 				],
 				linkListsBot: [{
 						name: '问题提交',
 						url: 'http://www.dbl.name/wbc/static/images/问题.png',
-						link: ''
+						link: '../feed/feed',
+						isLogin:true
 					},
 					{
 						name: '安全设置',
@@ -96,8 +99,11 @@
 				return isLogin
 			}
 		},
+		onShow() {
+			this.personInfo.id && this.dateUpInfo(this.personInfo.id)
+		},
 		methods: {
-			...mapMutations(['clearPersonInfo']),
+			...mapMutations(['clearPersonInfo','dateUpInfo']),
 			//注册
 			linkToReg(){
 				uni.navigateTo({
@@ -132,7 +138,7 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
 
@@ -170,10 +176,8 @@
 
 	.person_info .login_or_res {
 		height: 38upx;
-		font-family: PingFang-SC-Medium;
 		font-size: 36upx;
 		color: #1b62ff;
-		opacity: 0.8;
 		line-height: 38upx;
 		padding-top: 122upx;
 		display: flex;

@@ -43,6 +43,9 @@
 </script>
 
 <style scoped>
+	page{
+		height: 100%;
+	}
 	.top {
 		display: flex;
 		padding: 0 75upx;

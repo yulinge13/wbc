@@ -7,12 +7,12 @@
 		<view class="click">
 			长按保存二维码
 		</view>
-		<view class="name">
+<!-- 		<view class="name">
 			预存WBC可用
 		</view>
 		<view class="num">
 			{{personInfo.balance}}
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -69,7 +69,7 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page{
 		height: 100%;
 	}
 	.qrc{

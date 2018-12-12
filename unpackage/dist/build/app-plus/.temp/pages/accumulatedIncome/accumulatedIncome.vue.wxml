@@ -16,7 +16,7 @@
         <view class="_view data-v-b0906e70 num"> {{personInfo.balance || 0}} </view>
       </view>
     </view>
-    <view class="_view data-v-b0906e70 btn" bindtap="handleProxy" data-eventid="{{'O6m-0'}}" data-comkey="{{$k}}"> 收益归集 </view>
+    <view class="_view data-v-b0906e70 btn" bindtap="handleProxy" data-eventid="{{'gup-0'}}" data-comkey="{{$k}}"> 收益归集 </view>
     <view class="_view data-v-b0906e70 tishi"> 执行操作会自动将收益归集到WBC钱包 </view>
     <image src="http://www.dbl.name/wbc/static/images/309667562730824656.png" class="_image data-v-b0906e70 bg"></image>
   </view>

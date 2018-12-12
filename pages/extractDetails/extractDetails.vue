@@ -83,6 +83,9 @@
 </script>
 
 <style scoped>
+	page{
+		height: 100%;
+	}
 	.header {
 		height: 160upx;
 		line-height: 160upx;

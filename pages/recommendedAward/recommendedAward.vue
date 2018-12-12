@@ -7,15 +7,15 @@
 					可提现金额
 				</view>
 				<view class="header_num">
-					{{personInfo.bill || 0}}
+					{{personInfo.reward || 0}}
 				</view>
 			</view>
 		</view>
 		<view class="cont">
-<!-- 			<view class="fill fill_one">
+			<view class="fill fill_one">
 				<view class="fill_title">
 					<view class="fill_left">
-						<image src="http://www.dbl.name/wbc/static/images/时钟 拷贝 2.png"></image>
+						<image src="http://www.dbl.name/wbc/static/images/银行卡1.png"></image>
 						<view class="fill_left_name">
 							已绑定银行卡
 						</view>
@@ -29,7 +29,7 @@
 						请添加银行卡号
 					</view>
 				</view>
-			</view> -->
+			</view>
 			<view class="fill fill_three">
 				<view class="fill_title">
 					<view class="fill_left">
@@ -91,14 +91,14 @@
 	export default {
 		data() {
 			return {
-				cardInfo:{},//所有的银行卡
-				formData:{
-					num:0,
-					pay_password:''
+				cardInfo: {}, //所有的银行卡
+				formData: {
+					num: 0,
+					pay_password: ''
 				},
-				actNum:0,
-				cutNum:0,
-				sxf:null,//系数
+				actNum: 0,
+				cutNum: 0,
+				sxf: null, //系数
 			};
 		},
 		components: {
@@ -187,6 +187,21 @@
 							title: res.msg,
 							duration: 1000,
 						});
+						this.formData = {
+							num: 0,
+							pay_password: ''
+						}
+						setTimeout(() => {
+							uni.switchTab({
+								url:'../index/index'
+							})
+						},200)
+					}else{
+						uni.showToast({
+							title: res.msg,
+							duration: 1000,
+							icon:"none"
+						});
 					}
 				})
 			}
@@ -195,7 +210,7 @@
 </script>
 
 <style scoped>
-	uni-page-body {
+	page {
 		height: 100%;
 	}
 

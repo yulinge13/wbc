@@ -144,6 +144,9 @@
 </script>
 
 <style scoped>
+	page{
+		height: 100%;
+	}
 	.small {
 		padding-right: 216upx;
 	}

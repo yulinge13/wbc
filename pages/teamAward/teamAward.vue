@@ -70,9 +70,9 @@
 </script>
 
 <style scoped>
-uni-page-body{
-	height: 100%;
-}
+	page{
+		height: 100%;
+	}
 .teamAward{
 	height: 100%;
 	background: #f7f7f7;

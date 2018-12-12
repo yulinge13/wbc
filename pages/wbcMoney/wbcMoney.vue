@@ -7,7 +7,7 @@
 					冬宝链（WBC）
 				</view>
 				<view class="header_num">
-					{{personInfo.reward || 0}}
+					{{personInfo.balance || 0}}
 				</view>
 			</view>
 		</view>
@@ -40,7 +40,7 @@
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input type="number" placeholder="请输入提取数量" class="input" v-model="formData.num" @input="getActNum"/>
+					<input type="number" placeholder="请输入提取数量" class="input" v-model="formData.num" @input="getActNum" />
 				</view>
 			</view>
 			<view class="act_num">
@@ -71,7 +71,7 @@
 					</view>
 				</view>
 				<view class="fill_cont">
-					<input placeholder="请输入交易密码" :password="true" class="input" v-model="formData.pay_password"/>
+					<input placeholder="请输入交易密码" :password="true" class="input" v-model="formData.pay_password" />
 					<!-- <TimeBtn :mobile="15983750925"></TimeBtn> -->
 				</view>
 			</view>
@@ -91,97 +91,112 @@
 	export default {
 		data() {
 			return {
-				cardInfo:{},//所有的银行卡
-				formData:{
-					num:0,
-					pay_password:''
+				cardInfo: {}, //所有的银行卡
+				formData: {
+					num: 0,
+					pay_password: ''
 				},
-				actNum:0,
-				cutNum:0,
-				sxf:null,//系数
+				actNum: 0,
+				cutNum: 0,
+				sxf: null, //系数
 			};
 		},
-		computed:{
+		computed: {
 			...mapState({
-				personInfo:state =>{
+				personInfo: state => {
 					return state.personInfo
 				}
 			})
 		},
-		components:{
+		components: {
 			TimeBtn
 		},
-		methods:{
-			getActNum(val){
-				const sxf = (this.sxf.replace('%','')-0)/100
-				const num = val.detail.value-0
-				this.cutNum = sxf*num.toFixed(2)
-				this.actNum = num - sxf*num.toFixed(2)
+		methods: {
+			getActNum(val) {
+				const sxf = (this.sxf.replace('%', '') - 0) / 100
+				const num = val.detail.value - 0
+				this.cutNum = sxf * num.toFixed(2)
+				this.actNum = num - sxf * num.toFixed(2)
 			},
 			//获取实际能获得数量
-			getActsxf(){
+			getActsxf() {
 				this.Post({
-					url:this.url.balanceWithdrawSxf,
-					data:{
-						type:1
+					url: this.url.balanceWithdrawSxf,
+					data: {
+						type: 1
 					}
 				}).then(res => {
-					if(res.code === 200){
+					if (res.code === 200) {
 						this.sxf = res.data
 					}
 				})
 			},
 			//获取个人的银行卡
-			getCardLists(){
+			getCardLists() {
 				this.Post({
-					url:this.url.balanceGetUbank,
-					data:{
-						uid:this.personInfo.id,
-						type:'1'
+					url: this.url.balanceGetUbank,
+					data: {
+						uid: this.personInfo.id,
+						type: '1'
 					}
 				}).then(res => {
-					if(res.code === 200){
+					if (res.code === 200) {
 						this.cardInfo = res.data
 					}
 				})
 			},
 			//添加银行卡
-			linkToAddCard(){
+			linkToAddCard() {
 				uni.navigateTo({
 					url: '../bankCard/bankCard'
 				});
 			},
 			//提现
-			getMoney(){
-				if(this.formData.num===0){
+			getMoney() {
+				if (this.formData.num === 0) {
 					uni.showToast({
 						title: '请输入要提现的数量',
 						duration: 1000,
 						icon: 'none'
 					});
-					return 
+					return
 				}
-				if(this.formData.pay_password.length<=0){
+				if (this.formData.pay_password.length <= 0) {
 					uni.showToast({
 						title: '请输入交易密码',
 						duration: 1000,
 						icon: 'none'
 					});
-					return 
+					return
 				}
 				this.Post({
-					url:this.url.balanceWithdraw,
-					data:{
-						uid:this.personInfo.id,
-						type:1,
-						num:this.formData.num,
-						pay_password:this.formData.pay_password
+					url: this.url.balanceWithdraw,
+					data: {
+						uid: this.personInfo.id,
+						type: 1,
+						num: this.formData.num,
+						pay_password: this.formData.pay_password
 					}
 				}).then(res => {
-					if(res.code === 200){
+					if (res.code === 200) {
 						uni.showToast({
 							title: res.msg,
 							duration: 1000,
+						});
+						this.formData = {
+							num: 0,
+							pay_password: ''
+						}
+						setTimeout(() => {
+							uni.switchTab({
+								url:'../index/index'
+							})
+						},200)
+					}else{
+						uni.showToast({
+							title: res.msg,
+							duration: 1000,
+							icon:"none"
 						});
 					}
 				})
@@ -191,12 +206,12 @@
 			this.getCardLists()
 			this.getActsxf()
 		}
-		
+
 	}
 </script>
 
 <style scoped>
-	uni-page-body {
+	page {
 		height: 100%;
 	}
 
@@ -287,7 +302,7 @@
 		display: flex;
 		align-items: center;
 	}
-	
+
 	.fill_cont .input {
 		height: 92upx;
 		line-height: 92upx;
@@ -311,9 +326,11 @@
 		width: 61upx;
 		height: 61upx;
 	}
-	.fill_three{
+
+	.fill_three {
 		margin-bottom: 0;
 	}
+
 	.fill_three .fill_title image {
 		width: 61upx;
 		height: 61upx;
@@ -323,13 +340,16 @@
 		width: 61upx;
 		height: 61upx;
 	}
-	.fill_four .fill_cont{
+
+	.fill_four .fill_cont {
 		padding-right: 35upx;
 	}
-	.fill_four .fill_cont input{
+
+	.fill_four .fill_cont input {
 		padding-right: 10upx;
 	}
-	.act_num{
+
+	.act_num {
 		display: flex;
 		padding: 0 33upx;
 		height: 24upx;
@@ -340,15 +360,18 @@
 		justify-content: space-between;
 		padding-bottom: 44upx;
 	}
-	.act_num .act{
+
+	.act_num .act {
 		display: flex;
 	}
-	.act_num .act_val{
+
+	.act_num .act_val {
 		color: #3574fa;
 		font-size: 30upx;
 		padding-left: 10upx;
 	}
-	.btn{
+
+	.btn {
 		margin: 0 30upx;
 		height: 80upx;
 		line-height: 80upx;

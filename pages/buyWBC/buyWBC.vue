@@ -13,7 +13,7 @@
 					确认付款
 				</view>
 				<view class="num">
-					￥200.00
+					￥{{totalPrice}}
 				</view>
 				<view class="pay_type">
 					请选择付款方式
@@ -28,10 +28,10 @@
 			<view class="pay_modal">
 				<view class="pay_top">
 					<view class="money_icon">
-						<image src="http://www.dbl.name/wbc/static/images/BTC-比特币.png"></image>
+						<image :src="productInfo.adv"></image>
 					</view>
 					<view class="money_num">
-						￥{{this.price}}.00
+						￥{{productInfo.price}}
 					</view>
 				</view>
 				<view class="pay_mid">
@@ -68,11 +68,12 @@
 	export default {
 		data() {
 			return {
-				price: 500,
 				modalShow: false,
 				payShow: false,
 				num: 1,
 				type: 1, //1微信 2支付宝
+				productInfo:{},//商品信息
+				totalPrice:0,//总价
 			};
 		},
 		components: {
@@ -86,6 +87,9 @@
 				}
 			})
 		},
+		onLoad() {
+			this.getProductInfo()
+		},
 		methods: {
 			//获取数量
 			getNum(val) {
@@ -95,9 +99,10 @@
 				this.payShow = false
 			},
 			showModal() {
-				this.modalShow = true
+				this.payShow = true
 			},
 			close() {
+				this.num = 1
 				this.modalShow = false
 			},
 			weichat() {
@@ -106,20 +111,24 @@
 					duration: 1000,
 					icon: 'none'
 				});
-				// 				
-				// 				this.type = 1
-				// 				this.payShow = true
 			},
 			alipay() {
-				this.type = 2
-				this.payShow = true
+				this.aliyPay()
 			},
 			pay() {
-				if (this.type === 1) {
-
-				} else if (this.type === 2) {
-					this.aliyPay()
-				}
+				this.totalPrice =  this.num*this.productInfo.price
+				this.modalShow = true
+				this.closePayShow()
+			},
+			//获取商品单价
+			getProductInfo(){
+				this.Post({
+					url:this.url.goodsGoodslist
+				}).then(res => {
+					if(res.code === 200){
+						this.productInfo = res.data
+					}
+				})
 			},
 			aliyPay() {
 				uni.request({
@@ -161,6 +170,9 @@
 </script>
 
 <style scoped>
+	page{
+		height: 100%;
+	}
 	.buyWBC {
 		padding: 30upx;
 	}

@@ -11,51 +11,60 @@
 			return {
 				linkLists: [{
 						name: '提取WBC明细',
-						link: '../extractDetails/extractDetails',
-						isLogin:true,
-						bgColor:'#3574fa'
+						// link: '../extractDetails/extractDetails',
+						link: '../mutualTransferdetails/mutualTransferdetails?type=1',
+						isLogin: true,
+						bgColor: '#3574fa'
 					},
 					{
 						name: '互转明细',
-						link: '../mutualTransferdetails/mutualTransferdetails',
-						isLogin:true,
-						bgColor:'#04d287'
+						link: '../mutualTransferdetails/mutualTransferdetails?type=2',
+						isLogin: true,
+						bgColor: '#04d287'
 					},
 					{
-						name: '存储明细',
-						link: '',
-						bgColor:'#b2e500'
+						name: '我的交易记录',
+						link: '../mutualTransferdetails/mutualTransferdetails?type=7',
+						bgColor: '#b2e500'
 					},
 					{
 						name: '预期收益明细',
-						link: '',
-						bgColor:'#ffde00'
+						link: '../mutualTransferdetails/mutualTransferdetails?type=5',
+						isLogin: true,
+						bgColor: '#ffde00'
 					},
-					{
-						name: '锁仓和释放明细',
-						link: '',
-						bgColor:'#ff8400'
-					},
+// 					{
+// 						name: '锁仓和释放明细',
+// 						link: '../mutualTransferdetails/mutualTransferdetails?type=4',
+// 						isLogin: true,
+// 						bgColor: '#ff8400'
+// 					},
 					{
 						name: '推荐奖励明细',
-						link: '',
-						bgColor:'#53a8ff'
+						link: '../mutualTransferdetails/mutualTransferdetails?type=3',
+						isLogin: true,
+						bgColor: '#53a8ff'
 					}
 				],
 			};
 		},
-		components:{
+		components: {
 			LinkCom
 		}
 	}
 </script>
 
 <style>
-.transactionDetails{
-	padding: 20upx 30upx;
-	background: #F7F7F7;
-}
-.link_list{
-	margin-bottom: 30upx;
-}
+	page {
+		height: 100%;
+	}
+
+	.transactionDetails {
+		padding: 20upx 30upx;
+		background: #F7F7F7;
+	}
+
+	.link_list {
+		margin-bottom: 30upx;
+	}
 </style>

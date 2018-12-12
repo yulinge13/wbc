@@ -9,7 +9,7 @@
 		<view class="moble_name">
 			5秒后将自动跳回首页...
 		</view>
-		<view class="btn">
+		<view class="btn" @click="backTohome">
 			回到首页
 		</view>
 		<image src="http://www.dbl.name/wbc/static/images/互转成功.png" class="bg"></image>
@@ -25,15 +25,23 @@
 		},
 		onLoad() {
 			setTimeout(() =>{
+				this.backTohome()
+			},5000)
+		},
+		methods:{
+			backTohome(){
 				uni.switchTab({
 					url: '../index/index'
 				});
-			},5000)
+			}
 		}
 	}
 </script>
 
 <style scoped>
+	page{
+		height: 100%;
+	}
 	.top{
 		display: flex;
 		padding: 0 75upx;

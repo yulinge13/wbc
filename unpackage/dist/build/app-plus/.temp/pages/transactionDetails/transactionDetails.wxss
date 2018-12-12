@@ -1,2 +1,2 @@
 @import "../../common/vendor.wxss";
-.transactionDetails{padding:20rpx 30rpx;background:#f7f7f7}.link_list{margin-bottom:30rpx}
+page{height:100%}.transactionDetails{padding:20rpx 30rpx;background:#f7f7f7}.link_list{margin-bottom:30rpx}

@@ -52,9 +52,8 @@
 </script>
 
 <style scoped>
-	uni-page-body{
+	page{
 		height: 100%;
-		width: 100%;
 	}
 	.saft {
 		padding-top: 30upx;
@@ -70,6 +69,10 @@
 
 	.link_list {
 		margin-bottom: 30upx;
+		
+	}
+	.links{
+		margin-bottom: 304upx;
 	}
 	.bg{
 		width: 334upx;
