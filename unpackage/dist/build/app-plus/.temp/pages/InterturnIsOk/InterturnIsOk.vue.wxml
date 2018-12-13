@@ -1,11 +1,11 @@
-<template name="2b025106">
-  <view class="_view data-v-5bfc79da InterturnIsOk">
-    <view class="_view data-v-5bfc79da top">
-      <image src="http://www.dbl.name/wbc/static/images/已完成 (1).png" class="_image data-v-5bfc79da"></image>
-      <view class="_view data-v-5bfc79da name"> 互转成功！ </view>
+<template name="2d868ce4">
+  <view class="_view data-v-58a530b0 InterturnIsOk">
+    <view class="_view data-v-58a530b0 top">
+      <image src="http://www.dbl.name/wbc/static/images/已完成 (1).png" class="_image data-v-58a530b0"></image>
+      <view class="_view data-v-58a530b0 name"> 互转成功！ </view>
     </view>
-    <view class="_view data-v-5bfc79da moble_name"> 5秒后将自动跳回首页... </view>
-    <view class="_view data-v-5bfc79da btn" bindtap="handleProxy" data-eventid="{{'YAt-0'}}" data-comkey="{{$k}}"> 回到首页 </view>
-    <image src="http://www.dbl.name/wbc/static/images/互转成功.png" class="_image data-v-5bfc79da bg"></image>
+    <view class="_view data-v-58a530b0 moble_name"> 5秒后将自动跳回首页... </view>
+    <view class="_view data-v-58a530b0 btn" bindtap="handleProxy" data-eventid="{{'c25-0'}}" data-comkey="{{$k}}"> 回到首页 </view>
+    <image src="http://www.dbl.name/wbc/static/images/互转成功.png" class="_image data-v-58a530b0 bg"></image>
   </view>
 </template>

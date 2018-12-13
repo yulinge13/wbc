@@ -1,34 +1,34 @@
-<template name="1bcddf00">
-  <view class="_view data-v-cf9c685a bankCard">
-    <view class="_view data-v-cf9c685a login_modal">
-      <view class="_view data-v-cf9c685a fill">
-        <image src="http://www.dbl.name/wbc/static/images/推荐拷贝3@2x.png" class="_image data-v-cf9c685a fill_pic"></image>
-        <view class="_view data-v-cf9c685a fill_val">
-          <input placeholder="请输入持卡人" value="{{fromData.name}}" bindinput="handleProxy" data-eventid="{{'ZVt-0'}}" data-comkey="{{$k}}" class="_input data-v-cf9c685a" />
+<template name="add88f44">
+  <view class="_view data-v-22b729b0 bankCard">
+    <view class="_view data-v-22b729b0 login_modal">
+      <view class="_view data-v-22b729b0 fill">
+        <image src="http://www.dbl.name/wbc/static/images/推荐拷贝3@2x.png" class="_image data-v-22b729b0 fill_pic"></image>
+        <view class="_view data-v-22b729b0 fill_val">
+          <input placeholder="请输入持卡人" value="{{fromData.name}}" bindinput="handleProxy" data-eventid="{{'4hb-0'}}" data-comkey="{{$k}}" class="_input data-v-22b729b0" />
         </view>
       </view>
-      <view class="_view data-v-cf9c685a fill">
-        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-cf9c685a fill_pic"></image>
-        <view class="_view data-v-cf9c685a fill_val">
-          <input placeholder="请输入银行卡号" type="number" value="{{fromData.newBankAccount}}" bindinput="handleProxy" data-eventid="{{'2Rk-1'}}" data-comkey="{{$k}}" class="_input data-v-cf9c685a" />
+      <view class="_view data-v-22b729b0 fill">
+        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-22b729b0 fill_pic"></image>
+        <view class="_view data-v-22b729b0 fill_val">
+          <input placeholder="请输入银行卡号" type="number" value="{{fromData.newBankAccount}}" bindinput="handleProxy" data-eventid="{{'z3t-1'}}" data-comkey="{{$k}}" class="_input data-v-22b729b0" />
         </view>
       </view>
-      <view class="_view data-v-cf9c685a fill">
-        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-cf9c685a fill_pic"></image>
-        <view class="_view data-v-cf9c685a fill_val">
-          <input placeholder="请确认银行卡号" type="number" value="{{fromData.bank_account}}" bindinput="handleProxy" data-eventid="{{'spn-2'}}" data-comkey="{{$k}}" class="_input data-v-cf9c685a" />
+      <view class="_view data-v-22b729b0 fill">
+        <image src="http://www.dbl.name/wbc/static/images/确认@2x.png" class="_image data-v-22b729b0 fill_pic"></image>
+        <view class="_view data-v-22b729b0 fill_val">
+          <input placeholder="请确认银行卡号" type="number" value="{{fromData.bank_account}}" bindinput="handleProxy" data-eventid="{{'JGu-2'}}" data-comkey="{{$k}}" class="_input data-v-22b729b0" />
         </view>
       </view>
-      <view class="_view data-v-cf9c685a fill">
-        <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-cf9c685a fill_pic"></image>
-        <view class="_view data-v-cf9c685a fill_val">
-          <picker class="_picker data-v-cf9c685a input" mode="selector" bindchange="handleProxy" range="{{bankLists}}" value="{{0}}" range-key="bank_name" data-eventid="{{'zlI-3'}}" data-comkey="{{$k}}">
-            <view wx:if="{{bankLists[bankListsIndex]}}" class="_view data-v-cf9c685a">{{bankLists[bankListsIndex].bank_name}}</view>
+      <view class="_view data-v-22b729b0 fill">
+        <image src="http://www.dbl.name/wbc/static/images/密码锁@2x.png" class="_image data-v-22b729b0 fill_pic"></image>
+        <view class="_view data-v-22b729b0 fill_val">
+          <picker class="_picker data-v-22b729b0 input" mode="selector" bindchange="handleProxy" range="{{bankLists}}" value="{{0}}" range-key="bank_name" data-eventid="{{'zxW-3'}}" data-comkey="{{$k}}">
+            <view wx:if="{{bankLists[bankListsIndex]}}" class="_view data-v-22b729b0">{{bankLists[bankListsIndex].bank_name}}</view>
           </picker>
         </view>
       </view>
-      <button class="_button data-v-cf9c685a login_btn" bindtap="handleProxy" data-eventid="{{'JkE-4'}}" data-comkey="{{$k}}">添加</button>
+      <button class="_button data-v-22b729b0 login_btn" bindtap="handleProxy" data-eventid="{{'LyX-4'}}" data-comkey="{{$k}}">添加</button>
     </view>
-    <view class="_view data-v-cf9c685a footer"> 冬宝链 </view>
+    <view class="_view data-v-22b729b0 footer"> 冬宝链 </view>
   </view>
 </template>

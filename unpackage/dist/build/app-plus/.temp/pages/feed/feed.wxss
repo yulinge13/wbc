@@ -1,2 +1,2 @@
 @import "../../common/vendor.wxss";
-.feed.data-v-636d6093{padding:0 30rpx}.btn.data-v-636d6093{margin:0 30rpx;height:80rpx;line-height:80rpx;border-radius:10rpx;text-align:center;font-size:30rpx;color:#fff;background:#3574fa;margin-top:30rpx}.text.data-v-636d6093{margin:0 30rpx;border:1rpx solid #eee}.text ._textarea.data-v-636d6093{padding:10rpx}
+.feed.data-v-53ee2920{padding:0 30rpx}.btn.data-v-53ee2920{margin:0 30rpx;height:80rpx;line-height:80rpx;border-radius:10rpx;text-align:center;font-size:30rpx;color:#fff;background:#3574fa;margin-top:30rpx}.text.data-v-53ee2920{margin:0 30rpx;border:1rpx solid #eee}.text ._textarea.data-v-53ee2920{padding:10rpx}

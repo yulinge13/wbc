@@ -1,25 +1,25 @@
 <import src="/components/linkCom.vue.wxml" />
-<template name="f8d78600">
-  <view class="_view data-v-3e13b7da my_page">
-    <view class="_view data-v-3e13b7da person_info">
-      <image src="http://www.dbl.name/wbc/static/images/头像未登录.png" class="_image data-v-3e13b7da head_icon"></image>
-      <view class="_view data-v-3e13b7da login_or_res" wx:if="{{!isLogin}}">
-        <text class="_text data-v-3e13b7da login" bindtap="handleProxy" wx:if="{{!isLogin}}" data-eventid="{{'Zly-0'}}" data-comkey="{{$k}}"> 登陆 </text>
-        <view class="_view data-v-3e13b7da line" wx:if="{{!isLogin}}"></view>
-        <view class="_view data-v-3e13b7da res" bindtap="handleProxy" wx:if="{{!isLogin}}" data-eventid="{{'uZe-1'}}" data-comkey="{{$k}}"> 注册 </view>
+<template name="f2829944">
+  <view class="_view data-v-61c8b520 my_page">
+    <view class="_view data-v-61c8b520 person_info">
+      <image src="http://www.dbl.name/wbc/static/images/头像未登录.png" class="_image data-v-61c8b520 head_icon"></image>
+      <view class="_view data-v-61c8b520 login_or_res" wx:if="{{!isLogin}}">
+        <text class="_text data-v-61c8b520 login" bindtap="handleProxy" wx:if="{{!isLogin}}" data-eventid="{{'a5g-0'}}" data-comkey="{{$k}}"> 登陆 </text>
+        <view class="_view data-v-61c8b520 line" wx:if="{{!isLogin}}"></view>
+        <view class="_view data-v-61c8b520 res" bindtap="handleProxy" wx:if="{{!isLogin}}" data-eventid="{{'bzn-1'}}" data-comkey="{{$k}}"> 注册 </view>
       </view>
-      <view class="_view data-v-3e13b7da is_login" wx:if="{{isLogin}}">
-        <view class="_view data-v-3e13b7da name"> {{personInfo.nickname}} </view>
-        <view class="_view data-v-3e13b7da mobile"> 冬宝链账号{{personInfo.mobile}} </view>
+      <view class="_view data-v-61c8b520 is_login" wx:if="{{isLogin}}">
+        <view class="_view data-v-61c8b520 name"> {{personInfo.nickname}} </view>
+        <view class="_view data-v-61c8b520 mobile"> 冬宝链账号{{personInfo.mobile}} </view>
       </view>
-      <view class="_view data-v-3e13b7da uid"> UID: {{personInfo.id || '请先登录'}} </view>
+      <view class="_view data-v-61c8b520 uid"> UID: {{personInfo.id || '请先登录'}} </view>
     </view>
-    <view class="_view data-v-3e13b7da links">
-      <template wx:key="index" data="{{...$root['0'], ...$root[$kk+'Nnz-0-'+index],$root}}" is="0f8ae955" wx:for="{{linkListsTop}}" wx:for-index="index" wx:for-item="i"></template>
+    <view class="_view data-v-61c8b520 links">
+      <template wx:key="index" data="{{...$root['0'], ...$root[$kk+'CFR-0-'+index],$root}}" is="0f03a592" wx:for="{{linkListsTop}}" wx:for-index="index" wx:for-item="i"></template>
     </view>
-    <view class="_view data-v-3e13b7da links">
-      <template wx:key="index" data="{{...$root['0'], ...$root[$kk+'139-1-'+index],$root}}" is="0f8ae955" wx:for="{{linkListsBot}}" wx:for-index="index" wx:for-item="i"></template>
+    <view class="_view data-v-61c8b520 links">
+      <template wx:key="index" data="{{...$root['0'], ...$root[$kk+'BJt-1-'+index],$root}}" is="0f03a592" wx:for="{{linkListsBot}}" wx:for-index="index" wx:for-item="i"></template>
     </view>
-    <view class="_view data-v-3e13b7da is_login_btn" bindtap="handleProxy" wx:if="{{isLogin}}" data-eventid="{{'nZi-2'}}" data-comkey="{{$k}}"> 退出登陆 </view>
+    <view class="_view data-v-61c8b520 is_login_btn" bindtap="handleProxy" wx:if="{{isLogin}}" data-eventid="{{'xbf-2'}}" data-comkey="{{$k}}"> 退出登陆 </view>
   </view>
 </template>

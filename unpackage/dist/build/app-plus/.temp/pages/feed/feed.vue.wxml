@@ -1,10 +1,10 @@
-<template name="6bc15b80">
-  <view class="_view data-v-636d6093 feed">
-    <view class="_view data-v-636d6093 section">
-      <view class="_view data-v-636d6093 text">
-        <textarea value="{{content}}" bindinput="handleProxy" placeholder="请输入你的反馈意见" maxlength="{{100}}" adjust-position="{{true}}" auto-focus data-eventid="{{'BHU-0'}}" data-comkey="{{$k}}" class="_textarea data-v-636d6093" />
+<template name="a7692cc4">
+  <view class="_view data-v-53ee2920 feed">
+    <view class="_view data-v-53ee2920 section">
+      <view class="_view data-v-53ee2920 text">
+        <textarea value="{{content}}" bindinput="handleProxy" placeholder="请输入你的反馈意见" maxlength="{{100}}" adjust-position="{{true}}" auto-focus data-eventid="{{'tS8-0'}}" data-comkey="{{$k}}" class="_textarea data-v-53ee2920" />
       </view>
     </view>
-    <view class="_view data-v-636d6093 btn" bindtap="handleProxy" data-eventid="{{'TZF-1'}}" data-comkey="{{$k}}"> 提交 </view>
+    <view class="_view data-v-53ee2920 btn" bindtap="handleProxy" data-eventid="{{'xMe-1'}}" data-comkey="{{$k}}"> 提交 </view>
   </view>
 </template>

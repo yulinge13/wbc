@@ -1,10 +1,10 @@
 <import src="/components/pop.vue.wxml" />
 <import src="/components/numBox.vue.wxml" />
-<template name="9750eb80">
-  <view class="_view data-v-fd56205a buyWBC">
-    <image src="http://www.dbl.name/wbc/static/images/链接你我.png" class="_image data-v-fd56205a"></image>
-    <view class="_view data-v-fd56205a btn" bindtap="handleProxy" data-eventid="{{'YxG-0'}}" data-comkey="{{$k}}"> 立即购买 </view>
-    <template type="bottom" bindhidePopup="handleProxy" data-eventid="{{'ZAp-4'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'aXi-0'],$root, $slotdefault:'data-v-fd56205a-default-aXi-0'}}" is="60c6527f"></template>
-    <template type="bottom" bindhidePopup="handleProxy" data-eventid="{{'6hU-7'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'aOS-2'],$root, $slotdefault:'data-v-fd56205a-default-aOS-2'}}" is="60c6527f"></template>
+<template name="2c667ac4">
+  <view class="_view data-v-597477a0 buyWBC">
+    <image src="http://www.dbl.name/wbc/static/images/链接你我.png" class="_image data-v-597477a0"></image>
+    <view class="_view data-v-597477a0 btn" bindtap="handleProxy" data-eventid="{{'nBO-0'}}" data-comkey="{{$k}}"> 立即购买 </view>
+    <template type="bottom" bindhidePopup="handleProxy" data-eventid="{{'enG-4'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'fHu-0'],$root, $slotdefault:'data-v-597477a0-default-fHu-0'}}" is="69aa513e"></template>
+    <template type="bottom" bindhidePopup="handleProxy" data-eventid="{{'Ibf-7'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'w2H-2'],$root, $slotdefault:'data-v-597477a0-default-w2H-2'}}" is="69aa513e"></template>
   </view>
 </template>

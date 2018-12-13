@@ -1,12 +1,12 @@
-<template name="3cc7bdac">
-  <view class="_view data-v-49bbf577 changeMobileSuccess">
-    <view class="_view data-v-49bbf577 top">
-      <image src="http://www.dbl.name/wbc/static/images/已完成 (1).png" class="_image data-v-49bbf577"></image>
-      <view class="_view data-v-49bbf577 name"> 更换成功！ </view>
+<template name="463f8008">
+  <view class="_view data-v-03fedf94 changeMobileSuccess">
+    <view class="_view data-v-03fedf94 top">
+      <image src="http://www.dbl.name/wbc/static/images/已完成 (1).png" class="_image data-v-03fedf94"></image>
+      <view class="_view data-v-03fedf94 name"> 更换成功！ </view>
     </view>
-    <view class="_view data-v-49bbf577 moble_name"> 您的手机号已更改成功 </view>
-    <view class="_view data-v-49bbf577 tishi"> 下次请使用此号码登录，登录密码不变 </view>
-    <view class="_view data-v-49bbf577 btn" bindtap="handleProxy" data-eventid="{{'O0d-0'}}" data-comkey="{{$k}}"> 确定 </view>
-    <view class="_view data-v-49bbf577 beizhu"> 备注：确定以后回到登录页面重新登录 </view>
+    <view class="_view data-v-03fedf94 moble_name"> 您的手机号已更改成功 </view>
+    <view class="_view data-v-03fedf94 tishi"> 下次请使用此号码登录，登录密码不变 </view>
+    <view class="_view data-v-03fedf94 btn" bindtap="handleProxy" data-eventid="{{'Fqg-0'}}" data-comkey="{{$k}}"> 确定 </view>
+    <view class="_view data-v-03fedf94 beizhu"> 备注：确定以后回到登录页面重新登录 </view>
   </view>
 </template>

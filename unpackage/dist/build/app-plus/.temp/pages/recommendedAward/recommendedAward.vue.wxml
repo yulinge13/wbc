@@ -1,58 +1,58 @@
-<template name="5a41e480">
-  <view class="_view data-v-4a14f793 recommendedAward">
-    <view class="_view data-v-4a14f793 header">
-      <image src="http://www.dbl.name/wbc/static/images/推荐奖励.png" class="_image data-v-4a14f793"></image>
-      <view class="_view data-v-4a14f793 header_cont">
-        <view class="_view data-v-4a14f793 header_name"> 可提现金额 </view>
-        <view class="_view data-v-4a14f793 header_num"> {{personInfo.reward || 0}} </view>
+<template name="5c9b29c4">
+  <view class="_view data-v-fa360920 recommendedAward">
+    <view class="_view data-v-fa360920 header">
+      <image src="http://www.dbl.name/wbc/static/images/推荐奖励.png" class="_image data-v-fa360920"></image>
+      <view class="_view data-v-fa360920 header_cont">
+        <view class="_view data-v-fa360920 header_name"> 可提现金额 </view>
+        <view class="_view data-v-fa360920 header_num"> {{personInfo.reward || 0}} </view>
       </view>
     </view>
-    <view class="_view data-v-4a14f793 cont">
-      <view class="_view data-v-4a14f793 fill fill_one">
-        <view class="_view data-v-4a14f793 fill_title">
-          <view class="_view data-v-4a14f793 fill_left">
-            <image src="http://www.dbl.name/wbc/static/images/银行卡1.png" class="_image data-v-4a14f793"></image>
-            <view class="_view data-v-4a14f793 fill_left_name"> 已绑定银行卡 </view>
+    <view class="_view data-v-fa360920 cont">
+      <view class="_view data-v-fa360920 fill fill_one">
+        <view class="_view data-v-fa360920 fill_title">
+          <view class="_view data-v-fa360920 fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/银行卡1.png" class="_image data-v-fa360920"></image>
+            <view class="_view data-v-fa360920 fill_left_name"> 已绑定银行卡 </view>
           </view>
         </view>
-        <view class="_view data-v-4a14f793 fill_cont">
-          <view class="_view data-v-4a14f793" wx:if="{{cardInfo.id}}"> {{cardInfo.bank_account}} </view>
-          <view class="_view data-v-4a14f793" wx:else bindtap="handleProxy" data-eventid="{{'Xru-0'}}" data-comkey="{{$k}}"> 请添加银行卡号 </view>
+        <view class="_view data-v-fa360920 fill_cont">
+          <view class="_view data-v-fa360920" wx:if="{{cardInfo.id}}"> {{cardInfo.bank_account}} </view>
+          <view class="_view data-v-fa360920" wx:else bindtap="handleProxy" data-eventid="{{'THr-0'}}" data-comkey="{{$k}}"> 请添加银行卡号 </view>
         </view>
       </view>
-      <view class="_view data-v-4a14f793 fill fill_three">
-        <view class="_view data-v-4a14f793 fill_title">
-          <view class="_view data-v-4a14f793 fill_left">
-            <image src="http://www.dbl.name/wbc/static/images/键盘.png" class="_image data-v-4a14f793"></image>
-            <view class="_view data-v-4a14f793 fill_left_name"> 请输入提取WBC数量 </view>
+      <view class="_view data-v-fa360920 fill fill_three">
+        <view class="_view data-v-fa360920 fill_title">
+          <view class="_view data-v-fa360920 fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/键盘.png" class="_image data-v-fa360920"></image>
+            <view class="_view data-v-fa360920 fill_left_name"> 请输入提取WBC数量 </view>
           </view>
         </view>
-        <view class="_view data-v-4a14f793 fill_cont">
-          <input type="number" placeholder="请输入提取数量" class="_input data-v-4a14f793 input" value="{{formData.num}}" bindinput="handleProxy" data-eventid="{{'I4U-1'}}" data-comkey="{{$k}}" />
+        <view class="_view data-v-fa360920 fill_cont">
+          <input type="number" placeholder="请输入提取数量" class="_input data-v-fa360920 input" value="{{formData.num}}" bindinput="handleProxy" data-eventid="{{'31s-1'}}" data-comkey="{{$k}}" />
         </view>
       </view>
-      <view class="_view data-v-4a14f793 act_num">
-        <view class="_view data-v-4a14f793 act">
-          <view class="_view data-v-4a14f793 act_name"> 实际提现： </view>
-          <view class="_view data-v-4a14f793 act_val"> {{actNum}} </view>
+      <view class="_view data-v-fa360920 act_num">
+        <view class="_view data-v-fa360920 act">
+          <view class="_view data-v-fa360920 act_name"> 实际提现： </view>
+          <view class="_view data-v-fa360920 act_val"> {{actNum}} </view>
         </view>
-        <view class="_view data-v-4a14f793 act">
-          <view class="_view data-v-4a14f793 act_name"> 扣除手续费用： </view>
-          <view class="_view data-v-4a14f793 act_val"> {{cutNum}} </view>
+        <view class="_view data-v-fa360920 act">
+          <view class="_view data-v-fa360920 act_name"> 扣除手续费用： </view>
+          <view class="_view data-v-fa360920 act_val"> {{cutNum}} </view>
         </view>
       </view>
-      <view class="_view data-v-4a14f793 fill fill_four">
-        <view class="_view data-v-4a14f793 fill_title">
-          <view class="_view data-v-4a14f793 fill_left">
-            <image src="http://www.dbl.name/wbc/static/images/交易密码.png" class="_image data-v-4a14f793"></image>
-            <view class="_view data-v-4a14f793 fill_left_name"> 请输入交易密码 </view>
+      <view class="_view data-v-fa360920 fill fill_four">
+        <view class="_view data-v-fa360920 fill_title">
+          <view class="_view data-v-fa360920 fill_left">
+            <image src="http://www.dbl.name/wbc/static/images/交易密码.png" class="_image data-v-fa360920"></image>
+            <view class="_view data-v-fa360920 fill_left_name"> 请输入交易密码 </view>
           </view>
         </view>
-        <view class="_view data-v-4a14f793 fill_cont">
-          <input placeholder="请输入交易密码" class="_input data-v-4a14f793 input" password="{{true}}" value="{{formData.pay_password}}" bindinput="handleProxy" data-eventid="{{'QAL-2'}}" data-comkey="{{$k}}" />
+        <view class="_view data-v-fa360920 fill_cont">
+          <input placeholder="请输入交易密码" class="_input data-v-fa360920 input" password="{{true}}" value="{{formData.pay_password}}" bindinput="handleProxy" data-eventid="{{'bYx-2'}}" data-comkey="{{$k}}" />
         </view>
       </view>
     </view>
-    <view class="_view data-v-4a14f793 btn" bindtap="handleProxy" data-eventid="{{'Sm0-3'}}" data-comkey="{{$k}}"> 提交 </view>
+    <view class="_view data-v-fa360920 btn" bindtap="handleProxy" data-eventid="{{'LLJ-3'}}" data-comkey="{{$k}}"> 提交 </view>
   </view>
 </template>

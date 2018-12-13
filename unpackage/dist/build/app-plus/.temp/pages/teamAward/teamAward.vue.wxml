@@ -1,28 +1,28 @@
-<template name="adc3b570">
-  <view class="_view data-v-98613456 teamAward">
-    <view class="_view data-v-98613456 header">
-      <image src="http://www.dbl.name/wbc/static/images/业绩.png" class="_image data-v-98613456"></image>
-      <view class="_view data-v-98613456 header_cont">
-        <view class="_view data-v-98613456 header_name"> 团队业绩 </view>
-        <view class="_view data-v-98613456 header_num"> {{info.team_bill}} </view>
+<template name="0759c1b4">
+  <view class="_view data-v-9b167f1c teamAward">
+    <view class="_view data-v-9b167f1c header">
+      <image src="http://www.dbl.name/wbc/static/images/业绩.png" class="_image data-v-9b167f1c"></image>
+      <view class="_view data-v-9b167f1c header_cont">
+        <view class="_view data-v-9b167f1c header_name"> 团队业绩 </view>
+        <view class="_view data-v-9b167f1c header_num"> {{info.team_bill}} </view>
       </view>
     </view>
-    <view class="_view data-v-98613456 has_num">
-      <view class="_view data-v-98613456 has_num_name"> 奖励金额 </view>
-      <view class="_view data-v-98613456 num"> {{info.team_bill_open}} </view>
+    <view class="_view data-v-9b167f1c has_num">
+      <view class="_view data-v-9b167f1c has_num_name"> 奖励金额 </view>
+      <view class="_view data-v-9b167f1c num"> {{info.team_bill_open}} </view>
     </view>
-    <view class="_view data-v-98613456 faq">
-      <view class="_view data-v-98613456 faq_left">
-        <view class="_view data-v-98613456 faq_list"> 系数说明： </view>
-        <view class="_view data-v-98613456 faq_list"> 奖励伞下业绩千分之三 </view>
-        <view class="_view data-v-98613456 faq_list"> 100万-千分之3.5 </view>
-        <view class="_view data-v-98613456 faq_list"> 200万-千分之4 </view>
-        <view class="_view data-v-98613456 faq_list"> 200万以上-千分之5 </view>
+    <view class="_view data-v-9b167f1c faq">
+      <view class="_view data-v-9b167f1c faq_left">
+        <view class="_view data-v-9b167f1c faq_list"> 系数说明： </view>
+        <view class="_view data-v-9b167f1c faq_list"> 奖励伞下业绩千分之三 </view>
+        <view class="_view data-v-9b167f1c faq_list"> 100万-千分之3.5 </view>
+        <view class="_view data-v-9b167f1c faq_list"> 200万-千分之4 </view>
+        <view class="_view data-v-9b167f1c faq_list"> 200万以上-千分之5 </view>
       </view>
-      <view class="_view data-v-98613456 faq_right">
-        <view class="_view data-v-98613456 faq_list"> 最低提取数量：1000 </view>
+      <view class="_view data-v-9b167f1c faq_right">
+        <view class="_view data-v-9b167f1c faq_list"> 最低提取数量：1000 </view>
       </view>
     </view>
-    <view class="_view data-v-98613456 btn" bindtap="handleProxy" data-eventid="{{'JSv-0'}}" data-comkey="{{$k}}"> 提现 </view>
+    <view class="_view data-v-9b167f1c btn" bindtap="handleProxy" data-eventid="{{'sDO-0'}}" data-comkey="{{$k}}"> 提现 </view>
   </view>
 </template>

@@ -1,1 +1,1 @@
-<import src="/pages/saft/saft.vue.wxml" /><template is="16e88100" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/saft/saft.vue.wxml" /><template is="0dd6cf44" data="{{ ...$root['0'], $root }}"/>

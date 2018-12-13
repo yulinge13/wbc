@@ -1,16 +1,16 @@
-<template name="3a727ae4">
-  <view class="_view data-v-56b750ca mutualTransferdetails">
-    <view class="_view data-v-56b750ca header">
-      <view class="_view data-v-56b750ca title"> 日期 </view>
-      <view class="_view data-v-56b750ca title"> 类型 </view>
-      <view class="_view data-v-56b750ca title"> 数量 </view>
+<template name="76c3826c">
+  <view class="_view data-v-fe0a2990 mutualTransferdetails">
+    <view class="_view data-v-fe0a2990 header">
+      <view class="_view data-v-fe0a2990 title"> 日期 </view>
+      <view class="_view data-v-fe0a2990 title"> 类型 </view>
+      <view class="_view data-v-fe0a2990 title"> 数量 </view>
     </view>
-    <scroll-view scroll-y bindscrolltolower="handleProxy" data-eventid="{{'pv9-0'}}" data-comkey="{{$k}}" class="_scroll-view data-v-56b750ca" style=" {{'height:' + halfHeight}}">
-      <view class="_view data-v-56b750ca lists">
-        <view class="_view data-v-56b750ca list" wx:key="index" key="{{index}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="i">
-          <view class="_view data-v-56b750ca time"> {{i.date}} </view>
-          <view class="_view data-v-56b750ca type"> {{i.whitchType}} </view>
-          <view class="_view data-v-56b750ca num" style=" {{'color:' + i.color}}"> {{i.icon}}{{i.money}} </view>
+    <scroll-view scroll-y bindscrolltolower="handleProxy" data-eventid="{{'rgb-0'}}" data-comkey="{{$k}}" class="_scroll-view data-v-fe0a2990" style=" {{'height:' + halfHeight}}">
+      <view class="_view data-v-fe0a2990 lists">
+        <view class="_view data-v-fe0a2990 list" wx:key="index" key="{{index}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="i">
+          <view class="_view data-v-fe0a2990 time"> {{i.date}} </view>
+          <view class="_view data-v-fe0a2990 type"> {{i.whitchType}} </view>
+          <view class="_view data-v-fe0a2990 num" style=" {{'color:' + i.color}}"> {{i.icon}}{{i.money}} </view>
         </view>
       </view>
     </scroll-view>

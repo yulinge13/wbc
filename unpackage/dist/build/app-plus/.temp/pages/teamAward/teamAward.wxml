@@ -1,1 +1,1 @@
-<import src="/pages/teamAward/teamAward.vue.wxml" /><template is="adc3b570" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/teamAward/teamAward.vue.wxml" /><template is="0759c1b4" data="{{ ...$root['0'], $root }}"/>

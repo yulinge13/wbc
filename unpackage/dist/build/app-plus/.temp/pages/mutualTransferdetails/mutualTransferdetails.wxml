@@ -1,1 +1,1 @@
-<import src="/pages/mutualTransferdetails/mutualTransferdetails.vue.wxml" /><template is="3a727ae4" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/mutualTransferdetails/mutualTransferdetails.vue.wxml" /><template is="76c3826c" data="{{ ...$root['0'], $root }}"/>

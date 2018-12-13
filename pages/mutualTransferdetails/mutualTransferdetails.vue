@@ -99,8 +99,8 @@
 							} else if (this.type == 3) {
 								i.money = i.charge
 								i.whitchType = '转入'
-								i.color = '#ed3735'
-								i.icon = '-'
+								i.color = '#3574fa'
+								i.icon = '+'
 							}
 						})
 						this.lists = [...this.lists, ...res.data]

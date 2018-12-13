@@ -15,7 +15,7 @@
 					<image src="http://www.dbl.name/wbc/static/images/微信图片_20181202214237.png"></image>
 					<view class="header_list_cont">
 						<view class="header_list_name">
-							预存WBC
+							WBC存储量
 						</view>
 						<view class="header_list_num">
 							￥{{personInfo.corpus_bill}}
@@ -26,7 +26,7 @@
 					<image src="http://www.dbl.name/wbc/static/images/微信图片_20181202214232.png"></image>
 					<view class="header_list_cont">
 						<view class="header_list_name">
-							补贴WBC
+							预期收益
 						</view>
 						<view class="header_list_num">
 							￥{{personInfo.corpus_point}}

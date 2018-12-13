@@ -21,4 +21,5 @@ export default {
 	indexTeamMember:'api/index/teamMember',//下级成员列表 post
 	goodsQuestion:'api/goods/question',//反馈 post
 	goodsTeamComesForApp:'api/goods/teamComesForApp',//团队业绩 post
+	indexNotice:'api/index/notice',//广告 post
 }

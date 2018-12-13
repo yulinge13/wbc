@@ -22,7 +22,7 @@
 				<view class="banner_text">
 					<image src="http://www.dbl.name/wbc/static/images/通知@2x.png" class="notice_pic"></image>
 					<view class="notice">
-						冬宝链v1.0正式上线了！
+						{{notice}}
 					</view>
 				</view>
 				<view class="slider_lists">
@@ -44,7 +44,7 @@
 						<view class="slider_list_top">
 							<image src="http://www.dbl.name/wbc/static/images/收益(1)@2x.png"></image>
 							<view class="slider_list_name">
-								WBC预期收益
+								预期收益
 							</view>
 						</view>
 						<view class="slider_list_num">
@@ -143,9 +143,11 @@
 					}
 				],
 				coefficient:'',//系数
+				notice:''
 			}
 		},
 		onLoad() {
+			this.indexNotice()
 			// this.getTax()
 		},
 		onShow() {
@@ -159,6 +161,16 @@
 		},
 		methods: {
 			...mapMutations(['dateUpInfo']),
+			//获取广告
+			indexNotice(){
+				this.Post({
+					url:this.url.indexNotice,
+				}).then(res => {
+					if(res.code === 200){
+						this.notice = res.data
+					}
+				})
+			},
 			//买币
 			buyWbc() {
 				const personInfo = uni.getStorageSync('personInfo') || this.$store.state.personInfo

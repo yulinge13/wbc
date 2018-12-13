@@ -85,31 +85,39 @@
 				})
 			},
 			submit(){
-				this.Post({
-					url:this.url.balanceWithdraw,
-					data:{
-						uid:this.personInfo.id,
-						type:5
-					}
-				}).then(res => {
-					if (res.code === 200) {
-						uni.showToast({
-							title: res.msg,
-							duration: 1000,
-						});
-						setTimeout(() => {
-							uni.switchTab({
-								url:'../index/index'
-							})
-						},200)
-					}else{
-						uni.showToast({
-							title: res.msg,
-							duration: 1000,
-							icon:"none"
-						});
-					}
-				})
+				if(this.info.team_bill_open>0){
+					this.Post({
+						url:this.url.balanceWithdraw,
+						data:{
+							uid:this.personInfo.id,
+							type:5
+						}
+					}).then(res => {
+						if (res.code === 200) {
+							uni.showToast({
+								title: res.msg,
+								duration: 1000,
+							});
+							setTimeout(() => {
+								uni.switchTab({
+									url:'../index/index'
+								})
+							},200)
+						}else{
+							uni.showToast({
+								title: res.msg,
+								duration: 1000,
+								icon:"none"
+							});
+						}
+					})
+				}else{
+					uni.showToast({
+						title: '暂无可提现的余额',
+						duration: 1000,
+						icon:"none"
+					});
+				}
 			}
 		}
 	}
